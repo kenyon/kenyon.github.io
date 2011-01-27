@@ -1,0 +1,7 @@
+I am Kenyon Ralph. This is my website. I use it for documenting things.
+
+All wikis are supposed to have a [[SandBox]], so this one does too.
+
+----
+
+This wiki is powered by [[ikiwiki]].
