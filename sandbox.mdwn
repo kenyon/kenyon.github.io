@@ -2,6 +2,10 @@ This is the SandBox, a page anyone can edit to learn how to use the wiki.
 
 Testing.
 
+A SiteMap:
+
+[[!map]]
+
 ----
 
 Here's a paragraph.
@@ -20,7 +24,7 @@ Here's another one with *emphasised* text.
 >
 > Back to the first level.
 
-Numbered list 
+Numbered list
 
 1. First item.
 1. Another.
