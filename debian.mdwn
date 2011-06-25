@@ -1,0 +1,21 @@
+[[!meta title="Debian"]]
+This is my [Debian](http://debian.org/) page.
+
+Since March 2009, I'm running [Debian squeeze](http://www.debian.org/releases/squeeze/) on my main workstation.
+
+Since March 2010, I'm running Debian squeeze on my [[Dell Latitude 2100]] netbook.
+
+Since June 2010, I'm running Debian squeeze on my Dell Latitude D520.
+
+## debconf
+Make it so all questions are asked: `sudo dpkg-reconfigure debconf`
+
+## disable console beep
+    modprobe -r pcspkr
+    echo blacklist pcspkr >> /etc/modprobe.d/blacklist
+
+Set 'bell-style' to 'none' in `/etc/inputrc`.
+
+See also: [Removing annoying console beeps](http://www.debian-administration.org/articles/110)
+
+[[!tag Debian Linux]]
