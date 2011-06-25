@@ -1,4 +1,3 @@
-[[!meta title="Dell Latitude 2100"]]
 This page documents my experiences with Debian Linux on a Dell Latitude 2100 netbook computer.
 
 [[!toc]]

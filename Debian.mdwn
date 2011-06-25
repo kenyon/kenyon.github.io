@@ -1,4 +1,3 @@
-[[!meta title="Debian"]]
 This is my [Debian](http://debian.org/) page.
 
 Since March 2009, I'm running [Debian squeeze](http://www.debian.org/releases/squeeze/) on my main workstation.
