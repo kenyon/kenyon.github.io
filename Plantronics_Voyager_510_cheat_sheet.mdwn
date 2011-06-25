@@ -4,3 +4,6 @@ How to link to attachments?
 
 * voyager510-cheatsheet.pdf PDF
 * voyager510-cheatsheet.tex LaTeX source
+
+
+[[voyager510-cheatsheet.pdf]]
