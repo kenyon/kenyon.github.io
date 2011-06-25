@@ -24,7 +24,7 @@ Permanent switch in Xorg:
 
 and say dvorak for keyboard layout.
 
-Some HAL thing involving `cp /usr/share/hal/fdi/policy/10osvendor/10-keymap.fdi /etc/hal/fdi/policy/`? <http://jeromeandrieux.blogspot.com/2009/02/setup-dvorak-on-debian-with-xorg.html>
+Some HAL thing involving `cp /usr/share/hal/fdi/policy/10osvendor/10-keymap.fdi /etc/hal/fdi/policy/`(?) <http://jeromeandrieux.blogspot.com/2009/02/setup-dvorak-on-debian-with-xorg.html>
 
 Console:
 
@@ -44,7 +44,7 @@ Linux kernel keymap:
 * On FreeBSD 8: `sudo cp -vi /usr/local/share/hal/fdi/policy/10osvendor/10-x11-input.fdi /usr/local/etc/hal/fdi/policy ;` edit `/usr/local/etc/hal/fdi/policy/10-x11-input.fdi` and add `<merge key="input.xkb.layout" type="string">dvorak</merge>` so that it looks likes this:
 
 
-    <merge key="input.x11_driver" type="string">kbd</merge>
+    &lt;merge key="input.x11_driver" type="string"&gt;kbd&lt;/merge&gt;
 
 ## Solaris
 * Same as Xorg. (?)
