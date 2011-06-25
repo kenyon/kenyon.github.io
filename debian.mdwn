@@ -8,7 +8,7 @@ Since March 2010, I'm running Debian squeeze on my [[Dell Latitude 2100]] netboo
 Since June 2010, I'm running Debian squeeze on my Dell Latitude D520.
 
 ## debconf
-Make it so all questions are asked: `sudo dpkg-reconfigure debconf`
+Make it so all questions are asked: `sudo dpkg-reconfigure debconf` and answer lowest priority.
 
 ## disable console beep
     modprobe -r pcspkr
