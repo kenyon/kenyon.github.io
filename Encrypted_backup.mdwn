@@ -37,11 +37,11 @@ Documentation on my encrypted backup hard drive.
 
 I did `sudo modprobe dm-mod dm-crypt aes` and added those modules to `/etc/modules`.
 
-#### Creation ===
+#### Creation
     sudo cryptsetup --verbose --verify-passphrase --key-size 256 luksFormat /dev/sdf1
     sudo cryptsetup --verbose luksOpen /dev/sdf1 bak
 
-#### Use ===
+#### Use
 Added to `/etc/fstab`:
 
     LABEL=bak       /bak            ext4    user,noatime,noauto 0   0
@@ -58,12 +58,12 @@ After making the `crypttab` entry:
     sudo cryptdisks_start bak && sudo mount /bak
 
 ### File system
-#### Creation ===
+#### Creation
 After `sudo cryptsetup --verbose luksOpen /dev/sdf1 bak`, I did
 
     sudo mkfs.ext4 -v -L bak /dev/mapper/bak
 
-#### Disconnecting ===
+#### Disconnecting
 Before disconnecting the drive from the system, do this:
 
     sudo umount /bak && sudo cryptdisks_stop bak
