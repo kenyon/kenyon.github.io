@@ -5,7 +5,7 @@ This page documents my experiences with Debian Linux on a Dell Latitude 2100 net
 
 ## Installation
 
-Installing Debian Lenny with GRUB 2 and encrypted LVM works, until the first boot after installation. GRUB says "file not found" and goes to the rescue prompt. Typing "root" shows that GRUB thinks the boot file system is fat, but it's really ext2. This happens because of some bytes left over from Dell's factory installation. See bug [[!debbug 514263]] and bug [[!debbug 505137]]. I booted from a [grml](http://grml.org/) USB stick, did `mkfs.ext2 /dev/sda1`, and reinstalled.
+Installing Debian Lenny with GRUB 2 and encrypted LVM works, until the first boot after installation. GRUB says "file not found" and goes to the rescue prompt. Typing "root" shows that GRUB thinks the boot file system is fat, but it's really ext2. This happens because of some bytes left over from Dell's factory installation. See [[!debbug 514263]] and [[!debbug 505137]]. I booted from a [grml](http://grml.org/) USB stick, did `mkfs.ext2 /dev/sda1`, and reinstalled.
 
 Next the boot got as far as "waiting for root file system" and eventually dropping to the initramfs busybox prompt. This was with the "targeted" initramfs. Trying the "generic" next.
 
@@ -19,7 +19,7 @@ I had to disable CPU throttling in `/etc/laptop-mode/conf.d/cpufreq.conf` becaus
 
 ## Wireless
 
-My machine has an Intel Wireless WiFi Link 5100. The Debian squeeze instructions for [[!debwiki iwlagn]] work.
+My machine has an Intel Wireless WiFi Link 5100 according to `lspci`. The Debian squeeze instructions for [[!debwiki iwlagn]] work.
 
 My comment on an Ubuntu bug that might be related to a iwlagn power management problem I have on Debian squeeze: <https://bugs.edge.launchpad.net/ubuntu/+source/network-manager/+bug/384924/comments/13>
 
@@ -27,7 +27,7 @@ Disabling power management in `/etc/laptop-mode/conf.d/wireless-iwl-power.conf` 
 
 ## Recovery with grml and encrypted LVM
 
-Since this is still [[!debwiki DebianTesting]], occasional breakage is expected. I encountered bug [[!debbug 574350]] on March 17, 2010. So here is how to boot from a grml USB stick, mount encrypted LVM volumes, and chroot to be able to do recovery work. [Grub2LiveCdInstallGuide](http://student.agh.edu.pl/~journal/plik/Grub2LiveCdInstallGuide.html) was helpful for this procedure. <http://www.supergrubdisk.org/wiki/Howto_Fix_Grub> might be another good resource.
+Since this was [[!debwiki DebianTesting]], occasional breakage was expected. I encountered [[!debbug 574350]] on March 17, 2010. So here is how to boot from a grml USB stick, mount encrypted LVM volumes, and chroot to be able to do recovery work. [Grub2LiveCdInstallGuide](http://student.agh.edu.pl/~journal/plik/Grub2LiveCdInstallGuide.html) was helpful for this procedure. <http://www.supergrubdisk.org/wiki/Howto_Fix_Grub> might be another good resource.
 
 1. `cryptsetup luksOpen /dev/sda2 copernicus`
 1. `Start lvm2`
