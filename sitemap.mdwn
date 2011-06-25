@@ -1,1 +1,1 @@
-[[!map pages="*"]]
+[[!map pages="* and !smileys/* and !*.js and !*.css and !wikiicons"]]
