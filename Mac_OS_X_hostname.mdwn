@@ -7,7 +7,7 @@ In System Preferences, Sharing, Computer Name should be set to the FQDN. The .lo
 
 `hostname` should return the FQDN (devildog.kenyonralph.com), and `hostname -s` should return just the first part (devildog).
 
-= References =
+## References
 * <http://excitedcuriosity.wordpress.com/2007/08/24/mac-os-x-hostname-determination/>
 * <http://forums.macosxhints.com/showthread.php?t=29712>
 * <http://www.macosxhints.com/article.php?story=20001224021638403>
