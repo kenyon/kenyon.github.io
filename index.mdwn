@@ -4,11 +4,11 @@ See the [[site map|sitemap]] for a list of all pages on this site.
 
 [[!toc levels=2]]
 
-# About voodoo.kenyonralph.com
+## About voodoo.kenyonralph.com
 [voodoo.kenyonralph.com](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396) runs a Tor relay. If it touches your network, it's probably not me doing it, but somebody else via the Tor network. See [Tor exit notice](https://gitweb.torproject.org/tor.git?a=blob_plain;hb=HEAD;f=contrib/tor-exit-notice.html) for more info.
 
-# Contact
-## Email
+## Contact
+### Email
 <kenyon+www@kenyonralph.com>
 
 Use my public OpenPGP key to engage in secure communications with me:
@@ -18,16 +18,16 @@ Use my public OpenPGP key to engage in secure communications with me:
 * Stats: <http://pgp.cs.uu.nl/mk_path.cgi?STAT=0xC9B912D5&STATS=statistics>
 * Signed key transition message of 2009-12-23 regarding my transition from key [[!gpg 92A76E75]] to [[!gpg C9B912D5]]: <http://kenyonralph.com/key-transition-20091223.txt>
 
-## Instant message
+### Instant message
 * AIM: RalphKAUSMC
 * XMPP: kralph@gmail.com
 * Skype: kenyonralph
 
-## IRC
+### IRC
 * [OFTC](http://www.oftc.net/): kenyon
 * [Freenode](http://freenode.net/): kenyon
 
-# External links
+## External links
 * [Amazon](http://amazon.com/gp/pdp/profile/A14E2XP0PR1V8D)
 * [claimID](http://claimid.com/kenyon)
 * [eBay](http://myworld.ebay.com/kenyon321)
@@ -41,15 +41,15 @@ Use my public OpenPGP key to engage in secure communications with me:
 * [Twitter](http://twitter.com/kenyonralph)
 * [Wikipedia](https://secure.wikimedia.org/wikipedia/en/wiki/User:Kenyon)
 
-## URLs that redirect here
+### URLs that redirect here
 * <http://caida.org/~kenyon/>
 
-# System information
+## System information
 * [voodoo system status](http://voodoo.kenyonralph.com/cgi-bin/sysstatus.py)
 * [voodoo MRTG network traffic graphs](http://voodoo.kenyonralph.com/mrtg/)
 * [UPS status](http://voodoo.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
 
-# Who I am not
+## Who I am not
 * I am not [Ralph Kenyon](http://www.xenodochy.org/ralph.html), but he
   has a similar name.
 
