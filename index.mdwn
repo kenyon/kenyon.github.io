@@ -4,4 +4,4 @@ See the [[site map|sitemap]] for a list of all pages on this site.
 
 ----
 
-This wiki is powered by [[ikiwiki]].
+This wiki is powered by [[ikiwiki]] [[!version]].
