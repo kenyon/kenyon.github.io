@@ -1,0 +1,38 @@
+[[!meta title="Contributions to Free Software"]]
+Here I'll try to document my contributions to the [[WikiPedia:Free Software]] world. This might not be complete.
+
+[[!toc levels=2]]
+
+## Bug reporting
+* [PGF/TikZ manual typo corrections](http://sourceforge.net/tracker/?func=detail&aid=2965003&group_id=142562&atid=752792)
+
+### FreeBSD
+* [docs/129448: loader(8) manpage typo: two init_script listings, the second one should be init_shell](http://www.freebsd.org/cgi/query-pr.cgi?pr=129448)
+* [docs/139370: de(4) manual page typo](http://www.freebsd.org/cgi/query-pr.cgi?pr=docs/139370)
+* [Grammar fix in head/lib/libexpat/libbsdxml.3](http://svn.freebsd.org/viewvc/base?view=revision&revision=201137)
+* [ports/142275: sysutils/anacron should have better configuration hints](http://www.freebsd.org/cgi/query-pr.cgi?pr=142275)
+
+### Gentoo Linux
+* [bugs I reported](https://bugs.gentoo.org/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&emailreporter1=1&emailtype1=substring&email1=kenyon%40kenyonralph.com&emailreporter2=1&emailtype2=substring&email2=kenyon%40kenyonralph.com&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&query_based_on=my+reported&field0-0-0=noop&type0-0-0=noop&value0-0-0=)
+
+### Ubuntu Linux
+* <https://bugs.launchpad.net/~kralph>
+
+### Debian
+* <http://bugs.debian.org/cgi-bin/pkgreport.cgi?archive=both;submitter=kenyon%40kenyonralph.com>
+* <http://www.google.com/search?q=kenyon+ralph+site:bugs.debian.org&hl=en&safe=off&num=100&filter=0>
+
+## Documentation
+### Ubuntu Linux
+I use and edit the [Ubuntu Community Documentation wiki](https://help.ubuntu.com/community/) under the username *kralph*.
+
+### Mutt
+* [Comment on Ticket #3109, Improve manual for 1.6](http://dev.mutt.org/trac/ticket/3109#comment:11)
+
+### Wikipedia
+Not Free Software, a [Free Cultural Work](http://freedomdefined.org/), but I have made a lot of Wikipedia contributions: [[!wikipedia Special:Contributions/Kenyon]]
+
+## Packaging
+* [Launchpad Personal Package Archive](https://edge.launchpad.net/~kralph/+archive/ppa)
+
+[[!tag Linux Debian Ubuntu FreeBSD]]
