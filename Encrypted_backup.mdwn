@@ -3,10 +3,8 @@ Documentation on my encrypted backup hard drive.
 [[!toc levels=3]]
 
 ## Hardware
-
 * [Western Digital My Book Essential 750 GB USB 2.0 Desktop External Hard Drive WDH1U7500N](http://www.amazon.com/gp/product/B000XRI034)
 * Western Digital's page: <http://wdc.com/en/products/products.asp?driveid=771>
-
 
     kenyon@grunt ~ !9920 % sudo smartctl --all /dev/sdf
     smartctl 5.39 2009-12-09 r2995 [x86_64-unknown-linux-gnu] (local build)
