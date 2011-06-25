@@ -12,6 +12,7 @@ See the [[site map|sitemap]] for a list of all pages on this site.
 <kenyon+www@kenyonralph.com>
 
 Use my public OpenPGP key to engage in secure communications with me:
+
 * [[!gpg 0xc9b912d5]] fingerprint: 6166 B557 BF04 3923 AC22  6183 98FF 3EF9 C9B9 12D5
 * Local copy (may not have all the latest signatures as the one on the public keyservers): <http://kenyonralph.com/0xC9B912D5-pubkey.asc>
 * Stats: <http://pgp.cs.uu.nl/mk_path.cgi?STAT=0xC9B912D5&STATS=statistics>
