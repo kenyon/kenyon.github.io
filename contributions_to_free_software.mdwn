@@ -1,5 +1,5 @@
 [[!meta title="Contributions to Free Software"]]
-Here I'll try to document my contributions to the [[WikiPedia:Free Software]] world. This might not be complete.
+Here I'll try to document my contributions to the [[!WikiPedia Free Software]] world. This might not be complete.
 
 [[!toc levels=2]]
 
