@@ -1,0 +1,42 @@
+[[!meta title="Dell Latitude 2100"]]
+This page documents my experiences with Debian Linux on a Dell Latitude 2100 netbook computer.
+
+[[!toc]]
+
+## Installation
+
+Installing Debian Lenny with GRUB 2 and encrypted LVM works, until the first boot after installation. GRUB says "file not found" and goes to the rescue prompt. Typing "root" shows that GRUB thinks the boot file system is fat, but it's really ext2. This happens because of some bytes left over from Dell's factory installation. See bug [[!debbug 514263]] and bug [[!debbug 505137]]. I booted from a [grml](http://grml.org/) USB stick, did `mkfs.ext2 /dev/sda1`, and reinstalled.
+
+Next the boot got as far as "waiting for root file system" and eventually dropping to the initramfs busybox prompt. This was with the "targeted" initramfs. Trying the "generic" next.
+
+Using generic, the same thing happens. For some reason, `/dev/sdb` is the Secure Digital slot after installation, but during installation `sdb` is the SSD. It is looking for the file system root in `/dev/mapper` though.
+
+Gave up on Lenny, installed Debian squeeze with the same partitioning scheme, and it all worked the first time. (This was before squeeze became the stable release of Debian.)
+
+The encryption passphrase at boot can be entered with the keyboard in the Dvorak layout; just install or `dpkg-reconfigure` [[!debpkg console-data]] and set it to Dvorak.
+
+I had to disable CPU throttling in `/etc/laptop-mode/conf.d/cpufreq.conf` because throttling caused the CPU to stay stuck at 800 MHz after going on battery, even after going back on AC power.
+
+## Wireless
+
+My machine has an Intel Wireless WiFi Link 5100. The Debian squeeze instructions for [[!debwiki iwlagn]] work.
+
+My comment on an Ubuntu bug that might be related to a iwlagn power management problem I have on Debian squeeze: <https://bugs.edge.launchpad.net/ubuntu/+source/network-manager/+bug/384924/comments/13>
+
+Disabling power management in `/etc/laptop-mode/conf.d/wireless-iwl-power.conf` makes iwlagn wireless performance much better. It was almost unusable with power management enabled.
+
+## Recovery with grml and encrypted LVM
+
+Since this is still [[!debwiki DebianTesting]], occasional breakage is expected. I encountered bug [[!debbug 574350]] on March 17, 2010. So here is how to boot from a grml USB stick, mount encrypted LVM volumes, and chroot to be able to do recovery work. [Grub2LiveCdInstallGuide](http://student.agh.edu.pl/~journal/plik/Grub2LiveCdInstallGuide.html) was helpful for this procedure. <http://www.supergrubdisk.org/wiki/Howto_Fix_Grub> might be another good resource.
+
+1. `cryptsetup luksOpen /dev/sda2 copernicus`
+1. `Start lvm2`
+1. `mount /dev/mapper/copernicus-root /mnt/sda2`
+1. `for fs in home tmp usr var; do mount /dev/mapper/copernicus-$fs /mnt/sda2/$fs; done`
+1. `mount LABEL=boot /mnt/sda2/boot`
+1. `for fs in dev proc sys; do mount --bind /$fs /mnt/sda2/$fs; done`
+1. `chroot /mnt/sda2`
+1. `su - root`
+1. Do whatever recovery is necessary, such as `dpkg-reconfigure grub-pc`.
+
+[[!tag Debian Linux]]
