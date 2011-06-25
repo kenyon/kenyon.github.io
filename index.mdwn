@@ -5,11 +5,7 @@ See the [[site map|sitemap]] for a list of all pages on this site.
 [[!toc startlevel=1]]
 
 # About voodoo.kenyonralph.com
-[voodoo.kenyonralph.com](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396)
-runs a Tor relay. If it touches your network, it's probably not me
-doing it, but somebody else via the Tor network. See
-[Tor exit notice](https://gitweb.torproject.org/tor.git?a=blob_plain;hb=HEAD;f=contrib/tor-exit-notice.html)
-for more info.
+[voodoo.kenyonralph.com](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396) runs a Tor relay. If it touches your network, it's probably not me doing it, but somebody else via the Tor network. See [Tor exit notice](https://gitweb.torproject.org/tor.git?a=blob_plain;hb=HEAD;f=contrib/tor-exit-notice.html) for more info.
 
 # Contact
 ## Email
@@ -17,12 +13,9 @@ for more info.
 
 Use my public OpenPGP key to engage in secure communications with me:
 * [[!gpg 0xc9b912d5]] fingerprint: 6166 B557 BF04 3923 AC22  6183 98FF 3EF9 C9B9 12D5
-* Local copy (may not have all the latest signatures as the one on the
-  public keyservers): <http://kenyonralph.com/0xC9B912D5-pubkey.asc>
+* Local copy (may not have all the latest signatures as the one on the public keyservers): <http://kenyonralph.com/0xC9B912D5-pubkey.asc>
 * Stats: <http://pgp.cs.uu.nl/mk_path.cgi?STAT=0xC9B912D5&STATS=statistics>
-* Signed key transition message of 2009-12-23 regarding my transition
-  from key [[!gpg 0x92A76E75]] to [[!gpg 0xC9B912D5]]:
-  <http://kenyonralph.com/key-transition-20091223.txt>
+* Signed key transition message of 2009-12-23 regarding my transition from key [[!gpg 0x92A76E75]] to [[!gpg 0xC9B912D5]]: <http://kenyonralph.com/key-transition-20091223.txt>
 
 ## Instant message
 * AIM: RalphKAUSMC
@@ -48,7 +41,7 @@ Use my public OpenPGP key to engage in secure communications with me:
 * [Wikipedia](https://secure.wikimedia.org/wikipedia/en/wiki/User:Kenyon)
 
 ## URLs that redirect here
-* http://caida.org/~kenyon/
+* <http://caida.org/~kenyon/>
 
 # System information
 * [voodoo system status](http://voodoo.kenyonralph.com/cgi-bin/sysstatus.py)
