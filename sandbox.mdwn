@@ -2,10 +2,6 @@ This is the SandBox, a page anyone can edit to learn how to use the wiki.
 
 Testing.
 
-A SiteMap:
-
-[[!map]]
-
 ----
 
 Here's a paragraph.

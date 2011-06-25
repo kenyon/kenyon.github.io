@@ -1,6 +1,6 @@
-I am Kenyon Ralph. This is my website. I use it for documenting things.
+I am Kenyon Ralph. This is my website. I use it for documenting things. This page documents me.
 
-All wikis are supposed to have a [[SandBox]], so this one does too.
+See the [[site map|sitemap]] for a list of all pages on this site.
 
 ----
 
