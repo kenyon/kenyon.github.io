@@ -28,12 +28,12 @@ Since Debian sid doesn't have the Haskell X11-xft package, I want to install it 
 Debian squeeze currently doesn't have the required version of [[!debpkg libghc6-http-dev]], so following <http://projects.haskell.org/http/> (or what used to be there):
 
 1. `git clone git://code.galois.com/HTTPbis.git`
-1. `runghc Setup configure --user && runghc Setup build && runghc Setup install`
+1. `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install`
 
 ### cabal-install
 1. `darcs get --partial http://darcs.haskell.org/cabal-install/`
 1. `cd cabal-install`
-1. `runghc Setup configure --user && runghc Setup build && runghc Setup install`
+1. `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install`
 1. `cd ..`
 
 cabal binary is now installed as `~/.cabal/bin/cabal`. I've added `~/.cabal/bin` to my `PATH`.
@@ -52,8 +52,8 @@ Now the xmobar binary is installed as `~/.cabal/bin/xmobar`.
 At first, `Setup configure` could not find [[!hackage X11-xft]], even though ghc-pkg list showed X11-xft as being installed in my home directory. This was because I forgot the "--user" option to `Setup configure`.
 
 ### Notes
-* [PROTIP](http://ohinternet.com/PROTIP): After doing any `runghc Setup configure --user && runghc Setup build && runghc Setup install`, that package is registered under ~/.ghc and visible to ghc-pkg. If you rm -rf ~/.cabal without ghc-pkg unregistering the package, then subsequent builds will fail.
-* runhaskell is a symlink to runghc. I suppose runhaskell is more generic, so that compilers other than ghc can be run.
+* [PROTIP](http://ohinternet.com/PROTIP): After doing any `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install`, that package is registered under ~/.ghc and visible to ghc-pkg. If you rm -rf ~/.cabal without ghc-pkg unregistering the package, then subsequent builds will fail.
+* runhaskell is equivalent to runghc. I suppose runhaskell is more generic, so that compilers other than ghc can be run.
 * [Haskell Package Version Tracker](http://people.debian.org/~nomeata/hackagevsdebian.html) - Debian versus Hackage
 * I had to add `lowerOnStart = True` to my xmobarrc to get it to work this time. Otherwise it's the same as shown at the bottom of this page.
 
@@ -67,14 +67,14 @@ At first, `Setup configure` could not find [[!hackage X11-xft]], even though ghc
 First some dependencies can be installed using aptitude. These are [[!ubupkg libxft-dev]] (for [[!wikipedia xft]] support in xmobar), and [[!ubupkg zlib1g-dev]] for building cabal-install.
 
 ### Building cabal-install dependencies
-Building [[!hackage parsec]], [[!hackage stm]], [[!hackage network]], [[!hackage http]], and [[!hackage zlib]] should now work with the command `runghc Setup configure --user && runghc Setup build && runghc Setup install` for each. Or you could use the bootstrap.sh included with cabal-install.
+Building [[!hackage parsec]], [[!hackage stm]], [[!hackage network]], [[!hackage http]], and [[!hackage zlib]] should now work with the command `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install` for each. Or you could use the bootstrap.sh included with cabal-install.
 
 I think those are all of the dependencies.
 
 ### Building cabal-install
 Now cabal-install should install into your home directory with the standard Haskell configure, build, and install commands:
 
-    runghc Setup configure --user && runghc Setup build && runghc Setup install
+    runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install
 
 ### Installing X11-xft
 With cabal installed, a simple `cabal install X11-xft` should work.
