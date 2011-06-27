@@ -61,7 +61,7 @@ At first, `Setup configure` could not find [[!hackage X11-xft]], even though ghc
 
 ## Old Ubuntu instructions
 
-(December 2008) I use [[xmonad]] on [[Ubuntu]]. I use the [[!hackage xmobar]] status bar with it. Ubuntu doesn't have a package for xmobar, nor for many of its dependencies. So to build xmobar I had to build and install a bunch of dependencies. Also, in order to make installing Haskell packages easier, I installed [[!haskellwiki cabal-install]], which had its own dependencies.
+(December 2008) I use [xmonad](http://xmonad.org/) on [[Ubuntu]]. I use the [[!hackage xmobar]] status bar with it. Ubuntu doesn't have a package for xmobar, nor for many of its dependencies. So to build xmobar I had to build and install a bunch of dependencies. Also, in order to make installing Haskell packages easier, I installed [[!haskellwiki cabal-install]], which had its own dependencies.
 
 ### Dependencies with Ubuntu packages
 First some dependencies can be installed using aptitude. These are [[!ubupkg libxft-dev]] (for [[!wikipedia xft]] support in xmobar), and [[!ubupkg zlib1g-dev]] for building cabal-install.
