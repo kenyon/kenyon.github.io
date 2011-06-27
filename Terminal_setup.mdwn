@@ -11,9 +11,10 @@ I tried mrxvt. Before mrxvt, I tried gnome-terminal. I didn't like its blinking 
 
 rxvt-unicode supports Unicode, tabs, and URL launching. However, [[!debbug 511377]] is quite annoying: you can't scroll using the keyboard when the mouse pointer is outside the terminal window with tabbed enabled. rxvt-unicode has a cool fading feature, where the text can fade when the terminal goes out of focus.
 
-xfce4-terminal is decent. It does URL launching and tabs, and the tab switching wraps around. You can't rearrange the tabs with the keyboard, but you can with the mouse. It's based on the same terminal widget as gnome-terminal, so it has the same problem where it eats CPU time if you hold down a cursor movement key in vim and the cursor is against a screen edge. It's also slow graphically -- it takes a lot of CPU to scroll, and it has a noticeable refresh delay when switching among desktops containing xfce4-terminal windows (although I see this with rxvt-unicode too, so it is probably just my video card (Intel G31 integrated on a Supermicro C2SBA+)). Also, xfce4-terminal does not hide the mouse cursor when you're typing in the terminal, and doesn't seem to have a way to configure it to do this.
+xfce4-terminal is decent. It does URL launching and tabs, and the tab switching wraps around. You can't rearrange the tabs with the keyboard, but you can with the mouse. It's based on the same terminal widget as gnome-terminal, so it has the same problem where it eats CPU time if you hold down a cursor movement key in vim and the cursor is against a screen edge. It's also slow graphically&mdash;it takes a lot of CPU to scroll, and it has a noticeable refresh delay when switching among desktops containing xfce4-terminal windows (although I see this with rxvt-unicode too, so it is probably just my video card (Intel G31 integrated on a Supermicro C2SBA+)). Also, xfce4-terminal does not hide the mouse cursor when you're typing in the terminal, and doesn't seem to have a way to configure it to do this.
 
 Bug causing backspace to fail in screen under xfce4-terminal:
+
 * <https://bugs.launchpad.net/bugs/29787>
 * <http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=477455>
 
@@ -30,7 +31,7 @@ In the environment settings, I put `TERM=xterm-256color`. Verify: `tput colors`
 Change the "open link" handlers with the KDE `systemsettings` program. Use the Default Applications and File Associations applets.
 
 ### mrxvtrc
-Here is my ~/.mrxvtrc. I got this stuff by reading the mrxvt manual page and from [dotfiles.org](http://dotfiles.org/search?q=mrxvt).
+Here is my ~/.mrxvtrc. I got this stuff by reading the mrxvt manual page and from [dotfiles.org](http://dotfiles.org/.mrxvtrc).
 
     #Mrxvt.bottomTabbar: True
     #Mrxvt.xftAntialias: 1 # antialiasing seems to be default on
