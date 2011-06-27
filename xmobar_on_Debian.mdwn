@@ -49,10 +49,10 @@ cabal binary is now installed as `~/.cabal/bin/cabal`. I've added `~/.cabal/bin`
 
 Now the xmobar binary is installed as `~/.cabal/bin/xmobar`.
 
-At first, `Setup configure` could not find [[!hackage X11-xft]], even though ghc-pkg list showed X11-xft as being installed in my home directory. This was because I forgot the "--user" option to `Setup configure`.
+At first, `Setup configure` could not find [[!hackage X11-xft]], even though ghc-pkg list showed X11-xft as being installed in my home directory. This was because I forgot the "`--user`" option to `Setup configure`.
 
 ### Notes
-* [PROTIP](http://ohinternet.com/PROTIP): After doing any `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install`, that package is registered under ~/.ghc and visible to ghc-pkg. If you rm -rf ~/.cabal without ghc-pkg unregistering the package, then subsequent builds will fail.
+* [PROTIP](http://ohinternet.com/PROTIP): After doing any `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install`, that package is registered under ~/.ghc and visible to ghc-pkg. If you `rm -rf ~/.cabal` without ghc-pkg unregistering the package, then subsequent builds will fail.
 * runhaskell is equivalent to runghc. I suppose runhaskell is more generic, so that compilers other than ghc can be run.
 * [Haskell Package Version Tracker](http://people.debian.org/~nomeata/hackagevsdebian.html) - Debian versus Hackage
 * I had to add `lowerOnStart = True` to my xmobarrc to get it to work this time. Otherwise it's the same as shown at the bottom of this page.
