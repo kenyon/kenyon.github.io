@@ -49,7 +49,7 @@ cabal binary is now installed as `~/.cabal/bin/cabal`. I've added `~/.cabal/bin`
 
 Now the xmobar binary is installed as `~/.cabal/bin/xmobar`.
 
-At first, `Setup configure` could not find X11-xft, even though ghc-pkg list showed X11-xft as being installed in my home directory. This was because I forgot the "--user" option to `Setup configure`.
+At first, `Setup configure` could not find [[!hackage X11-xft]], even though ghc-pkg list showed X11-xft as being installed in my home directory. This was because I forgot the "--user" option to `Setup configure`.
 
 ### Notes
 * [PROTIP](http://ohinternet.com/PROTIP): After doing any `runghc Setup configure --user && runghc Setup build && runghc Setup install`, that package is registered under ~/.ghc and visible to ghc-pkg. If you rm -rf ~/.cabal without ghc-pkg unregistering the package, then subsequent builds will fail.
