@@ -4,9 +4,6 @@ See the [[site map|sitemap]] for a list of all pages on this site.
 
 [[!toc levels=2]]
 
-## About voodoo.kenyonralph.com
-[voodoo.kenyonralph.com](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396) (76.176.210.75) runs a Tor relay. If it touches your network, it's probably not me doing it, but somebody else via the Tor network. See [Tor exit notice](https://gitweb.torproject.org/tor.git?a=blob_plain;hb=HEAD;f=contrib/tor-exit-notice.html) for more info.
-
 ## Contact
 ### Email
 <kenyon+www@kenyonralph.com>
