@@ -12,5 +12,6 @@
 1. Activate ssh-agent: `eval $(ssh-agent) && ssh-add ~/.ssh/id_rsa`
 1. `sha512sum` on Mac OS X (or any system with OpenSSL): `openssl dgst -sha512 filename` (with OpenSSL from MacPorts)
 1. Get rid of "Warning: No xauth data; using fake authentication data for X11 forwarding.": `xauth generate :0 .`
+1. To stop the blinking cursor in GTK+-based Eclipse (on Linux at least), put the following line in `~/.gtkrc-2.0`: `gtk-cursor-blink = 0`
 
 [[!tag Linux Debian "Mac OS X" FreeBSD]]
