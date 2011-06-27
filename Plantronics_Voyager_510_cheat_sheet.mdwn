@@ -1,6 +1,4 @@
 Here is my Plantronics Voyager 510 Bluetooth headset cheat sheet.
 
-How to link to attachments?
-
 * [[voyager510-cheatsheet.pdf]]
 * [[voyager510-cheatsheet.tex]]
