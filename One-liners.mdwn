@@ -11,5 +11,6 @@
 1. Count dependencies of a deb: `dpkg-deb --field filename.deb depends | tr --delete ',' | tr ' ' '\n' | wc -l`
 1. Activate ssh-agent: `eval $(ssh-agent) && ssh-add ~/.ssh/id_rsa`
 1. `sha512sum` on Mac OS X (or any system with OpenSSL): `openssl dgst -sha512 filename` (with OpenSSL from MacPorts)
+1. To get rid of "Warning: No xauth data; using fake authentication data for X11 forwarding.": `xauth generate :0 .`
 
 [[!tag Linux Debian "Mac OS X" FreeBSD]]

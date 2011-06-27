@@ -1,3 +1,0 @@
-To get rid of "Warning: No xauth data; using fake authentication data for X11 forwarding.":
-
-    xauth generate :0 .
