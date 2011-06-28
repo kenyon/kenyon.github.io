@@ -6,6 +6,13 @@ Testing.
 then="The highlight plugin is enabled :-)"
 else="No smiley highlight here.."]]
 
+[[!format c """
+int main()
+{
+    return 0;
+}
+"""]]
+
 ----
 
 Here's a paragraph.
