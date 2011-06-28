@@ -2,6 +2,10 @@ This is the SandBox, a page anyone can edit to learn how to use the wiki.
 
 Testing.
 
+[[!if  test="enabled(smiley)"
+then="The smiley plugin is enabled :-)"
+else="No smiley plugin here.."]]
+
 ----
 
 Here's a paragraph.
