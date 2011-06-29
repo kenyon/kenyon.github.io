@@ -3,7 +3,7 @@ This is the SandBox, a page anyone can edit to learn how to use the wiki.
 Testing.
 
 [[!if  test="enabled(highlight)"
-then="The highlight plugin is enabled :-)"
+then="The highlight plugin is enabled :-) !"
 else="No smiley highlight here.."]]
 
 [[!format c """
