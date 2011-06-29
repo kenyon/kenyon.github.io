@@ -70,53 +70,55 @@ Before disconnecting the drive from the system, do this:
 ### Backup
 Run this script: `$MYGITREPO_DIR/sysadmin/hosts/grunt/external-backup`
 
-    #!/bin/sh
-    if mount -l -v -t ext4 | grep -q '/bak type ext4'
-    then
-        echo "$(date)" >> /data/backups/external-backups.log
-        exec sudo time rsync \
-            --archive \
-            --delete \
-            --delete-excluded \
-            --exclude=/data/backups/hourly.[1-9] \
-            --exclude=/data/backups/daily.* \
-            --exclude=/data/backups/weekly.* \
-            --exclude=/data/backups/monthly.* \
-            --exclude=/dev \
-            --exclude=/media \
-            --exclude=/mnt \
-            --exclude=/proc \
-            --exclude=/sys \
-            --exclude=/tmp \
-            --exclude=.cache \
-            --exclude=.ccache \
-            --exclude=Cache \
-            --exclude=lost+found \
-            --exclude=/var/cache \
-            --exclude=/var/db/ccache \
-            --exclude=/var/tmp \
-            --fuzzy \
-            --hard-links \
-            --human-readable \
-            --ignore-errors \
-            --progress \
-            --relative \
-            --sparse \
-            --stats \
-            --verbose \
-            /boot \
-            /etc \
-            /lib \
-            /opt \
-            /raptor \
-            /root \
-            /var \
-            /data \
-            /bak/grunt
-    else
-        echo 'bak seems to not be mounted.'
-        exit 1
-    fi
+[[!format sh """
+#!/bin/sh
+if mount -l -v -t ext4 | grep -q '/bak type ext4'
+then
+    echo "$(date)" >> /data/backups/external-backups.log
+    exec sudo time rsync \
+        --archive \
+        --delete \
+        --delete-excluded \
+        --exclude=/data/backups/hourly.[1-9] \
+        --exclude=/data/backups/daily.* \
+        --exclude=/data/backups/weekly.* \
+        --exclude=/data/backups/monthly.* \
+        --exclude=/dev \
+        --exclude=/media \
+        --exclude=/mnt \
+        --exclude=/proc \
+        --exclude=/sys \
+        --exclude=/tmp \
+        --exclude=.cache \
+        --exclude=.ccache \
+        --exclude=Cache \
+        --exclude=lost+found \
+        --exclude=/var/cache \
+        --exclude=/var/db/ccache \
+        --exclude=/var/tmp \
+        --fuzzy \
+        --hard-links \
+        --human-readable \
+        --ignore-errors \
+        --progress \
+        --relative \
+        --sparse \
+        --stats \
+        --verbose \
+        /boot \
+        /etc \
+        /lib \
+        /opt \
+        /raptor \
+        /root \
+        /var \
+        /data \
+        /bak/grunt
+else
+    echo 'bak seems to not be mounted.'
+    exit 1
+fi
+"""]]
 
 ## References
 * cryptsetup, luks: <http://code.google.com/p/cryptsetup/>
