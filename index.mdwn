@@ -1,4 +1,4 @@
-I am Kenyon Ralph. :-) This is my website. I use it for documenting things. This page documents me.
+I am Kenyon Ralph. This is my website. I use it for documenting things. This page documents me.
 
 See the [[site map|sitemap]] for a list of all pages on this site.
 
