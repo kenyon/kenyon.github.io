@@ -6,7 +6,7 @@ Testing.
 then="The smiley plugin is enabled :-) !"
 else="No smiley plugin here."]]
 
-A smiley: :-)
+A smiley: :-) :-D
 
 [[!format c """
 int main()
