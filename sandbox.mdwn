@@ -2,9 +2,9 @@ This is the SandBox, a page anyone can edit to learn how to use the wiki.
 
 Testing.
 
-[[!if  test="enabled(highlight)"
+[[!if  test="enabled(smiley)"
 then="The highlight plugin is enabled :-) !"
-else="No smiley highlight here.."]]
+else="No smiley plugin here.."]]
 
 [[!format c """
 int main()
