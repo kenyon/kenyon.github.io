@@ -2,34 +2,42 @@ Here is my condensed version of <http://www.freebsd.org/doc/en/books/handbook/ma
 
 Once the devel/subversion-freebsd port is installed, check out the source tree once:
 
-    cd /usr && sudo svn co svn://svn.freebsd.org/base/stable/8/ src
-    create symlink to my custom kernel config, if necessary
+[[!format sh """
+cd /usr && sudo svn co svn://svn.freebsd.org/base/stable/8/ src
+create symlink to my custom kernel config, if necessary
+"""]]
 
 Update if the tree has already been checked out:
 
-    cd /usr/src && sudo svn up
+[[!format sh """
+cd /usr/src && sudo svn up
+"""]]
 
 If devel/subversion-freebsd is not available, update the source tree with csup:
 
-    sudo csup -g -L 2 stable-supfile
+[[!format sh """
+sudo csup -g -L 2 stable-supfile
+"""]]
 
 Read updating notes and build:
 
-    less /usr/src/UPDATING
-    cd /usr/obj && sudo chflags -vR noschg * && sudo rm -rvf *
-    cd /usr/src
-    sudo make cleandir && sudo make cleandir
-    sudo script /root/build-`date +%Y%m%dT%H%M%S`.log
-    make -j2 buildworld && make buildkernel
-    exit
-    sudo make installkernel
-    sudo shutdown -r now # boot into single-user mode with boot -s at the loader prompt.
-    adjkerntz -i
-    mount -a # zfs mount -v -a && mount -u -w / ; for a ZFS system
-    mergemaster -p -F -U
-    cd /usr/src
-    make installworld
-    mergemaster -i -F -U
-    shutdown -r now
+[[!format sh """
+less /usr/src/UPDATING
+cd /usr/obj && sudo chflags -vR noschg * && sudo rm -rvf *
+cd /usr/src
+sudo make cleandir && sudo make cleandir
+sudo script /root/build-`date +%Y%m%dT%H%M%S`.log
+make -j2 buildworld && make buildkernel
+exit
+sudo make installkernel
+sudo shutdown -r now # boot into single-user mode with boot -s at the loader prompt.
+adjkerntz -i
+mount -a # zfs mount -v -a && mount -u -w / ; for a ZFS system
+mergemaster -p -F -U
+cd /usr/src
+make installworld
+mergemaster -i -F -U
+shutdown -r now
+"""]]
 
 [[!tag FreeBSD]]
