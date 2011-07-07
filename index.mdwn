@@ -43,8 +43,11 @@ Use my public OpenPGP key to engage in secure communications with me:
 
 ## System information
 * [voodoo system status](http://voodoo.kenyonralph.com/cgi-bin/sysstatus.py)
+* [darwin system status](http://darwin.kenyonralph.com/cgi-bin/sysstatus.py)
 * [voodoo MRTG network traffic graphs](http://voodoo.kenyonralph.com/mrtg/)
 * [UPS status](http://voodoo.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
+* [darwin tor status](https://torstatus.all.de/router_detail.php?FP=fe63425a2354ea7739fc1e4754b2f7b2638f405e)
+* [voodoo tor status](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396)
 
 ## Who I am not
 * I am not [Ralph Kenyon](http://www.xenodochy.org/ralph.html), but he
