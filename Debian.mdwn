@@ -12,7 +12,7 @@ Make it so all questions are asked: `sudo dpkg-reconfigure debconf` and answer l
 ## disable console beep
 [[!format sh """
 modprobe -r pcspkr
-echo blacklist pcspkr >> /etc/modprobe.d/blacklist
+echo blacklist pcspkr >> /etc/modprobe.d/blacklist.conf
 """]]
 
 Set 'bell-style' to 'none' in `/etc/inputrc`.
