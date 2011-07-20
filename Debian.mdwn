@@ -17,6 +17,8 @@ echo blacklist pcspkr >> /etc/modprobe.d/blacklist.conf
 
 Set 'bell-style' to 'none' in `/etc/inputrc`.
 
+`setterm -blength 0`
+
 ## See also
 * [Removing annoying console beeps](http://www.debian-administration.org/articles/110) on <http://Debian-Administration.org>
 
