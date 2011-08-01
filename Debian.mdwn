@@ -8,12 +8,15 @@ Since June 2010, I'm running Debian squeeze on my Dell Latitude D520.
 
 ## 6to4 init script
 Here is a script I wrote for a Debian-style `/etc/init.d` that configures a 6to4 IPv6 tunnel.
+
 * <http://kenyonralph.com/6to4>
+
 Dependencies:
-* iproute
-* moreutils
-* perl
-* curl
+
+* [[!debpkg iproute]]
+* [[!debpkg moreutils]]
+* [[!debpkg perl]]
+* [[!debpkg curl]]
 
 ## debconf
 Make it so all questions are asked: `sudo dpkg-reconfigure debconf` and answer lowest priority.
