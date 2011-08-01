@@ -20,7 +20,7 @@ Set 'bell-style' to 'none' in `/etc/inputrc`.
 `setterm -blength 0`
 
 ## See also
-* [Removing annoying console beeps](http://www.debian-administration.org/articles/110) on <http://Debian-Administration.org>
+* [Removing annoying console beeps](http://www.debian-administration.org/articles/110)
 
 ## External links
 * <http://debian.org/>
