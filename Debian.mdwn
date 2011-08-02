@@ -9,7 +9,7 @@ Since June 2010, I'm running Debian squeeze on my Dell Latitude D520.
 [[!toc levels=2]]
 
 ## 6to4 init script
-Here is a script I wrote for a Debian-style `/etc/init.d` that configures a 6to4 IPv6 tunnel.
+Here is a script I wrote for a Debian-style `/etc/init.d` that configures a [[!wikipedia 6to4]] IPv6 tunnel.
 
 * <http://kenyonralph.com/6to4>
 
