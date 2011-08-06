@@ -32,7 +32,7 @@ exit
 sudo make installkernel
 sudo shutdown -r now # boot into single-user mode with boot -s at the loader prompt.
 adjkerntz -i
-mount -a # zfs mount -v -a && mount -u -w / ; for a ZFS system
+mount -a # zfs mount -v -a && mount -u -w / # for a ZFS system
 mergemaster -p -F -U
 cd /usr/src
 make installworld
