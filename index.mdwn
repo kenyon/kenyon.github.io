@@ -47,6 +47,7 @@ Use my public OpenPGP key to engage in secure communications with me:
 * [voodoo MRTG network traffic graphs](http://voodoo.kenyonralph.com/mrtg/)
 * [UPS status](http://voodoo.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
 * [voodoo tor status](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396)
+* [munin](http://kenyonralph.com/munin/)
 
 ## Who I am not
 * I am not [Ralph Kenyon](http://www.xenodochy.org/ralph.html), but he
