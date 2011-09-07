@@ -1,0 +1,7 @@
+This page documents my project to build a stratum 1 NTP time server at my house.
+
+[[!toc levels=2]]
+
+## GPS selection
+
+## References
