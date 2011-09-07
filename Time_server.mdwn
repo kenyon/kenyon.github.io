@@ -4,4 +4,13 @@ This page documents my project to build a stratum 1 NTP [[!wikipedia time server
 
 ## GPS selection
 
+I selected the [Garmin GPS 18x LVC](http://www.amazon.com/gp/product/B0016O3T7A) for the following reasons:
+
+* Plenty of documentation exists by people who have used this unit as an NTP timing source.
+* The receiver and antenna are integrated into one enclosure.
+* Minimal assembly and soldering necessary, compared to bare-board receivers.
+* Available on [Amazon](http://amazon.com/) for a decent price.
+
+I ordered the 18x (and a [serial cable](http://www.amazon.com/gp/product/B000ZKNANO)) on Amazon on 2011-09-05. It should be delivered by UPS on 2011-09-09.
+
 ## References
