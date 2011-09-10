@@ -14,3 +14,14 @@ I selected the [Garmin GPS 18x LVC](http://www.amazon.com/gp/product/B0016O3T7A)
 I ordered the 18x (and a [serial cable](http://www.amazon.com/gp/product/B000ZKNANO)) on Amazon on 2011-09-05. It should be delivered by UPS on 2011-09-09.
 
 ## References
+
+* NTP support wiki: [Configuring Garmin Refclocks](https://support.ntp.org/bin/view/Support/ConfiguringGarminRefclocks)
+* NTP support wiki: [Configuring NMEA Refclocks](https://support.ntp.org/bin/view/Support/ConfiguringNMEARefclocks)
+* NTP support wiki: [Garmin Refclock Users](https://support.ntp.org/bin/view/Support/GarminRefclockUsers)
+* NTP documentation: [Reference Clock Support](http://www.eecis.udel.edu/~mills/ntp/html/refclock.html)
+* [Adding a FreeBSD NTP server based on an GPS 18 LVC device](http://www.satsignal.eu/ntp/FreeBSD-GPS-PPS.htm) by David Taylor
+* [NTP server using PC gnu/linux and freebsd](http://www.wraith.sf.ca.us/ntp/) by Steven Bjork
+* [Stratum 1 NTP, Garmin GPS 18 LVC on FreeBSD 8.0](http://blog.doylenet.net/?p=145) by Ryan Doyle
+* [Synchronising to a Garmin GPS 18 LVC](http://www.sput.nl/time/garmin.html) by R.J. van der Putten
+* [Synchronizing ntpd to a Garmin GPS 18 LVC via gpsd](http://www.rjsystems.nl/en/2100-ntpd-garmin-gps-18-lvc-gpsd.php) by Jaap Winius
+* [Using a Garmin GPS 18 LVC as NTP stratum-0 on Linux 2.6](http://time.qnan.org/) by Philip M. White
