@@ -11,7 +11,7 @@ I selected the [Garmin GPS 18x LVC](http://www.amazon.com/gp/product/B0016O3T7A)
 * Minimal assembly and soldering necessary, compared to bare-board receivers.
 * Available on [Amazon](http://amazon.com/) for a decent price.
 
-I ordered the 18x (and a [serial cable](http://www.amazon.com/gp/product/B000ZKNANO)) on Amazon on 2011-09-05. It should be delivered by UPS on 2011-09-09.
+I ordered the 18x (and a [serial cable](http://www.amazon.com/gp/product/B000ZKNANO)) on Amazon on 2011-09-05. UPS delivered it on 2011-09-09.
 
 ## References
 
