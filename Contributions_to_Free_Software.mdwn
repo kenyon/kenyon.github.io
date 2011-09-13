@@ -34,4 +34,7 @@ Not Free Software, a [Free Cultural Work](http://freedomdefined.org/), but I hav
 ## Packaging
 * [Launchpad Personal Package Archive](https://edge.launchpad.net/~kralph/+archive/ppa)
 
+## munin
+I'm contributing to the [munin](http://munin-monitoring.org/) project.
+
 [[!tag Linux Debian Ubuntu FreeBSD]]
