@@ -26,3 +26,4 @@ Addons that I sometimes like to install:
 * <https://addons.mozilla.org/en-US/firefox/addon/firebug/> - but normally I have this disabled unless I need it.
 * <https://addons.mozilla.org/en-US/firefox/addon/downthemall/> - good when it's needed, but I don't use it much. Usually disabled.
 * <https://addons.mozilla.org/en-US/firefox/addon/its-all-text/> - good, but made redundant by Pentadactyl.
+* <https://addons.mozilla.org/en-US/firefox/addon/ipvfox/>
