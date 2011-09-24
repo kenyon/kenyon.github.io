@@ -21,5 +21,6 @@
 1. Remove all blank lines: `sed '/^\[[:space:]]*$/d'`
 1. Bash glob for all directory entries, including hidden: `{.[!.]*,*}`
 * <http://stackoverflow.com/questions/1586477/bash-globbing-autoexpand-for-a-few-specific-cases>
+1. Show top 20 processes by memory usage: `ps -eo rss,vsz,pid,cputime,cmd --width 100 --sort rss,vsz | tail --lines 20`
 
 [[!tag Linux Debian "Mac OS X" FreeBSD]]
