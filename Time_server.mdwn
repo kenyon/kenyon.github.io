@@ -30,6 +30,7 @@ You need to have `/usr/include/timepps.h` to compile ntpd with proper PPS suppor
 The ntpd in Debian squeeze [does not have debugging enabled](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=643954), which makes it difficult to see what is going on with your local reference clock. I [rebuilt the squeeze package](http://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/) with debugging enabled, but I still wasn't getting very good results.
 
 When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded automatically and the device `/dev/pps0` will be created. I have some udev rules to create device symlinks:
+
     KERNEL=="ttyS0" SYMLINK+="gps0"
     KERNEL=="pps0" SYMLINK+="gpspps0"
 
