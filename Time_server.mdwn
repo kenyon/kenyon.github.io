@@ -34,6 +34,46 @@ When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded autom
     KERNEL=="ttyS0" SYMLINK+="gps0"
     KERNEL=="pps0" SYMLINK+="gpspps0"
 
+Here is my working Debian squeeze ntp.conf:
+
+    driftfile /var/lib/ntp/ntp.drift
+    logconfig +clockall
+    server 127.127.20.0 minpoll 3 prefer
+    fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
+    server voodoo.kenyonralph.com iburst
+    server darwin.kenyonralph.com iburst
+
+Example output after letting ntpd run for about 8 hours:
+
+    ntpq -p -c clockvar; ntptime; ntpdc -c kerninfo
+         remote           refid      st t when poll reach   delay   offset  jitter
+    ==============================================================================
+    oGPS_NMEA(0)     .GPS.            0 l    3    8  377    0.000    0.001   0.001
+    *voodoo.kenyonra 72.29.161.5      2 u   46   64  377    0.243    2.454   0.146
+    +darwin.kenyonra 127.67.113.92    2 u   14   64  377   20.122    2.467   3.413
+    associd=0 status=0012 , 1 event, clk_bad_format,
+    device="NMEA GPS Clock",
+    timecode="$GPRMC,212627,A,1111.1111,N,11111.1111,W,000.0,171.9,011011,012.1,E*61",
+    poll=3876, noreply=0, badformat=1, baddata=0, fudgetime1=0.000,
+    stratum=0, refid=GPS, flags=5
+    ntp_gettime() returns code 0 (OK)
+      time d2320403.a6e5ab84  Sat, Oct  1 2011 14:26:27.651, (.651942165),
+      maximum error 1617 us, estimated error 0 us
+    ntp_adjtime() returns code 0 (OK)
+      modes 0x0 (),
+      offset 0.530 us, frequency 4.205 ppm, interval 1 s,
+      maximum error 1617 us, estimated error 0 us,
+      status 0x2007 (PLL,PPSFREQ,PPSTIME,NANO),
+      time constant 3, precision 0.001 us, tolerance 500 ppm,
+    pll offset:           5.3e-07 s
+    pll frequency:        4.205 ppm
+    maximum error:        0.001617 s
+    estimated error:      0 s
+    status:               2007  pll ppsfreq ppstime nano
+    pll time constant:    3
+    precision:            1e-09 s
+    frequency tolerance:  500 ppm
+
 I'm going to try setting up a time server with FreeBSD next to see if it's any easier.
 
 ## Notes
