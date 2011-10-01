@@ -23,11 +23,17 @@ I used a Windows Vista computer with Garmin's SNSRXCFG_270.exe to upgrade the fi
 
 ## NTP setup
 
-I first tried using the GPS with an old Pentium III computer running Ubuntu 11.04 natty. I could see the NMEA sentences with `gpsd` and `gpspipe -r`, but a few seconds after I did `sudo ldattach PPS /dev/ttyS0` the system would lock up hard due to some kernel bug in some driver for my hardware. I saw `BUG: scheduling while atomic` in the syslog, but I wasn't able to capture the whole bug output. The same bug would occur if I just did `cat /dev/ttyS0`. So I just gave up with that old hardware and moved the GPS to my newer desktop computer running Debian squeeze.
+I first tried using the GPS with an old Pentium III computer running Ubuntu 11.04 natty running kernel 2.6.38-11-generic-pae. I could see the NMEA sentences with `gpsd` and `gpspipe -r`, but a few seconds after I did `sudo ldattach PPS /dev/ttyS0` the system would lock up hard due to some kernel bug in some driver for my hardware. I saw `BUG: scheduling while atomic` in the syslog, but I wasn't able to capture the whole bug output. The same bug would occur if I just did `cat /dev/ttyS0`. So I just gave up with that old hardware and moved the GPS to my newer desktop computer running Debian squeeze and kernel 2.6.39-bpo.2-amd64. No lockups on this machine.
 
 You need to have `/usr/include/timepps.h` to compile ntpd with proper PPS support. This header [does not exist in Debian yet](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=570233), so I used the one from [Alexander Gordeev's git repository](https://github.com/ago/pps-tools/).
 
 The ntpd in Debian squeeze [does not have debugging enabled](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=643954), which makes it difficult to see what is going on with your local reference clock. I [rebuilt the squeeze package](http://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/) with debugging enabled, but I still wasn't getting very good results.
+
+When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded automatically and the device `/dev/pps0` will be created. I have some udev rules to create device symlinks:
+    KERNEL=="ttyS0" SYMLINK+="gps0"
+    KERNEL=="pps0" SYMLINK+="gpspps0"
+
+I'm going to try setting up a time server with FreeBSD next to see if it's any easier.
 
 ## Notes
 
