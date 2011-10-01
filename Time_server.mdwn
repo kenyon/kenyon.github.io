@@ -27,7 +27,7 @@ I first tried using the GPS with an old Pentium III computer running Ubuntu 11.0
 
 You need to have `/usr/include/timepps.h` to compile ntpd with proper PPS support. This header [does not exist in Debian yet](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=570233), so I used the one from [Alexander Gordeev's git repository](https://github.com/ago/pps-tools/).
 
-The ntpd in Debian squeeze [does not have debugging enabled](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=643954), which makes it difficult to see what is going on with your local reference clock. I [rebuilt the squeeze package](http://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/) with debugging enabled, but I still wasn't getting very good results.
+The ntpd in Debian squeeze [does not have debugging enabled](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=643954), which makes it difficult to see what is going on with your local reference clock. I [rebuilt the squeeze package](http://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/) with debugging enabled, but I still wasn't getting very good results. It would not select the GPS as system peer or PPS peer, and jitter was high, in the tens of milliseconds. So I compiled my own ntp version 4.2.6p4 straight from the tarball, starting with this configure line: `./configure --prefix=/usr --sysconfdir=/var/lib/ntp` The output below is from this build of ntp, not the Debian package, which was version 4.2.6p2.
 
 When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded automatically and the device `/dev/pps0` will be created. I have some udev rules to create device symlinks:
 
