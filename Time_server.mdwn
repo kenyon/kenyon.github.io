@@ -13,15 +13,33 @@ I selected the [Garmin GPS 18x LVC](http://www.amazon.com/gp/product/B0016O3T7A)
 
 I ordered the 18x (and a [serial cable](http://www.amazon.com/gp/product/B000ZKNANO)) on Amazon on 2011-09-05. UPS delivered it on 2011-09-09.
 
+## Cable Construction
+
+I simply spliced the GPS 18x LVC wires onto serial and USB wires. This matches what's documented in Garmin's GPS 18x LVC Technical Specifications.
+
+## GPS preparation
+
+I used a Windows Vista computer with Garmin's SNSRXCFG_270.exe to upgrade the firmware from version 3.60 to the latest, 3.70. I also used SNSRXCFG_270.exe to set the PPS pulse width to 200 ms, and disable all NMEA sentences except GPGGA.
+
+## NTP setup
+
+I first tried using the GPS with an old Pentium III computer running Ubuntu 11.04 natty. I could see the NMEA sentences with `gpsd` and `gpspipe -r`, but a few seconds after I did `sudo ldattach PPS /dev/ttyS0` the system would lock up hard due to some kernel bug in some driver for my hardware. I saw `BUG: scheduling while atomic` in the syslog, but I wasn't able to capture the whole bug output. The same bug would occur if I just did `cat /dev/ttyS0`.
+
 ## References
 
+* NTP documentation: [Reference Clock Support](http://www.eecis.udel.edu/~mills/ntp/html/refclock.html)
 * NTP support wiki: [Configuring Garmin Refclocks](https://support.ntp.org/bin/view/Support/ConfiguringGarminRefclocks)
 * NTP support wiki: [Configuring NMEA Refclocks](https://support.ntp.org/bin/view/Support/ConfiguringNMEARefclocks)
 * NTP support wiki: [Garmin Refclock Users](https://support.ntp.org/bin/view/Support/GarminRefclockUsers)
-* NTP documentation: [Reference Clock Support](http://www.eecis.udel.edu/~mills/ntp/html/refclock.html)
 * [Adding a FreeBSD NTP server based on an GPS 18 LVC device](http://www.satsignal.eu/ntp/FreeBSD-GPS-PPS.htm) by David Taylor
+* [Enabling ntpd PPS support for Debian Lenny Linux](http://www.worldtimesolutions.com/support/ntp/Debian_Lenny_Linux_PPS_support_for_ntpd.html) by World Time Solutions
+* [Garmin GPS 18x OEM](https://buy.garmin.com/shop/shop.do?cID=158&pID=27594)
+* [LinuxPPS installation](http://wiki.enneenne.com/index.php/LinuxPPS_installation) and [ntpd support](http://wiki.enneenne.com/index.php/LinuxPPS_NTPD_support)
 * [NTP server using PC gnu/linux and freebsd](http://www.wraith.sf.ca.us/ntp/) by Steven Bjork
+* [NTP](http://en.gentoo-wiki.com/wiki/NTP) on Gentoo Wiki
 * [Stratum 1 NTP, Garmin GPS 18 LVC on FreeBSD 8.0](http://blog.doylenet.net/?p=145) by Ryan Doyle
 * [Synchronising to a Garmin GPS 18 LVC](http://www.sput.nl/time/garmin.html) by R.J. van der Putten
+* [Synchronizing an NTP server to GPS/PPS](http://linlog.blogspot.com/2009/07/synchronizing-ntp-server-to-gpspps.html) by Pela-Suros
 * [Synchronizing ntpd to a Garmin GPS 18 LVC via gpsd](http://www.rjsystems.nl/en/2100-ntpd-garmin-gps-18-lvc-gpsd.php) by Jaap Winius
+* [Ubuntu bug 805661](https://bugs.launchpad.net/bugs/805661)
 * [Using a Garmin GPS 18 LVC as NTP stratum-0 on Linux 2.6](http://time.qnan.org/) by Philip M. White
