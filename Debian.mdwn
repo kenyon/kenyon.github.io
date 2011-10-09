@@ -68,6 +68,7 @@ Set 'bell-style' to 'none' in `/etc/inputrc`.
 Here is how I created a local Debian package repository, also called an archive, using [[!debpkg mini-dinstall]].
 
 ### References
+* manual pages and `/usr/share/doc` (read with `debmany` from [[!debpkg debian-goodies]]: sources.list, mini-dinstall, dput
 * <http://wiki.freegeek.org/index.php/Debian_Package_Repositories>
 * <http://upsilon.cc/~zack/blog/posts/2009/04/howto:_uploading_to_people.d.o_using_dput/>
 * <http://wiki.debian.org/HowToSetupADebianRepository>
