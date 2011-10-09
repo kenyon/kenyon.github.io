@@ -67,6 +67,51 @@ Set 'bell-style' to 'none' in `/etc/inputrc`.
 ## Local Debian package repository
 Here is how I created a local Debian package repository, also called an archive, using [[!debpkg mini-dinstall]].
 
+### ~/.mini-dinstall.conf
+    [DEFAULT]
+    architectures = all, amd64
+    archivedir = ~/repo
+    archive_style = flat
+    generate_release = 1
+    release_signscript = ~/bin/sign-release.sh
+    [squeeze]
+    alias = stable
+
+Run `mini-dinstall --batch` to initialize the repository.
+
+### ~/bin/sign-release.sh
+[[!format bash """
+#!/bin/bash
+# -*- coding: utf-8 -*-
+# Based on Sample script to GPG sign Release files
+# Copyright © 2002 Colin Walters <walters@debian.org>
+# License: GPLv2
+set -e
+KEYID=0xc9b912d5
+rm -f Release.gpg.tmp
+gpg --default-key "$KEYID" --detach-sign -o Release.gpg.tmp "$1"
+mv Release.gpg.tmp Release.gpg
+"""]]
+
+### ~/.dput.cf
+    [local]
+    method = local
+    run_dinstall = 0
+    post_upload_command = mini-dinstall --batch
+    incoming = ~/repo/mini-dinstall/incoming
+
+Run `dput local pkg.changes` to upload the package to the repository.
+
+### ~/.devscripts
+    DEBUILD_DPKG_BUILDPACKAGE_OPTS="-k0xC9B912D5 -sa"
+    DSCVERIFY_KEYRINGS="~/.gnupg/pubring.gpg"
+
+### sources.list entries
+    deb file:///home/kenyon/repo squeeze/
+    deb-src file:///home/kenyon/repo squeeze/
+
+Now after a `sudo aptitude update` you should be able to install packages from the local repository.
+
 ### References
 * manual pages and `/usr/share/doc` (read with `debmany` from [[!debpkg debian-goodies]]: sources.list, mini-dinstall, dput
 * <http://wiki.freegeek.org/index.php/Debian_Package_Repositories>
