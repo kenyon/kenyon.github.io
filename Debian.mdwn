@@ -61,8 +61,11 @@ Set 'bell-style' to 'none' in `/etc/inputrc`.
 
 `setterm -blength 0`
 
-## See also
+### See also
 * [Removing annoying console beeps](http://www.debian-administration.org/articles/110)
+
+## Local Debian package repository
+Here is how I created a local Debian package repository, also called an archive, using [[!debpkg mini-dinstall]].
 
 ## External links
 * <http://debian.org/>
