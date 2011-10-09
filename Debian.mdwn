@@ -64,6 +64,15 @@ Set 'bell-style' to 'none' in `/etc/inputrc`.
 ### See also
 * [Removing annoying console beeps](http://www.debian-administration.org/articles/110)
 
+## Rebuilding Debian packages
+This is just my local, condensed version of [Raphaël Hertzog's](http://raphaelhertzog.com/) article [Howto to rebuild Debian packages](http://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/).
+
+1. `apt-get source ntp`
+1. `aptitude build-dep ntp`
+1. Make changes to package (or not), `dch --local foo` to record a changelog entry and increase the version.
+1. `debuild`
+1. `dput local whatever.changes` or just install the resulting deb with `gdebi`.
+
 ## Local Debian package repository
 Here is how I created a local Debian package repository, also called an archive, using [[!debpkg mini-dinstall]].
 
