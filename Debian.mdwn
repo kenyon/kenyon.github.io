@@ -112,8 +112,10 @@ mv Release.gpg.tmp Release.gpg
 Run `dput local pkg.changes` to upload the package to the repository.
 
 ### ~/.devscripts
-    DEBUILD_DPKG_BUILDPACKAGE_OPTS="-k0xC9B912D5 -sa"
-    DSCVERIFY_KEYRINGS="~/.gnupg/pubring.gpg"
+[[!format bash """
+DEBUILD_DPKG_BUILDPACKAGE_OPTS="-k0xC9B912D5 -sa"
+DSCVERIFY_KEYRINGS="~/.gnupg/pubring.gpg"
+"""]]
 
 ### sources.list entries
     deb file:///home/kenyon/repo squeeze/
