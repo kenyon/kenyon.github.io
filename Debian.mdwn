@@ -102,6 +102,8 @@ gpg --default-key "$KEYID" --detach-sign -o Release.gpg.tmp "$1"
 mv Release.gpg.tmp Release.gpg
 """]]
 
+Now `gpg --armor --export 0xc9b912d5 | sudo apt-key add -` to get APT to trust the local repository.
+
 ### ~/.dput.cf
     [local]
     method = local
