@@ -3,18 +3,18 @@ Instructions for creating a PXE-bootable FreeBSD installation disk image.
 (Based on these instructions: <http://syslinux.zytor.com/wiki/index.php/FreeBSD_disk_image_creation>)
 
 1. Get the bootonly ISO image for the desired FreeBSD release: <http://ftp4.freebsd.org/pub/FreeBSD/releases/amd64/ISO-IMAGES/>
-1. `dd if=/dev/zero of=7.2-RELEASE-amd64-bootonly.img bs=1k count=40000` #(Size should be a bit bigger than the ISO. For a 39M iso, a count=44000 is good.)
-1. `sudo mdconfig -a -t vnode -f 7.2-RELEASE-amd64-bootonly.img`
+1. `dd if=/dev/zero of=FreeBSD-8.2-RELEASE-amd64-bootonly.img bs=1k count=40000` #(Size should be a bit bigger than the ISO. For a 39M iso, a count=44000 is good.)
+1. `sudo mdconfig -a -t vnode -f FreeBSD-8.2-RELEASE-amd64-bootonly.img`
 1. `sudo bsdlabel -w -B md0 auto`
 1. `sudo newfs -m 0 md0a`
 1. `mkdir /tmp/img ; sudo mount /dev/md0a /tmp/img ; df /tmp/img`
-1. `mkdir /tmp/iso ; sudo mdconfig -a -t vnode -f 7.2-RELEASE-amd64-bootonly.iso ; sudo mount -t cd9660 /dev/md1 /tmp/iso ; df /tmp/iso`
+1. `mkdir /tmp/iso ; sudo mdconfig -a -t vnode -f FreeBSD-8.2-RELEASE-amd64-bootonly.iso ; sudo mount -t cd9660 /dev/md1 /tmp/iso ; df /tmp/iso`
 1. `cd /tmp/img ; sudo rsync -avHEh /tmp/iso/ .`
 1. `cd ; sudo umount /tmp/img /tmp/iso ; sudo mdconfig -d -u 0 ; sudo mdconfig -d -u 1`
 1. Add a menu entry to pxelinux.cfg/default similar to the following, and copy the .img to the location specified:
 
     label freebsd72
        kernel memdisk
-       append initrd=freebsd/7.2-RELEASE-amd64-bootonly.img harddisk
+       append initrd=freebsd/FreeBSD-8.2-RELEASE-amd64-bootonly.img harddisk
 
 [[!tag FreeBSD]]
