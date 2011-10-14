@@ -2,7 +2,7 @@ Instructions for creating a PXE-bootable FreeBSD installation disk image.
 
 (Based on these instructions: <http://syslinux.zytor.com/wiki/index.php/FreeBSD_disk_image_creation>)
 
-1. Get the bootonly ISO image for the desired FreeBSD release: ftp://ftp.ucsd.edu/FreeBSD/releases/i386/ISO-IMAGES/
+1. Get the bootonly ISO image for the desired FreeBSD release: <ftp://ftp.ucsd.edu/FreeBSD/releases/i386/ISO-IMAGES/>
 1. `dd if=/dev/zero of=7.2-RELEASE-i386-bootonly.img bs=1k count=40000` #(Size should be a bit bigger than the ISO. For a 39M iso, a count=44000 is good.)
 1. `sudo mdconfig -a -t vnode -f 7.2-RELEASE-i386-bootonly.img`
 1. `sudo bsdlabel -w -B md0 auto`
