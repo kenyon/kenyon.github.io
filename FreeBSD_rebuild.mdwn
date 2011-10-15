@@ -3,7 +3,7 @@ Here is my condensed version of <http://www.freebsd.org/doc/en/books/handbook/ma
 Once the devel/subversion-freebsd port is installed, check out the source tree once:
 
 [[!format sh """
-cd /usr && sudo svn co svn://svn.freebsd.org/base/stable/8/ src
+cd /usr && sudo svn co svn://svn.freebsd.org/base/stable/9/ src
 create symlink to my custom kernel config, if necessary
 """]]
 
