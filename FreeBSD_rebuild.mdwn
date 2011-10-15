@@ -16,7 +16,7 @@ cd /usr/src && sudo svn up
 If devel/subversion-freebsd is not available, update the source tree with csup:
 
 [[!format sh """
-sudo csup -g -L 2 stable-supfile
+sudo csup -L 2 stable-supfile
 """]]
 
 Read updating notes and build:
