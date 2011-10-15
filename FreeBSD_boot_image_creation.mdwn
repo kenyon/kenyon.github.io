@@ -13,7 +13,7 @@ Instructions for creating a PXE-bootable FreeBSD installation disk image.
 1. `cd ; sudo umount /tmp/img /tmp/iso ; sudo mdconfig -d -u 0 ; sudo mdconfig -d -u 1`
 1. Add a menu entry to pxelinux.cfg/default similar to the following, and copy the .img to the location specified:
 
-    label freebsd72
+    label freebsd
        kernel memdisk
        append initrd=freebsd/FreeBSD-9.0-BETA3-amd64-bootonly.img harddisk
 
