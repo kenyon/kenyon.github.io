@@ -11,7 +11,7 @@ Instructions for creating a PXE-bootable FreeBSD installation disk image.
 1. `mkdir /tmp/iso && mdconfig -a -t vnode -f FreeBSD-9.0-BETA3-amd64-bootonly.iso && mount -t cd9660 /dev/md1 /tmp/iso ; df /tmp/iso`
 1. `cd /tmp/img && rsync --archive --hard-links --executability --human-readable --progress --stats /tmp/iso/ .`
 1. `cd && umount /tmp/img /tmp/iso && mdconfig -d -u 0 ; mdconfig -d -u 1`
-1. Add a menu entry to pxelinux.cfg/default similar to the following, and copy the .img to the location specified:
+1. Add a menu entry to pxelinux.cfg/default similar to the following, and copy the .img to the location specified. The `memdisk` binary comes from [[!debpkg syslinux-common]].
 
     label freebsd
        kernel memdisk
