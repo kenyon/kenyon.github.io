@@ -21,7 +21,7 @@ I simply spliced the GPS 18x LVC wires onto serial and USB wires. This matches w
 
 I used a Windows Vista computer with Garmin's SNSRXCFG_270.exe to upgrade the firmware from version 3.60 to the latest, 3.70. I also used SNSRXCFG_270.exe to set the PPS pulse width to 200 ms, and disable all NMEA sentences except GPGGA.
 
-## NTP setup
+## Debian GNU/Linux setup
 
 I first tried using the GPS with an old Pentium III computer running Ubuntu 11.04 natty running kernel 2.6.38-11-generic-pae. I could see the NMEA sentences with `gpsd` and `gpspipe -r`, but a few seconds after I did `sudo ldattach PPS /dev/ttyS0` the system would lock up hard due to some kernel bug in some driver for my hardware. I saw `BUG: scheduling while atomic` in the syslog, but I wasn't able to capture the whole bug output. The same bug would occur if I just did `cat /dev/ttyS0`. So I just gave up with that old hardware and moved the GPS to my newer desktop computer running Debian squeeze and kernel 2.6.39-bpo.2-amd64. No lockups on this machine.
 
@@ -76,10 +76,43 @@ Example output after letting ntpd run for about 8 hours:
 
 I'm going to try setting up a time server with FreeBSD next to see if it's any easier.
 
+## FreeBSD setup
+
+I am using [ntp-devel](http://www.freshports.org/net/ntp-devel/) from ports.
+
+### /etc/rc.conf
+    ntpd_enable="YES"
+    ntpd_flags="-N -p /var/run/ntpd.pid -f /var/db/ntpd.drift"
+    ntpd_program="/usr/local/sbin/ntpd"
+    ntpd_sync_on_start="YES"
+
+### /etc/devfs.conf
+    link cuau0 gps0
+
+### /etc/ttys
+Commented out ttyu*.
+
+### Kernel configuration
+    #
+    # PPS -- Generic kernel configuration file for FreeBSD/amd64 PPS
+    #
+    include GENERIC
+    ident PPS-GENERIC
+    options PPS_SYNC
+
+### ntp.conf
+    server 127.127.20.0 prefer
+    fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
+    server darwin.kenyonralph.com iburst
+    server voodoo.kenyonralph.com iburst
+    server grunt.kenyonralph.com iburst
+    pool 2.us.pool.ntp.org iburst
+
 ## Notes
 
 * Show serial port settings: `stty --all --file=/dev/ttyS0`
 * Set serial port baud rate to 4800: `stty --file=/dev/ttyS0 4800`
+* FreeBSD: Observe NMEA output: `cu -l /dev/cuau0 -s 4800`
 
 ## References
 
