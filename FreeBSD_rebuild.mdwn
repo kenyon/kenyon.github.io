@@ -1,6 +1,6 @@
 Here is my condensed version of <http://www.freebsd.org/doc/en/books/handbook/makeworld.html>, or how to rebuild the FreeBSD world and kernel.
 
-Once the devel/subversion-freebsd port is installed, check out the source tree once:
+Once the devel/subversion port is installed, check out the source tree once:
 
 [[!format sh """
 cd /usr && sudo svn co svn://svn.freebsd.org/base/stable/9/ src
