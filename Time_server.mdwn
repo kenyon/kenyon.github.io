@@ -110,9 +110,15 @@ Commented out ttyu*.
 
 ## Notes
 
-* Linux: Show serial port settings: `stty --all --file=/dev/ttyS0`
-* Linux: Set serial port baud rate to 4800: `stty --file=/dev/ttyS0 4800`
-* FreeBSD: Observe NMEA output: `cu -l /dev/cuau0 -s 4800`
+* Show serial port settings:
+ * Linux: `stty --all --file=/dev/ttyS0`
+ * FreeBSD: `stty -a -f /dev/cuau0`
+* Set serial port baud rate to 4800:
+ * Linux: `stty --file=/dev/ttyS0 4800`
+ * FreeBSD (but not really necessary since `cu` can do it, and doesn't seem to take effect anyway): `stty -f /dev/cuau0 4800`
+* Observe NMEA output:
+ * Linux: `cat < /dev/ttyS0`
+ * FreeBSD: `cu -l /dev/cuau0 -s 4800`
 
 ## References
 
