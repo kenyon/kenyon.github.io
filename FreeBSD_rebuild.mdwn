@@ -13,7 +13,7 @@ Update if the tree has already been checked out:
 cd /usr/src && sudo svn up
 """]]
 
-If devel/subversion-freebsd is not available, update the source tree with csup:
+If devel/subversion is not available, update the source tree with csup:
 
 [[!format sh """
 sudo csup -L 2 stable-supfile
