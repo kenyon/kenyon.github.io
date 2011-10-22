@@ -164,6 +164,25 @@ Example output after running for a few minutes and while doing buildworld and bu
     filtoffset=    0.65    0.70    0.76    0.80    0.86    0.91    0.99    1.06,
     filtdisp=      0.00    0.96    1.92    2.88    3.84    4.80    5.76    6.72
 
+Here is what kerninfo looks like with the PPS_SYNC kernel option:
+
+    pll offset:           0.000123674 s
+    pll frequency:        -3.918 ppm
+    maximum error:        0.000111415 s
+    estimated error:      1.51e-07 s
+    status:               2107  pll ppsfreq ppstime ppssignal nano
+    pll time constant:    6
+    precision:            1e-09 s
+    frequency tolerance:  496 ppm
+    pps frequency:        -3.918 ppm
+    pps stability:        0.033 ppm
+    pps jitter:           4.729e-06 s
+    calibration interval: 64 s
+    calibration cycles:   27
+    jitter exceeded:      5
+    stability exceeded:   0
+    calibration errors:   10
+
 ## Notes
 
 * Show serial port settings:
