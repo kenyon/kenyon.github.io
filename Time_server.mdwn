@@ -94,6 +94,8 @@ I am using [ntp-devel](http://www.freshports.org/net/ntp-devel/) from ports.
 Commented out ttyu*.
 
 ### Kernel configuration
+Put this in `/usr/src/sys/amd64/conf/PPS-GENERIC`:
+
     #
     # PPS -- Generic kernel configuration file for FreeBSD/amd64 PPS
     #
@@ -101,13 +103,66 @@ Commented out ttyu*.
     ident PPS-GENERIC
     options PPS_SYNC
 
-### ntp.conf
+### /etc/make.conf
+    KERNCONF= PPS-GENERIC GENERIC
+
+### /etc/ntp.conf
     server 127.127.20.0 iburst prefer
     fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
     server darwin.kenyonralph.com iburst
     server voodoo.kenyonralph.com iburst
     server grunt.kenyonralph.com iburst
     pool 2.us.pool.ntp.org iburst
+
+### Example output
+Example output after running for a few minutes and while doing buildworld and buildkernel:
+
+    kenyon@gauss ~ % ntpq -p -c clockvar -c readvar; ntpdc -c kerninfo
+         remote           refid      st t when poll reach   delay   offset  jitter
+    ==============================================================================
+    oGPS_NMEA(0)     .GPS.            0 l   38   64  377    0.000    0.648   0.249
+     2.us.pool.ntp.o .POOL.          16 p    -   64    0    0.000    0.000   0.002
+    *darwin.kenyonra 127.67.113.92    2 u   63   64  377   20.431    3.263   3.354
+    -voodoo.kenyonra 106.61.18.129    3 u   61   64  377    0.243    4.485   0.124
+    +grunt.kenyonral 106.61.18.129    3 u   64   64  377    0.182    3.521   0.225
+    -conquest.kjsl.c 69.36.224.15     2 u   62   64  377   26.374    5.768   2.522
+    -bindcat.fhsu.ed 128.138.140.44   2 u   63   64  377   75.219    4.115   1.846
+    -peachesgeldof.k 204.9.54.119     2 u   64   64  377   94.141    3.787   2.844
+    -ip-173-201-38-8 198.153.152.52   2 u   58   64  377   24.752    6.104   1.801
+    -druid.storyinme 130.207.244.240  2 u   56   64  377   65.657   -2.773   4.542
+    +cheezum.mattnor 129.7.1.66       2 u   65   64  377   45.797    2.972   2.286
+    associd=0 status=0000 no events, clk_unspec,
+    device="NMEA GPS Clock",
+    timecode="$GPGGA,085740,1111.1111,N,11111.1111,W,1,09,0.9,103.2,M,-35.3,M,,*77",
+    poll=14, noreply=0, badformat=0, baddata=0, fudgetime2=600.000,
+    stratum=0, refid=GPS, flags=5
+    associd=0 status=04ad leap_none, sync_uhf_radio, 10 events, kern,
+    version="ntpd 4.2.7p225@1.2483-o Fri Oct 21 04:59:50 UTC 2011 (1)",
+    processor="amd64", system="FreeBSD/9.0-RC1", leap=00, stratum=1,
+    precision=-19, rootdelay=0.000, rootdisp=2.380, refid=GPS,
+    reftime=d24d03df.edabdc26  Sat, Oct 22 2011  1:57:03.928,
+    clock=d24d0405.3f696dad  Sat, Oct 22 2011  1:57:41.247, peer=38673, tc=6,
+    mintc=3, offset=0.648, frequency=-4.048, sys_jitter=0.249,
+    clk_jitter=0.000, clk_wander=0.005
+    pll offset:           0.000624065 s
+    pll frequency:        -4.048 ppm
+    maximum error:        2.0824e-05 s
+    estimated error:      1.7e-08 s
+    status:               2007  pll ppsfreq ppstime nano
+    pll time constant:    6
+    precision:            1e-09 s
+    frequency tolerance:  496 ppm
+    kenyon@gauss ~ % ntpq -c "rv 38673"
+    associd=38673 status=973a conf, reach, sel_pps.peer, 3 events, sys_peer,
+    srcadr=GPS_NMEA(0), srcport=123, dstadr=127.0.0.1, dstport=123, leap=00,
+    stratum=0, precision=-20, rootdelay=0.000, rootdisp=0.000, refid=GPS,
+    reftime=d24d03de.ffd6d0b6  Sat, Oct 22 2011  1:57:02.999,
+    rec=d24d03df.edabdc26  Sat, Oct 22 2011  1:57:03.928, reach=377,
+    unreach=0, hmode=3, pmode=4, hpoll=6, ppoll=6, headway=0, flash=00 ok,
+    keyid=0, offset=0.648, delay=0.000, dispersion=0.928, jitter=0.249,
+    filtdelay=     0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00,
+    filtoffset=    0.65    0.70    0.76    0.80    0.86    0.91    0.99    1.06,
+    filtdisp=      0.00    0.96    1.92    2.88    3.84    4.80    5.76    6.72
 
 ## Notes
 
