@@ -1,4 +1,4 @@
-This page documents my project to build a stratum 1 NTP [[!wikipedia time server]] at my house.
+This page documents my project to build a stratum 1 NTP [[!wikipedia time server]] at my house. Its hostname is [gauss.kenyonralph.com](http://www.pool.ntp.org/scores/2001:470:8683:0:219:b9ff:fe7d:e6e0) and it is part of the NTP pool.
 <!-- link to this page from http://wiki.northgrum.com/wiki/Network_Time_Protocol#Stratum_1_time_servers -->
 [[!toc levels=2]]
 
