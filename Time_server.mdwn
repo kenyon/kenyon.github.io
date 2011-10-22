@@ -42,6 +42,7 @@ Here is my working Debian squeeze ntp.conf:
     fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
     server voodoo.kenyonralph.com iburst
     server darwin.kenyonralph.com iburst
+    pool 2.us.pool.ntp.org iburst
 
 Example output after letting ntpd run for about 8 hours:
 
@@ -101,7 +102,7 @@ Commented out ttyu*.
     options PPS_SYNC
 
 ### ntp.conf
-    server 127.127.20.0 prefer
+    server 127.127.20.0 iburst prefer
     fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
     server darwin.kenyonralph.com iburst
     server voodoo.kenyonralph.com iburst
