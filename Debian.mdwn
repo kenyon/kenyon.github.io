@@ -28,10 +28,11 @@ This script is based on <http://extern.tribut.de/irssi-notify> (linked from <htt
 #!/bin/bash
 # Run this script in the background from the machine you want
 # notifications to appear on: irssi-notify &
+# Load the script fnotify.pl in irssi.
 
 ssh -f irssi-server "tail --lines=10 $HOME/.irssi/fnotify; > $HOME/.irssi/fnotify; tail --follow $HOME/.irssi/fnotify" |
     sed --regexp-extended --unbuffered "
-        s/&/\&amp;/g; # replace characters with HTML entities
+        s/(.)&/\1\&amp;/g; # replace characters with HTML entities
         s/</\&lt;/g;
         s/>/\&gt;/g;
         s%(#[[:alpha:]]+ )&lt;([^>]{0,10})&gt;%\1<b>\2</b> %g # bold the channel
@@ -45,6 +46,7 @@ ssh -f irssi-server "tail --lines=10 $HOME/.irssi/fnotify; > $HOME/.irssi/fnotif
 
 Dependencies:
 
+* [fnotify.pl](http://kenyonralph.com/fnotify.pl)
 * [[!debpkg libnotify-bin]] for notify-send
 * [[!debpkg openclipart-png]] for the icon
 
