@@ -37,8 +37,7 @@ When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded autom
 Here is my working Debian squeeze ntp.conf:
 
     driftfile /var/lib/ntp/ntp.drift
-    logconfig +clockall
-    server 127.127.20.0 prefer
+    server 127.127.20.0
     fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
     server voodoo.kenyonralph.com iburst
     server darwin.kenyonralph.com iburst
@@ -75,7 +74,7 @@ Example output after letting ntpd run for about 8 hours:
     precision:            1e-09 s
     frequency tolerance:  500 ppm
 
-I'm going to try setting up a time server with FreeBSD next to see if it's any easier.
+I'm going to try setting up a time server with FreeBSD next to see if it's any easier or better.
 
 ## FreeBSD setup
 
@@ -107,7 +106,7 @@ Put this in `/usr/src/sys/amd64/conf/PPS-GENERIC`:
     KERNCONF= PPS-GENERIC GENERIC
 
 ### /etc/ntp.conf
-    server 127.127.20.0 iburst prefer
+    server 127.127.20.0 minpoll 3
     fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
     server darwin.kenyonralph.com iburst
     server voodoo.kenyonralph.com iburst
@@ -182,6 +181,10 @@ Here is what kerninfo looks like with the PPS_SYNC kernel option:
     jitter exceeded:      5
     stability exceeded:   0
     calibration errors:   10
+
+## Conclusion
+
+FreeBSD is much nicer than Linux (as of late 2011) at being a stratum 1 NTP server using a NMEA GPS with PPS reference clock.
 
 ## Notes
 
