@@ -41,6 +41,8 @@ cd /usr/src
 make installworld
 mergemaster -i -F -U
 shutdown -r now
+(cd /etc && sg status; cd /usr/local/etc && sg status; cd /boot && sg status)
 """]]
+Commit changes to git repositories as necessary.
 
 [[!tag FreeBSD]]
