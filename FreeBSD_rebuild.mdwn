@@ -33,7 +33,8 @@ sudo script /root/build-`date +%Y%m%dT%H%M%S`.log
 make -j2 buildworld && make buildkernel
 exit
 sudo make installkernel
-sudo shutdown -r now # boot into single-user mode with boot -s at the loader prompt.
+sudo shutdown -r now
+# boot into single-user mode with boot -s at the loader prompt.
 adjkerntz -i
 mount -a # for a ZFS system: zfs mount -v -a && mount -u -w /
 mergemaster -p -F -U
