@@ -5,7 +5,10 @@ Once the devel/subversion port is installed, check out the source tree once:
 [[!format sh """
 cd /usr && sudo svn co svn://svn.freebsd.org/base/stable/9/ src
 """]]
-create symlink to my custom kernel config, if necessary
+Create a symlink to my custom kernel config, if necessary. For example:
+[[!format sh """
+ln -s ~/MYCONFIG /usr/src/sys/amd64/conf
+"""]]
 
 Update if the tree has already been checked out:
 
