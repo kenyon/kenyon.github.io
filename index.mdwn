@@ -42,9 +42,7 @@ Use my public OpenPGP key to engage in secure communications with me:
 * <http://caida.org/~kenyon/>
 
 ## System information
-* [voodoo system status](http://voodoo.kenyonralph.com/cgi-bin/sysstatus.py)
 * [voodoo apache status](http://voodoo.kenyonralph.com/server-status)
-* [darwin system status](http://darwin.kenyonralph.com/cgi-bin/sysstatus.py)
 * [darwin apache status](http://darwin.kenyonralph.com/server-status)
 * [UPS status](http://voodoo.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
 * [voodoo tor status](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396)
