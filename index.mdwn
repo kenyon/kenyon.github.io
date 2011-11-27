@@ -50,9 +50,6 @@ Use my public OpenPGP key to engage in secure communications with me:
 * [voodoo tor status](https://torstatus.all.de/router_detail.php?FP=30341174a029f1a2dba1f9ca1d23c41bf201d396)
 * [munin](http://kenyonralph.com/munin/)
 * [my NTP pool servers](http://www.pool.ntp.org/user/kenyon)
-* [darwin awstats](http://darwin.kenyonralph.com/cgi-bin/awstats.pl)
-* [voodoo awstats](http://voodoo.kenyonralph.com/cgi-bin/awstats.pl)
-* [voodoo webalizer](http://voodoo.kenyonralph.com/webalizer/)
 
 ## Who I am not
 * I am not [Ralph Kenyon](http://www.xenodochy.org/ralph.html), but he
