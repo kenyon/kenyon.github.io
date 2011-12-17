@@ -28,7 +28,7 @@ Read updating notes and build:
 less /usr/src/UPDATING
 cd /usr/obj && sudo chflags -vR noschg * && sudo rm -rvf *
 cd /usr/src
-sudo make cleandir && sudo make cleandir
+sudo make cleandir; sudo make cleandir
 sudo script /root/build-`date +%Y%m%dT%H%M%S`.log
 make -j2 buildworld && make buildkernel
 exit
