@@ -3,6 +3,6 @@ This page contains code I've written and want to make public, which doesn't fit 
 [[!toc levels=2]]
 
 ## fcrdns
-This is a [Python](http://python.org/) 3 script that just does DNS lookups on an IP address and the returned name. It is handy for verifying [forward-confirmed reverse DNS](https://en.wikipedia.org/wiki/Forward-confirmed_reverse_DNS). It uses `host` from [[!debpkg bind9-host]].
+This is a [Python](http://python.org/) 3 script that just does DNS lookups on an IP address and the returned name. It is handy for verifying [[!wikipedia forward-confirmed reverse DNS]]. It uses `host` from [[!debpkg bind9-host]].
 
 * <http://kenyonralph.com/fcrdns>
