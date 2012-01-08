@@ -24,5 +24,8 @@
 1. Show top 20 processes by memory usage: `ps -eo rss,vsz,pid,cputime,cmd --width 100 --sort rss,vsz | tail --lines 20`
 1. Get [ARIN](http://arin.net/) whois info: `whois -h whois.arin.net "n + 127.0.0.1"`
 * ARIN whois query syntax: `whois -h whois.arin.net "?"`
+1. Get external IP address:
+* IPv6 and IPv4: `wget -qO- icanhazip.com`
+* IPv4 only: `curl ifconfig.me`
 
 [[!tag Linux Debian "Mac OS X" FreeBSD]]
