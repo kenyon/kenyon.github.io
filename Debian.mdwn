@@ -71,7 +71,7 @@ This is just my local, condensed version of [Raphaël Hertzog's](http://raphaelh
 
 1. `apt-get source ntp`
 1. `sudo apt-get build-dep ntp`
-1. Make changes to package (or not), `dch --local foo` to record a changelog entry and increase the version.
+1. Make changes to package (or not). If changes were made, use `dch --local foo` to record a changelog entry and increase the version.
 1. `debuild`
 1. `dput local whatever.changes` or just install the resulting deb with `gdebi`.
 
