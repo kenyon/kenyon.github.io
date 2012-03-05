@@ -56,4 +56,4 @@ Use my public OpenPGP key to engage in secure communications with me:
 
 ----
 
-This wiki is powered by [[ikiwiki]] [[!version]].
+This wiki is powered by [[ikiwiki]] [[!version]] and hosted by [Linode](http://www.linode.com/?r=5a0b011abb565ac77f1d9a976853845747fdb5c2).
