@@ -25,19 +25,19 @@ Use my public OpenPGP key to engage in secure communications with me:
 * [Freenode](http://freenode.net/): kenyon
 
 ## External links
-* [Amazon](http://amazon.com/gp/pdp/profile/A14E2XP0PR1V8D)
+* [Amazon](https://www.amazon.com/gp/pdp/profile/A14E2XP0PR1V8D)
 * [claimID](http://claimid.com/kenyon)
 * [eBay](http://myworld.ebay.com/kenyon321)
-* [Facebook](http://www.facebook.com/kenyonralph)
+* [Facebook](https://facebook.com/kenyonralph)
 * [GitHub](http://github.com/kenyon)
-* [Google](http://www.google.com/profiles/kralph)
+* [Google+](https://plus.google.com/106326399153901456849)
 * [Identi.ca](http://identi.ca/kenyonralph)
 * [last.fm](http://last.fm/user/kenyonusmc)
 * [Launchpad](https://launchpad.net/~kralph)
 * [LinkedIn](http://www.linkedin.com/in/kenyonralph)
 * [ohloh](https://www.ohloh.net/accounts/kenyon)
 * [Twitter](http://twitter.com/kenyonralph)
-* [Wikipedia](https://secure.wikimedia.org/wikipedia/en/wiki/User:Kenyon)
+* [Wikipedia](https://en.wikipedia.org/wiki/User:Kenyon)
 
 ### URLs that redirect here
 * <http://caida.org/~kenyon/>
