@@ -27,6 +27,6 @@
 1. [Get external IP address](http://www.commandlinefu.com/commands/view/5427/get-your-external-ip-address):
 * IPv6 and IPv4: `wget -qO- icanhazip.com`
 * IPv4 only: `curl ifconfig.me`
-1. Convert a hexadecimal IPv4 address, like you would see in NAT64 and DNS64, to dotted-decimal format: `printf "%d.%d.%d.%d\n" $(echo c0a8:ff01 | sed 's/://;s/../0x& /g;s/\.$//')`
+1. Convert a hexadecimal IPv4 address, like you would see in NAT64 and DNS64, to dotted-decimal format: `printf "%d.%d.%d.%d\n" $(echo c0a8:ff01 | sed 's/://; s/../0x& /g; s/\.$//')`
 
 [[!tag Linux Debian "Mac OS X" FreeBSD]]
