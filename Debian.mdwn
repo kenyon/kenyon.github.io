@@ -4,8 +4,6 @@ Since March 2009, I'm running [Debian squeeze](http://www.debian.org/releases/sq
 
 Since March 2010, I'm running Debian squeeze on my [[Dell Latitude 2100]] netbook.
 
-Since June 2010, I'm running Debian squeeze on my Dell Latitude D520.
-
 [[!toc levels=2]]
 
 ## 6to4 init script
