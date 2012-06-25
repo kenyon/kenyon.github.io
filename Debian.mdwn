@@ -22,7 +22,7 @@ Dependencies:
 * [[!debpkg curl]]
 
 ## irssi-notify
-This script is based on <http://extern.tribut.de/irssi-notify> (linked from <http://thorstenl.blogspot.com/2007/01/thls-irssi-notification-script.html?showComment=1174835100000#c1681311296903415398>). It makes notifications on your desktop when you get messages in irssi. I fixed the link handling, added comments to the sed script, and used portable character classes in the regular expressions.
+This script is based on <http://extern.tribut.de/irssi-notify> (linked from <http://thorstenl.blogspot.com/2007/01/thls-irssi-notification-script.html?showComment=1174835100000#c1681311296903415398>). It makes notifications on your desktop when you get messages in irssi. I fixed the link handling, added comments to the sed script, and used portable character classes in the regular expressions. Put `fnotify.pl` in `~/.irssi/scripts/` and do `/script load fnotify`. Now all hilights in irssi will be logged to `~/.irssi/fnotify`.
 
 [[!format bash """
 #!/bin/bash
