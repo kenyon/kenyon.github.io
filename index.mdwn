@@ -43,9 +43,8 @@ Use my public OpenPGP key to engage in secure communications with me:
 * <http://caida.org/~kenyon/>
 
 ## System information
-* [voodoo apache status](http://voodoo.kenyonralph.com/server-status)
 * [darwin apache status](http://darwin.kenyonralph.com/server-status)
-* [UPS status](http://voodoo.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
+<!-- * [UPS status](http://voodoo.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi) -->
 * [munin](http://kenyonralph.com/munin/)
 * [my NTP pool servers](http://www.pool.ntp.org/user/kenyon)
 
