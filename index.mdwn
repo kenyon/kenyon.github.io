@@ -42,11 +42,9 @@ Use my public OpenPGP key to engage in secure communications with me:
 * <http://caida.org/~kenyon/>
 
 ## System information
-* [darwin apache status](http://darwin.kenyonralph.com/server-status)
-* [darwin smokeping](http://kenyonralph.com/smokeping/smokeping.cgi)
-* [grunt apache status](http://grunt.kenyonralph.com/server-status)
-* [grunt smokeping](http://grunt.kenyonralph.com/smokeping/smokeping.cgi)
-* [grunt UPS status](http://grunt.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
+* apache status: [darwin](http://darwin.kenyonralph.com/server-status) [grunt](http://grunt.kenyonralph.com/server-status)
+* smokeping: [darwin](http://kenyonralph.com/smokeping/smokeping.cgi) [grunt](http://grunt.kenyonralph.com/smokeping/smokeping.cgi)
+* UPS status: [grunt](http://grunt.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
 * [munin](http://kenyonralph.com/munin/)
 * [my NTP pool servers](http://www.pool.ntp.org/user/kenyon)
 
