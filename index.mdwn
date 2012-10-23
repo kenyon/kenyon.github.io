@@ -43,7 +43,10 @@ Use my public OpenPGP key to engage in secure communications with me:
 
 ## System information
 * [darwin apache status](http://darwin.kenyonralph.com/server-status)
-* [UPS status](http://grunt.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
+* [darwin smokeping](http://kenyonralph.com/smokeping/smokeping.cgi)
+* [grunt apache status](http://grunt.kenyonralph.com/server-status)
+* [grunt smokeping](http://grunt.kenyonralph.com/smokeping/smokeping.cgi)
+* [grunt UPS status](http://grunt.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
 * [munin](http://kenyonralph.com/munin/)
 * [my NTP pool servers](http://www.pool.ntp.org/user/kenyon)
 
