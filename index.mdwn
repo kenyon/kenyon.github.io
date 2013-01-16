@@ -16,7 +16,6 @@ Use my public OpenPGP key to engage in secure communications with me:
 * Signed key transition message of 2009-12-23 regarding my transition from key [[!gpg 92A76E75]] to [[!gpg C9B912D5]]: <http://kenyonralph.com/key-transition-20091223.txt>
 
 ### Instant message
-* AIM: RalphKAUSMC
 * XMPP: kenyon@kenyonralph.com
 
 ### IRC
