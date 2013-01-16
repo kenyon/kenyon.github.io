@@ -19,6 +19,7 @@
 1. Remove comment lines from configuration files: `grep --invert-match '^\[[:space:]]*#' /etc/file | cat --squeeze-blank`
 * There is a more sophisticated version of `cat --squeeze-blank` in the [GNU sed Info documentation](http://www.gnu.org/software/sed/manual/html_node/cat-_002ds.html#cat-_002ds).
 1. Remove all blank lines: `sed '/^\[[:space:]]*$/d'`
+1. Remove comments and blank lines: `grep --invert-match --regexp '^[[:space:]]*#' --regexp '^[[:space:]]*$' /etc/file`
 1. Bash glob for all directory entries, including hidden: `{.[!.]*,*}`
 * <http://stackoverflow.com/questions/1586477/bash-globbing-autoexpand-for-a-few-specific-cases>
 1. Show top 20 processes by memory usage: `ps -eo rss,vsz,pid,cputime,cmd --width 100 --sort rss,vsz | tail --lines 20`
