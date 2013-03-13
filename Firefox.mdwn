@@ -2,9 +2,7 @@ Here are some Firefox/[[!debpkg iceweasel]] config items I like to set:
 
 * [[!mozillazinekb browser.backspace_action]] 0
 * [[!mozillazinekb browser.blink_allowed]] false
-* [[!mozillazinekb browser.cache.disk_cache_ssl]] true
 * [[!mozillazinekb browser.download.manager.showAlertOnComplete]] false
-* [[!mozillazinekb browser.ssl_override_behavior]] 2
 * [[!mozillazinekb browser.xul.error_pages.expert_bad_cert]] true
 * [[!mozillazinekb font.size.fixed.x-western]] 14 (can set this using the GUI)
 * [[!mozillazinekb layout.spellcheckDefault]] 2
@@ -19,9 +17,7 @@ Addons that I sometimes like to install:
 * <https://addons.mozilla.org/en-US/firefox/addon/autoauth/> - for autosubmitting proxy auth dialogs, until Mozilla Project fixes the authentication popup bugs
 * <https://addons.mozilla.org/en-US/firefox/addon/colorfultabs/>
 * <https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/>
-* <https://addons.mozilla.org/en-US/firefox/addon/googlebar-lite/>
 * <https://addons.mozilla.org/en-US/firefox/addon/pentadactyl/>
-* <https://addons.mozilla.org/en-US/firefox/addon/textplain/> - Firefox 4 and up has this built-in.
 * <https://addons.mozilla.org/en-US/firefox/addon/uppity/> - Pentadactyl can do this mostly with `gu` and `gU`.
 * <https://addons.mozilla.org/en-US/firefox/addon/firebug/> - but normally I have this disabled unless I need it.
 * <https://addons.mozilla.org/en-US/firefox/addon/downthemall/> - good when it's needed, but I don't use it much. Usually disabled.
