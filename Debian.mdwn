@@ -38,7 +38,7 @@ ssh -f irssi-server "tail --lines=10 $HOME/.irssi/fnotify; > $HOME/.irssi/fnotif
         s%([\w+-]+@[^ ]+\.[[:alpha:]]{1,3})%<a href=\"mailto:\1\">\1</a>%g;" |
     while read heading message
     do
-        notify-send --category=im.received --expire-time 5000 --icon /usr/share/openclipart/png/computer/icons/flat-theme/applications/ksirc.png -- "${heading}" "${message}"
+        notify-send --hint=int:transient:1 --category=im.received --expire-time 5000 --icon /usr/share/openclipart/png/computer/icons/flat-theme/applications/ksirc.png -- "${heading}" "${message}"
     done
 """]]
 
@@ -46,6 +46,7 @@ Dependencies:
 
 * [fnotify.pl](http://kenyonralph.com/fnotify.pl)
 * [[!debpkg libnotify-bin]] for notify-send
+* [[!debpkg notification-daemon]] or some other notification daemon to display the notifications
 * [[!debpkg openclipart-png]] for the icon
 
 ## debconf
