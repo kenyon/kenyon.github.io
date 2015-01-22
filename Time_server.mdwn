@@ -196,7 +196,7 @@ FreeBSD is much nicer than Linux (as of late 2011) at being a stratum 1 NTP serv
  * Linux: `stty --file=/dev/ttyS0 4800`
  * FreeBSD (but not really necessary since `cu` can do it, and doesn't seem to take effect anyway): `stty -f /dev/cuau0 4800`
 * Observe NMEA output:
- * Linux: `cat < /dev/ttyS0`
+ * Linux: `cat /dev/ttyS0`
  * FreeBSD: `cu -l /dev/cuau0 -s 4800`
 
 ## References
