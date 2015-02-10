@@ -53,7 +53,65 @@ Here is my working ntp.conf:
 
 Example output after letting ntpd run for about 8 hours:
 
-    TODO UPDATE THIS
+    kenyon@einstein ~ % ntpq -ccv -p -crv -ckern -csysinfo
+    associd=0 status=0000 no events, clk_unspec,
+    device="NMEA GPS Clock",
+    timecode="$GPGGA,172617,1111.3839,N,11111.4417,W,2,11,0.8,126.3,M,-35.5,M,,*71",
+    poll=3418, noreply=0, badformat=0, baddata=0, fudgetime2=545.000,
+    stratum=0, refid=GPS, flags=5
+         remote           refid      st t when poll reach   delay   offset  jitter
+    ==============================================================================
+     2.us.pool.ntp.o .POOL.          16 p    -   64    0    0.000    0.000   0.000
+    oGPS_NMEA(0)     .GPS.            0 l    -    8  377    0.000    0.000   0.004
+    +darwin.kenyonra 127.67.113.92    2 u   50   64  377   28.478    4.232   0.953
+    -2001:470:c:4a1: 131.188.3.220    2 u   45   64  377  200.027   11.259   0.586
+    -2604:a880:800:1 184.105.182.7    3 u   39   64  377   82.776    4.196   1.805
+    -ntp.jtsage.com  216.218.254.202  2 u   24   64  377   69.561   -1.286   0.490
+    -2604:a880:800:1 184.105.182.7    3 u   46   64  377   82.421    3.827   0.603
+    *yurizoku.tk     209.51.161.238   2 u   59   64  377   80.916    1.554   0.619
+    +198.110.48.12 ( 204.9.54.119     2 u   35   64  377  100.437    1.796   1.330
+    -108.61.194.85 ( 201.198.247.252  2 u   53   64  377   45.230   -5.521   1.041
+    associd=0 status=041d leap_none, sync_uhf_radio, 1 event, kern,
+    version="ntpd 4.2.8p1@1.3265-o Mon Feb  9 09:59:02 UTC 2015 (1)",
+    processor="x86_64", system="Linux/3.16.7-ckt2", leap=00, stratum=1,
+    precision=-23, rootdelay=0.000, rootdisp=1.015, refid=GPS,
+    reftime=d884bdb9.bc1f69e3  Tue, Feb 10 2015  9:26:17.734,
+    clock=d884bdba.e1639551  Tue, Feb 10 2015  9:26:18.880, peer=27173, tc=3,
+    mintc=3, offset=-0.000130, frequency=-13.457, sys_jitter=0.004033,
+    clk_jitter=0.051, clk_wander=0.031, tai=35, leapsec=201507010000,
+    expire=201512280000
+    associd=0 status=041d leap_none, sync_uhf_radio, 1 event, kern,
+    pll offset:            0
+    pll frequency:         -13.4565
+    maximum error:         0.0015
+    estimated error:       3.4e-05
+    kernel status:         pll ppsfreq ppstime ppssignal nano
+    pll time constant:     3
+    precision:             1e-06
+    frequency tolerance:   500
+    pps frequency:         -13.4874
+    pps stability:         0.280609
+    pps jitter:            0.050
+    calibration interval   256
+    calibration cycles:    152
+    jitter exceeded:       45
+    stability exceeded:    2
+    calibration errors:    0
+    associd=0 status=041d leap_none, sync_uhf_radio, 1 event, kern,
+    system peer:        GPS_NMEA(0)
+    system peer mode:   client
+    leap indicator:     00
+    stratum:            1
+    log2 precision:     -23
+    root delay:         0.000
+    root dispersion:    1.015
+    reference ID:       GPS
+    reference time:     d884bdb9.bc1f69e3  Tue, Feb 10 2015  9:26:17.734
+    system jitter:      0.004033
+    clock jitter:       0.051
+    clock wander:       0.031
+    broadcast delay:    0.000
+    symm. auth. delay:  0.000
 
 I also tried setting up a time server with FreeBSD to see if it's any easier or better.
 
