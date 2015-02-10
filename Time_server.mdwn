@@ -1,4 +1,4 @@
-This page documents my project to build a stratum 1 NTP [[!wikipedia time server]] at my house. Its hostname is [gauss.kenyonralph.com](http://www.pool.ntp.org/scores/2001:470:8683:0:219:b9ff:fe7d:e6e0) and it is part of the NTP pool.
+This page documents my project to build a stratum 1 NTP [[!wikipedia time server]] at my house. Its hostname is [einstein.kenyonralph.com](http://www.pool.ntp.org/scores/2001:470:d:6ad:222:4dff:fe83:cd4a) and it is part of the NTP pool.
 <!-- link to this page from http://wiki.northgrum.com/wiki/Network_Time_Protocol#Stratum_1_time_servers -->
 [[!toc levels=2]]
 
@@ -23,61 +23,43 @@ I used a Windows Vista computer with Garmin's SNSRXCFG_270.exe to upgrade the fi
 
 ## Debian GNU/Linux setup
 
-I first tried using the GPS with an old Pentium III computer running Ubuntu 11.04 natty running kernel 2.6.38-11-generic-pae. I could see the NMEA sentences with `gpsd` and `gpspipe -r`, but a few seconds after I did `sudo ldattach PPS /dev/ttyS0` the system would lock up hard due to some kernel bug in some driver for my hardware. I saw `BUG: scheduling while atomic` in the syslog, but I wasn't able to capture the whole bug output. The same bug would occur if I just did `cat /dev/ttyS0`. So I just gave up with that old hardware and moved the GPS to my newer desktop computer running Debian squeeze and kernel 2.6.39-bpo.2-amd64. No lockups on this machine.
+Here are the steps in summary (written for Debian wheezy in February 2015):
 
-You need to have `/usr/include/timepps.h` to compile ntpd with proper PPS support. This header [does not exist in Debian yet](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=570233), so I used the one from [Alexander Gordeev's git repository](https://github.com/ago/pps-tools/).
+* Install [[!debpkg pps-tools]]
+* Create udev rules
+* Build a customized [[!debpkg ntp]] package which [enables debugging](http://bugs.debian.org/643954) and builds against the timepps.h header installed by pps-tools (there is no PPS support in the current Debian package of NTP, but there is a [bug report](https://bugs.debian.org/691672) requesting that it be built-in)
+* Build a custom kernel which enables CONFIG_NTP_PPS
 
-The ntpd in Debian squeeze [does not have debugging enabled](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=643954), which makes it difficult to see what is going on with your local reference clock. I [rebuilt the squeeze package](http://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/) with debugging enabled, but I still wasn't getting very good results. It would not select the GPS as system peer or PPS peer, and jitter was high, in the tens of milliseconds. So I compiled my own ntp version 4.2.6p4 straight from the tarball, starting with this configure line: `./configure --prefix=/usr --sysconfdir=/var/lib/ntp` The output below is from this build of ntp, not the Debian package, which was version 4.2.6p2.
+Some details:
 
-When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded automatically and the device `/dev/pps0` will be created. I have some udev rules to create device symlinks and run ldattach:
+When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded automatically and the device `/dev/pps0` will be created. Place some udev rules in `/etc/udev/rules.d/77-local.rules` to create device symlinks and run ldattach automatically:
 
+    SUBSYSTEM=="pps", MODE="0664" GROUP="dialout"
     KERNEL=="ttyS0" SYMLINK+="gps0"
     KERNEL=="ttyS0", RUN+="/usr/sbin/ldattach pps /dev/%k"
     KERNEL=="pps0" SYMLINK+="gpspps0"
 
-Here is my working Debian squeeze ntp.conf:
+Here is my working ntp.conf:
 
+    rlimit memlock 128
     driftfile /var/lib/ntp/ntp.drift
-    server 127.127.20.0
-    fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.600
-    server voodoo.kenyonralph.com iburst
+    restrict localhost
+    restrict default limited kod noquery
     server darwin.kenyonralph.com iburst
     pool 2.us.pool.ntp.org iburst
+    server 127.127.20.0 mode 16 minpoll 3 iburst
+    fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.545
+    leapfile /etc/ntp/leap-seconds.list
 
 Example output after letting ntpd run for about 8 hours:
 
-    ntpq -p -c clockvar; ntptime; ntpdc -c kerninfo
-         remote           refid      st t when poll reach   delay   offset  jitter
-    ==============================================================================
-    oGPS_NMEA(0)     .GPS.            0 l    3    8  377    0.000    0.001   0.001
-    *voodoo.kenyonra 72.29.161.5      2 u   46   64  377    0.243    2.454   0.146
-    +darwin.kenyonra 127.67.113.92    2 u   14   64  377   20.122    2.467   3.413
-    associd=0 status=0012 , 1 event, clk_bad_format,
-    device="NMEA GPS Clock",
-    timecode="$GPRMC,212627,A,1111.1111,N,11111.1111,W,000.0,171.9,011011,012.1,E*61",
-    poll=3876, noreply=0, badformat=1, baddata=0, fudgetime1=0.000,
-    stratum=0, refid=GPS, flags=5
-    ntp_gettime() returns code 0 (OK)
-      time d2320403.a6e5ab84  Sat, Oct  1 2011 14:26:27.651, (.651942165),
-      maximum error 1617 us, estimated error 0 us
-    ntp_adjtime() returns code 0 (OK)
-      modes 0x0 (),
-      offset 0.530 us, frequency 4.205 ppm, interval 1 s,
-      maximum error 1617 us, estimated error 0 us,
-      status 0x2007 (PLL,PPSFREQ,PPSTIME,NANO),
-      time constant 3, precision 0.001 us, tolerance 500 ppm,
-    pll offset:           5.3e-07 s
-    pll frequency:        4.205 ppm
-    maximum error:        0.001617 s
-    estimated error:      0 s
-    status:               2007  pll ppsfreq ppstime nano
-    pll time constant:    3
-    precision:            1e-09 s
-    frequency tolerance:  500 ppm
+    TODO UPDATE THIS
 
-I'm going to try setting up a time server with FreeBSD next to see if it's any easier or better.
+I also tried setting up a time server with FreeBSD to see if it's any easier or better.
 
 ## FreeBSD setup
+
+This section was written in October 2011. I no longer run this FreeBSD system. I'm running the NTP server on the Linux machine described above.
 
 I am using [ntp-devel](http://www.freshports.org/net/ntp-devel/) from ports.
 
@@ -187,6 +169,8 @@ Here is what kerninfo looks like with the PPS_SYNC kernel option:
 
 FreeBSD is much nicer than Linux (as of late 2011) at being a stratum 1 NTP server using a NMEA GPS with PPS reference clock.
 
+As of early 2015, I would say it's about an equal amount of effort between FreeBSD and Debian Linux. Debian Linux is a little more effort if you want to create a proper Debian package of NTP, but since I've already done that, you don't have to.
+
 ## Notes
 
 * Show serial port settings:
@@ -208,12 +192,8 @@ FreeBSD is much nicer than Linux (as of late 2011) at being a stratum 1 NTP serv
 * [Adding a FreeBSD NTP server based on an GPS 18 LVC device](http://www.satsignal.eu/ntp/FreeBSD-GPS-PPS.htm) by David Taylor
 * [Enabling ntpd PPS support for Debian Lenny Linux](http://www.worldtimesolutions.com/support/ntp/Debian_Lenny_Linux_PPS_support_for_ntpd.html) by World Time Solutions
 * [Garmin GPS 18x OEM](https://buy.garmin.com/shop/shop.do?cID=158&pID=27594)
-* [LinuxPPS installation](http://wiki.enneenne.com/index.php/LinuxPPS_installation) and [ntpd support](http://wiki.enneenne.com/index.php/LinuxPPS_NTPD_support)
 * [NTP server using PC gnu/linux and freebsd](http://www.wraith.sf.ca.us/ntp/) by Steven Bjork
-* [NTP](http://en.gentoo-wiki.com/wiki/NTP) on Gentoo Wiki
 * [Stratum 1 NTP, Garmin GPS 18 LVC on FreeBSD 8.0](http://blog.doylenet.net/?p=145) by Ryan Doyle
 * [Synchronising to a Garmin GPS 18 LVC](http://www.sput.nl/time/garmin.html) by R.J. van der Putten
 * [Synchronizing an NTP server to GPS/PPS](http://linlog.blogspot.com/2009/07/synchronizing-ntp-server-to-gpspps.html) by Pela-Suros
 * [Synchronizing ntpd to a Garmin GPS 18 LVC via gpsd](http://www.rjsystems.nl/en/2100-ntpd-garmin-gps-18-lvc-gpsd.php) by Jaap Winius
-* [Ubuntu bug 805661](https://bugs.launchpad.net/bugs/805661)
-* [Using a Garmin GPS 18 LVC as NTP stratum-0 on Linux 2.6](http://time.qnan.org/) by Philip M. White
