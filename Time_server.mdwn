@@ -227,7 +227,9 @@ Here is what kerninfo looks like with the PPS_SYNC kernel option:
 
 FreeBSD is much nicer than Linux (as of late 2011) at being a stratum 1 NTP server using a NMEA GPS with PPS reference clock.
 
-As of early 2015, I would say it's about an equal amount of effort between FreeBSD and Debian Linux. Debian Linux is a little more effort if you want to create a proper Debian package of NTP, but since I've already done that, you don't have to.
+As of early 2015, I would say it's about an equal amount of effort between FreeBSD and Debian Linux. Debian Linux is a little more effort if you want to create a proper Debian package of NTP, but since I've already done that, you don't have to. You may use the NTP package from my Debian repository by adding the following line to your sources.list:
+
+    deb http://kenyonralph.com/repo/ wheezy/
 
 ## Notes
 
