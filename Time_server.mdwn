@@ -28,7 +28,7 @@ Here are the steps in summary (written for Debian wheezy in February 2015):
 * Install [[!debpkg pps-tools]]
 * Create udev rules
 * Build a customized [[!debpkg ntp]] package which [enables debugging](http://bugs.debian.org/643954) and builds against the timepps.h header installed by pps-tools (there is no PPS support in the current Debian package of NTP, but there is a [bug report](https://bugs.debian.org/691672) requesting that it be built-in)
-* Build a custom kernel which enables CONFIG_NTP_PPS
+* Build a custom kernel which enables CONFIG_NTP_PPS (make all -j8 && make deb-pkg in kernel source tree)
 
 Some details:
 
