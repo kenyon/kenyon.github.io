@@ -28,7 +28,7 @@ Here are the steps in summary (written for Debian wheezy in February 2015):
 * Install [[!debpkg pps-tools]]
 * Create udev rules
 * Build a customized [[!debpkg ntp]] package which [enables debugging](http://bugs.debian.org/643954) and builds against the timepps.h header installed by pps-tools (there is no PPS support in the current Debian package of NTP, but there is a [bug report](https://bugs.debian.org/691672) requesting that it be built-in)
-* Build a custom kernel which enables CONFIG_NTP_PPS (make all -j8 && make deb-pkg in kernel source tree)
+* Build a custom kernel which enables CONFIG_NTP_PPS (make -j9 all && make deb-pkg in kernel source tree)
 
 Some details:
 
@@ -229,7 +229,7 @@ FreeBSD is much nicer than Linux (as of late 2011) at being a stratum 1 NTP serv
 
 As of early 2015, I would say it's about an equal amount of effort between FreeBSD and Debian Linux. Debian Linux is a little more effort if you want to create a proper Debian package of NTP, but since I've already done that, you don't have to. You may use the NTP package from my Debian repository by adding the following line to your sources.list:
 
-    deb http://kenyonralph.com/repo/ wheezy/
+    deb http://kenyonralph.com/repo/ jessie/
 
 ## Notes
 
