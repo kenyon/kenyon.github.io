@@ -40,7 +40,6 @@ Use my public OpenPGP key to engage in secure communications with me:
 * <http://caida.org/~kenyon/>
 
 ## System information
-* apache status: [darwin](http://darwin.kenyonralph.com/server-status) [einstein](http://einstein.kenyonralph.com:8080/server-status)
 * [smokeping](http://kenyonralph.com/smokeping/smokeping.cgi)
 * UPS status: [einstein](http://einstein.kenyonralph.com:8080/cgi-bin/apcupsd/multimon.cgi)
 * [munin](http://kenyonralph.com/munin/)
