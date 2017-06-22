@@ -11,9 +11,9 @@ See the [[site map|sitemap]] for a list of all pages on this site.
 Use my public OpenPGP key to engage in secure communications with me:
 
 * [[!gpg c9b912d5]] fingerprint: 6166 B557 BF04 3923 AC22  6183 98FF 3EF9 C9B9 12D5
-* Local copy (may not have all the latest signatures as the one on the public keyservers): </0xC9B912D5-pubkey.asc>
+* Local copy (may not have all the latest signatures as the one on the public keyservers): [0xC9B912D5-pubkey.asc](/0xC9B912D5-pubkey.asc)
 * Stats: <http://pgp.cs.uu.nl/mk_path.cgi?STAT=0xC9B912D5&STATS=statistics>
-* Signed key transition message of 2009-12-23 regarding my transition from key [[!gpg 92A76E75]] to [[!gpg C9B912D5]]: </key-transition-20091223.txt>
+* Signed key transition message of 2009-12-23 regarding my transition from key [[!gpg 92A76E75]] to [[!gpg C9B912D5]]: [key-transition-20091223.txt](/key-transition-20091223.txt)
 
 ### Instant message
 * XMPP: kenyon@kenyonralph.com
