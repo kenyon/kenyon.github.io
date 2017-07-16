@@ -3,122 +3,74 @@ Documentation on my encrypted backup hard drive.
 [[!toc levels=3]]
 
 ## Hardware
-* [Western Digital My Book Essential 750 GB USB 2.0 Desktop External Hard Drive WDH1U7500N](http://www.amazon.com/gp/product/B000XRI034)
-* Western Digital's page: <http://wdc.com/en/products/products.asp?driveid=771>
+* [Seagate Backup Plus 4TB Portable External Hard Drive USB 3.0, Silver (STDR4000900)](https://smile.amazon.com/dp/B0196J43TE)
 
-    kenyon@grunt ~ !9920 % sudo smartctl --all /dev/sdf
-    smartctl 5.39 2009-12-09 r2995 [x86_64-unknown-linux-gnu] (local build)
-    Copyright (C) 2002-9 by Bruce Allen, http://smartmontools.sourceforge.net
+    kenyon@einstein ~ % sudo smartctl --all --device=sat /dev/disk/by-id/ata-ST4000LM024-2AN17V_WCK0T8TG
+    smartctl 6.6 2016-05-31 r4324 [x86_64-linux-4.9.0-3-amd64] (local build)
+    Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
 
     === START OF INFORMATION SECTION ===
-    Model Family:     Western Digital Caviar Green family
-    Device Model:     WDC WD7500AACS-00D6B1
-    Serial Number:    WD-WCAU42310983
-    Firmware Version: 01.01A01
-    User Capacity:    750,156,374,016 bytes
-    Device is:        In smartctl database [for details use: -P show]
-    ATA Version is:   8
-    ATA Standard is:  Exact ATA specification draft version not indicated
-    Local Time is:    Sun Jan 31 00:46:01 2010 PST
+    Device Model:     ST4000LM024-2AN17V
+    Serial Number:    WCK0T8TG
+    LU WWN Device Id: 5 000c50 0a9957340
+    Firmware Version: 0001
+    User Capacity:    4,000,787,030,016 bytes [4.00 TB]
+    Sector Sizes:     512 bytes logical, 4096 bytes physical
+    Rotation Rate:    5526 rpm
+    Form Factor:      2.5 inches
+    Device is:        Not in smartctl database [for details use: -P showall]
+    ATA Version is:   ACS-3 T13/2161-D revision 5
+    SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
+    Local Time is:    Sun Jul 16 13:43:48 2017 PDT
     SMART support is: Available - device has SMART capability.
     SMART support is: Enabled
 
-    === START OF READ SMART DATA SECTION ===
-    SMART overall-health self-assessment test result: PASSED
-
 ## Software
-* Linux 2.6.32-5-amd64 #1 SMP Wed May 18 23:13:22 UTC 2011 x86_64 GNU/Linux
-* Debian GNU/Linux squeeze
+* Linux 4.9.0-3-amd64 #1 SMP Debian 4.9.30-2+deb9u1 (2017-06-18) x86_64 GNU/Linux
+* Debian GNU/Linux 9.0 stretch
 * Important packages: [[!debpkg dmsetup]], [[!debpkg cryptsetup]]
 
 ### Encryption
-* cryptsetup 1.1.0-rc2
-
-I did `sudo modprobe dm-mod dm-crypt aes` and added those modules to `/etc/modules`.
+* cryptsetup 1.7.3
 
 #### Creation
-    sudo cryptsetup --verbose --verify-passphrase --key-size 256 luksFormat /dev/sdf1
-    sudo cryptsetup --verbose luksOpen /dev/sdf1 bak
+    sudo cryptsetup --verbose --verify-passphrase --use-random luksFormat /dev/disk/by-id/ata-ST4000LM024-2AN17V_WCK0T8TG-part1
+    sudo cryptsetup --verbose open --type luks /dev/disk/by-id/ata-ST4000LM024-2AN17V_WCK0T8TG-part1 bak
 
 #### Use
 Added to `/etc/fstab`:
 
-    LABEL=bak       /bak            ext4    user,noatime,noauto 0   0
+    /dev/mapper/bak       /bak            btrfs    user,noatime,noauto,x-systemd.automount 0   0
 
-    sudo cryptsetup --verbose luksOpen /dev/sdf1 bak
+    sudo cryptsetup --verbose open --type luks /dev/disk/by-id/ata-ST4000LM024-2AN17V_WCK0T8TG-part1 bak
     sudo mount /bak
 
 Add entry to `/etc/crypttab`:
 
-    bak UUID=4a69dabf-929e-4f71-ab71-a9823c9633a9 none luks,noauto
+    bak UUID=c54be6ba-9f10-41b3-a95f-6115d6933df9 none luks,noauto
 
 After making the `crypttab` entry:
 
     sudo cryptdisks_start bak && sudo mount /bak
 
+Or:
+
+    sudo systemctl start /bak
+
 ### File system
 #### Creation
-After `sudo cryptsetup --verbose luksOpen /dev/sdf1 bak`, I did
+After `sudo cryptsetup --verbose open --type luks /dev/disk/by-id/ata-ST4000LM024-2AN17V_WCK0T8TG-part1 bak`, I did
 
-    sudo mkfs.ext4 -v -L bak /dev/mapper/bak
+    sudo mkfs.btrfs --label bak /dev/mapper/bak
 
 #### Disconnecting
 Before disconnecting the drive from the system, do this:
 
     sudo umount /bak && sudo cryptdisks_stop bak
 
-### Backup
-Run this script: `$MYGITREPO_DIR/sysadmin/hosts/grunt/external-backup`
+Or:
 
-[[!format sh """
-#!/bin/sh
-if mount -l -v -t ext4 | grep -q '/bak type ext4'
-then
-    echo "$(date)" >> /data/backups/external-backups.log
-    exec sudo time rsync \
-        --archive \
-        --delete \
-        --delete-excluded \
-        --exclude=/data/backups/hourly.[1-9] \
-        --exclude=/data/backups/daily.* \
-        --exclude=/data/backups/weekly.* \
-        --exclude=/data/backups/monthly.* \
-        --exclude=/dev \
-        --exclude=/media \
-        --exclude=/mnt \
-        --exclude=/proc \
-        --exclude=/sys \
-        --exclude=/tmp \
-        --exclude=.cache \
-        --exclude=.ccache \
-        --exclude=Cache \
-        --exclude=lost+found \
-        --exclude=/var/cache \
-        --exclude=/var/db/ccache \
-        --exclude=/var/tmp \
-        --fuzzy \
-        --hard-links \
-        --human-readable \
-        --ignore-errors \
-        --progress \
-        --relative \
-        --sparse \
-        --stats \
-        --verbose \
-        /boot \
-        /etc \
-        /lib \
-        /opt \
-        /raptor \
-        /root \
-        /var \
-        /data \
-        /bak/grunt
-else
-    echo 'bak seems to not be mounted.'
-    exit 1
-fi
-"""]]
+    sudo systemctl stop /bak && sudo systemctl stop systemd-cryptsetup@bak
 
 ## References
 * cryptsetup, luks: <http://code.google.com/p/cryptsetup/>
