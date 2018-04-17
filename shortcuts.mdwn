@@ -50,7 +50,7 @@ This page controls what shortcut links the wiki supports.
 * [[!shortcut name=haskellwiki url="http://haskell.org/haskellwiki/%s"]]
 * [[!shortcut name=dict url="http://www.dict.org/bin/Dict?Form=Dict1&Strategy=*&Database=*&Query=%s"]]
 * [[!shortcut name=imdb url="http://imdb.com/find?q=%s"]]
-* [[!shortcut name=gpg url="http://pgpkeys.mit.edu:11371/pks/lookup?op=vindex&exact=on&search=0x%s"]]
+* [[!shortcut name=gpg url="https://pgp.surfnet.nl/pks/lookup?search=%s"]]
 * [[!shortcut name=perldoc url="http://perldoc.perl.org/search.html?q=%s"]]
 * [[!shortcut name=whois url="http://reports.internic.net/cgi/whois?whois_nic=%s&type=domain"]]
 * [[!shortcut name=cve url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=%s"]]
