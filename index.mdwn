@@ -12,27 +12,27 @@ Use my public OpenPGP key to engage in secure communications with me:
 
 * [[!gpg c9b912d5]] fingerprint: `6166 B557 BF04 3923 AC22  6183 98FF 3EF9 C9B9 12D5`
 * Local copy (may not have all the latest signatures as the one on the public keyservers): [0xC9B912D5-pubkey.asc](/0xC9B912D5-pubkey.asc)
-* Stats: <http://pgp.cs.uu.nl/mk_path.cgi?STAT=0xC9B912D5&STATS=statistics>
+* Stats: <https://pgp.cs.uu.nl/stats/98ff3ef9c9b912d5.html>
 * Signed key transition message of 2009-12-23 regarding my transition from key [[!gpg 92A76E75]] to [[!gpg C9B912D5]]: [key-transition-20091223.txt](/key-transition-20091223.txt)
 
 ### Instant message
 * XMPP: kenyon@kenyonralph.com
 
 ### IRC
-* [OFTC](http://www.oftc.net/): kenyon
-* [Freenode](http://freenode.net/): kenyon
+* [OFTC](https://www.oftc.net/): kenyon
+* [Freenode](https://freenode.net/): kenyon
 
 ## External links
 * [Amazon](https://www.amazon.com/gp/pdp/profile/A14E2XP0PR1V8D)
-* [eBay](http://myworld.ebay.com/kenyon321)
+* [eBay](https://www.ebay.com/usr/kenyon321)
 * [Facebook](https://facebook.com/kenyonralph)
 * [GitHub](https://github.com/kenyon)
 * [Google+](https://plus.google.com/106326399153901456849)
 * [Launchpad](https://launchpad.net/~kralph)
-* [LinkedIn](http://www.linkedin.com/in/kenyonralph)
+* [LinkedIn](https://www.linkedin.com/in/kenyonralph)
 * [openhub](https://www.openhub.net/accounts/kenyon)
 * [Strava](https://www.strava.com/athletes/2197422)
-* [Twitter](http://twitter.com/kenyonralph)
+* [Twitter](https://twitter.com/kenyonralph)
 * [Wikipedia](https://en.wikipedia.org/wiki/User:Kenyon)
 
 ### URLs that redirect here
@@ -50,4 +50,4 @@ Use my public OpenPGP key to engage in secure communications with me:
 
 ----
 
-This wiki is powered by [[ikiwiki]] [[!version]] and hosted by [Linode](http://www.linode.com/?r=5a0b011abb565ac77f1d9a976853845747fdb5c2).
+This wiki is powered by [[ikiwiki]] [[!version]] and hosted by [Linode](https://www.linode.com/?r=5a0b011abb565ac77f1d9a976853845747fdb5c2).
