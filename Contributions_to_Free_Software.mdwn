@@ -44,6 +44,7 @@ Not Free Software, a [Free Cultural Work](http://freedomdefined.org/), but I hav
 I'm contributing to the [munin](http://munin-monitoring.org/) project.
 
 ## See also
+* Lots of contributions on [github](https://github.com/kenyon)
 * [Kenyon Ralph on ohloh](https://www.ohloh.net/accounts/kenyon)
 
 [[!tag Linux Debian Ubuntu FreeBSD]]
