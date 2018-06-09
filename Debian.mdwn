@@ -12,6 +12,7 @@ I'm using it with Debian GNU/Linux 9.4 (stretch) and kernel 4.9.88-1+deb9u1 (201
 Without any special configuration, the first port is detected by the kernel and works fine, but not the second port, even though you can see it in `lspci` output.
 
 The key to getting both serial ports working is to use `setserial` from the [[!debpkg setserial]] package to configure the serial ports. Here is my `/etc/serial.conf`:
+
     /dev/ttyS0 uart 16550A port 0x03f8 irq 4 baud_base 115200 spd_normal skip_test
     /dev/ttyS1 uart 16650V2 port 0xe000 irq 19 baud_base 115200 spd_normal skip_test
     /dev/ttyS2 uart 16650V2 port 0xe010 irq 18 baud_base 115200 spd_normal skip_test
