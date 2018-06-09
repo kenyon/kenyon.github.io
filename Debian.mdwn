@@ -54,7 +54,7 @@ Run `mini-dinstall --batch` to initialize the repository.
 # Copyright © 2002 Colin Walters <walters@debian.org>
 # License: GPLv2
 set -e
-KEYID=0xc9b912d5
+KEYID=0x98FF3EF9C9B912D5
 rm -f Release.gpg.tmp
 gpg --default-key "$KEYID" --detach-sign -o Release.gpg.tmp "$1"
 mv Release.gpg.tmp Release.gpg
@@ -73,7 +73,7 @@ Run `dput local pkg.changes` to upload the package to the repository.
 
 ### ~/.devscripts
 [[!format bash """
-DEBUILD_DPKG_BUILDPACKAGE_OPTS="-k0xC9B912D5 -sa"
+DEBUILD_DPKG_BUILDPACKAGE_OPTS="-k0x98FF3EF9C9B912D5 -sa"
 DSCVERIFY_KEYRINGS="~/.gnupg/pubring.gpg"
 """]]
 
