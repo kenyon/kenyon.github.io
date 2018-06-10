@@ -1,5 +1,5 @@
-This page documents my project to build a stratum 1 NTP [[!wikipedia time server]] at my house. Its hostname is [einstein.kenyonralph.com](http://www.pool.ntp.org/scores/2001:470:d:6ad:222:4dff:fe83:cd4a) and it is part of the NTP pool.
-<!-- link to this page from http://wiki.northgrum.com/wiki/Network_Time_Protocol#Stratum_1_time_servers -->
+This page documents my project to build a stratum 1 NTP [[!wikipedia time server]] at my house. Its hostname is einstein.kenyonralph.com.
+<!-- There is a link to this page from http://wiki.northgrum.com/wiki/Network_Time_Protocol#Stratum_1_time_servers -->
 [[!toc levels=2]]
 
 ## GPS selection
@@ -27,26 +27,39 @@ Here are the steps in summary (written for Debian wheezy in February 2015):
 
 * Install [[!debpkg pps-tools]]
 * Create udev rules
-* Build a customized [[!debpkg ntp]] package which [enables debugging](http://bugs.debian.org/643954) and builds against the timepps.h header installed by pps-tools (there is no PPS support in the current Debian package of NTP, but there is a [bug report](https://bugs.debian.org/691672) requesting that it be built-in)
-* Build a custom kernel which enables CONFIG_NTP_PPS (make -j9 all && make deb-pkg in kernel source tree)
+* Create systemd service unit for ldattach
 
 Some details:
 
 When you do `sudo ldattach PPS /dev/ttyS0`, the PPS modules will be loaded automatically and the device `/dev/pps0` will be created. Place some udev rules in `/etc/udev/rules.d/77-local.rules` to create device symlinks and run ldattach automatically:
 
     SUBSYSTEM=="pps", MODE="0664" GROUP="dialout"
-    KERNEL=="ttyS0" SYMLINK+="gps0"
-    KERNEL=="ttyS0", RUN+="/usr/sbin/ldattach pps /dev/%k"
+    KERNEL=="ttyS2", RUN+="/bin/stty --file=/dev/ttyS2 9600"
+    KERNEL=="ttyS2" SYMLINK+="gps0"
     KERNEL=="pps0" SYMLINK+="gpspps0"
+
+systemd unit to run `ldattach` (enable with `systemctl enable ldattach@ttyS2`):
+
+    [Unit]
+    Description=PPS Line Discipline for GPS Timekeeping for %i
+    Before=ntpd.service
+
+    [Service]
+    ExecStart=/usr/sbin/ldattach pps /dev/%i
+    Type=forking
+
+    [Install]
+    WantedBy=multi-user.target
+
 
 Here is my working ntp.conf:
 
-    rlimit memlock 128
+    rlimit memlock -1
     driftfile /var/lib/ntp/ntp.drift
     restrict localhost
-    restrict default limited kod noquery
+    restrict default limited noquery
     server darwin.kenyonralph.com iburst
-    pool 2.us.pool.ntp.org iburst
+    pool 2.pool.ntp.org iburst
     server 127.127.20.0 mode 16 minpoll 3 iburst
     fudge 127.127.20.0 flag1 1 flag2 0 flag3 1 time2 0.545
     leapfile /etc/ntp/leap-seconds.list
