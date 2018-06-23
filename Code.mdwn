@@ -6,3 +6,8 @@ This page contains code I've written and want to make public, which doesn't fit 
 This is a [Python](http://python.org/) 3 script that just does DNS lookups on an IP address and the returned name. It is handy for verifying [[!wikipedia forward-confirmed reverse DNS]]. It uses `host` from [[!debpkg bind9-host]].
 
 * <http://kenyonralph.com/fcrdns>
+
+## UniFi Video and UniFi Controller Let's Encrypt certificate update script
+This is a [bash](https://www.gnu.org/software/bash/) script that I run weekly with cron to keep the [Let's Encrypt](https://letsencrypt.org/) TLS certificates current for my [UniFi](https://www.ubnt.com/) software. You would of course have to adapt it to your own site since it contains my hostname.
+
+* <http://kenyonralph.com/letsencrypt-unifi.sh>
