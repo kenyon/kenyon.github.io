@@ -11,3 +11,11 @@ This is a [Python](http://python.org/) 3 script that just does DNS lookups on an
 This is a [bash](https://www.gnu.org/software/bash/) script that I run weekly with cron to keep the [Let's Encrypt](https://letsencrypt.org/) TLS certificates current for my [UniFi](https://www.ubnt.com/) software. You would of course have to adapt it to your own site since it contains my hostname.
 
 * <http://kenyonralph.com/letsencrypt-unifi.sh>
+
+## packages.rb
+Puppet Facter custom fact (written in Ruby). Returns a list of
+packages installed on the system as a hash, mapping the package name
+to the version. Works with Debian and Red Hat family operating
+systems.
+
+* <https://gist.github.com/kenyon/ac66188dc704951fbacd3a978e0c9f44>
