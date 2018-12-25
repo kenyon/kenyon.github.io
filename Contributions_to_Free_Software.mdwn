@@ -26,13 +26,13 @@ Here I'll try to document my contributions to the [[!wikipedia Free Software]] w
 I use and edit the [Ubuntu Community Documentation wiki](https://help.ubuntu.com/community/) under the username *kralph*.
 
 ### Debian Linux
-I use and edit the [Debian Wiki](http://wiki.debian.org/) as *KenyonRalph*.
+I use and edit the [Debian Wiki](http://wiki.debian.org/) as [KenyonRalph](https://wiki.debian.org/KenyonRalph).
 
 ### Linux iproute2
-* [update ip address manual page](http://git.kernel.org/?p=linux/kernel/git/shemminger/iproute2.git;a=commitdiff;h=43d29f782f12d6212ea3717a3a47b0036474a67c)
+* [update ip address manual page](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/commit/?id=4e972d5ef41b28679a8125ed5289496284a9157f) ([original commit](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/commit/?id=43d29f782f12d6212ea3717a3a47b0036474a67c))
 
 ### Mutt
-* [Comment on Ticket #3109, Improve manual for 1.6](http://dev.mutt.org/trac/ticket/3109#comment:11)
+* [Comment on Ticket #3109, Improve manual for 1.6](https://gitlab.com/muttmua/trac-tickets/blob/master/tickets/closed/3109-Improve_manual_for_16.txt#L103)
 
 ### Wikipedia
 Not Free Software, a [Free Cultural Work](http://freedomdefined.org/), but I have made a lot of Wikipedia contributions: [[!wikipedia Special:Contributions/Kenyon]]
