@@ -7,10 +7,11 @@ This is a [Python](http://python.org/) 3 script that just does DNS lookups on an
 
 * <http://kenyonralph.com/fcrdns>
 
-## UniFi Video and UniFi Controller Let's Encrypt certificate update script
-This is a [bash](https://www.gnu.org/software/bash/) script that I run weekly with cron to keep the [Let's Encrypt](https://letsencrypt.org/) TLS certificates current for my [UniFi](https://www.ubnt.com/) software. You would of course have to adapt it to your own site since it contains my hostname.
+## UniFi Video and UniFi Controller Let's Encrypt certificate update post-deploy hook script
+This is a [bash](https://www.gnu.org/software/bash/) script that runs whenever the [Let's Encrypt](https://letsencrypt.org/) TLS certificates are
+renewed for my [UniFi](https://www.ubnt.com/) software. It's installed as `/etc/letsencrypt/renewal-hooks/deploy/unifi`.
 
-* <http://kenyonralph.com/letsencrypt-unifi.sh>
+* <http://kenyonralph.com/letsencrypt-unifi>
 
 ## packages.rb
 Puppet Facter custom fact (written in Ruby). Returns a list of
