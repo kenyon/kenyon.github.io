@@ -11,7 +11,7 @@ See the [[site map|sitemap]] for a list of all pages on this site.
 Use my public OpenPGP key to engage in secure communications with me:
 
 * [[!gpg 0x98FF3EF9C9B912D5]] fingerprint: `6166 B557 BF04 3923 AC22  6183 98FF 3EF9 C9B9 12D5`
-* Local copy (may not have all the latest signatures as the one on the public keyservers): [0xC9B912D5-pubkey.asc](/0xC9B912D5-pubkey.asc)
+* Local copy (may not have all the latest signatures as the one on the public keyservers): [0x98FF3EF9C9B912D5-pubkey.asc](/0x98FF3EF9C9B912D5-pubkey.asc)
 * Stats: <https://pgp.cs.uu.nl/stats/98ff3ef9c9b912d5.html>
 * Signed key transition message of 2009-12-23 regarding my transition from key [[!gpg 0x985B54B492A76E75]] to [[!gpg 0x98FF3EF9C9B912D5]]: [key-transition-20091223.txt](/key-transition-20091223.txt)
 
