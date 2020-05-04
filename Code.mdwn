@@ -1,17 +1,9 @@
-This page contains code I've written and want to make public, which doesn't fit anywhere else on my site.
+This page contains code I've written and want to make public, which
+doesn't fit anywhere else on my site. Most of my work is on
+[GitHub](https://github.com/kenyon) and
+[GitLab](https://gitlab.com/kenyon).
 
 [[!toc levels=2]]
-
-## fcrdns
-This is a [Python](http://python.org/) 3 script that just does DNS lookups on an IP address and the returned name. It is handy for verifying [[!wikipedia forward-confirmed reverse DNS]]. It uses `host` from [[!debpkg bind9-host]].
-
-* <http://kenyonralph.com/fcrdns>
-
-## UniFi Video and UniFi Controller Let's Encrypt certificate update post-deploy hook script
-This is a [bash](https://www.gnu.org/software/bash/) script that runs whenever the [Let's Encrypt](https://letsencrypt.org/) TLS certificates are
-renewed for my [UniFi](https://www.ubnt.com/) software. It's installed as `/etc/letsencrypt/renewal-hooks/deploy/unifi`.
-
-* <http://kenyonralph.com/letsencrypt-unifi>
 
 ## packages.rb
 Puppet Facter custom fact (written in Ruby). Returns a list of
