@@ -21,6 +21,9 @@ Here I'll try to document my contributions to the [[!wikipedia Free Software]] w
 * <http://bugs.debian.org/cgi-bin/pkgreport.cgi?archive=both;submitter=kenyon%40kenyonralph.com>
 * <http://www.google.com/search?q=kenyon+ralph+site:bugs.debian.org&hl=en&safe=off&num=100&filter=0>
 
+### Red Hat Bugzilla
+* [my Red Hat Bugzilla activity](https://bugzilla.redhat.com/buglist.cgi?email1=kenyon%40kenyonralph.com&emailassigned_to1=1&emailcc1=1&emaildocs_contact1=1&emaillongdesc1=1&emailqa_contact1=1&emailreporter1=1&emailtype1=substring&list_id=11120320&query_format=advanced)
+
 ## Documentation
 ### Ubuntu Linux
 I use and edit the [Ubuntu Community Documentation wiki](https://help.ubuntu.com/community/) under the username *kralph*.
