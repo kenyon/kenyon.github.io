@@ -34,9 +34,6 @@ Use my public OpenPGP key to engage in secure communications with me:
 * [Twitter](https://twitter.com/kenyonralph)
 * [Wikipedia](https://en.wikipedia.org/wiki/User:Kenyon)
 
-### URLs that redirect here
-* <http://caida.org/~kenyon/>
-
 ## System information
 * [smokeping](/smokeping/smokeping.cgi)
 * UPS status: [einstein](http://einstein.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
