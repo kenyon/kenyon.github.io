@@ -1,0 +1,82 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1,SHA512
+
+Wed Dec 23 00:55:00 PST 2009
+
+For a number of reasons, I've generated a new OpenPGP key, and will be
+transitioning away from my old one.
+
+The old key will continue to be valid for some time, but I prefer all future
+correspondence to use the new one. I would also like this new key to be
+integrated into the Web of Trust.
+
+This message is signed by both keys to certify the transition. This can be
+verified with the following command (assuming you have both of my keys
+already, or have GnuPG configured to auto-retrieve keys):
+
+    wget -q -O - http://kenyonralph.com/key-transition-20091223.txt | gpg2 --verify -
+
+The old key was:
+
+pub   1024D/92A76E75 2008-06-26
+      Key fingerprint = 1878 40FD 0C51 92CD AE2F  88BE 985B 54B4 92A7 6E75
+
+The new key is:
+
+pub   4096R/C9B912D5 2009-12-22
+      Key fingerprint = 6166 B557 BF04 3923 AC22  6183 98FF 3EF9 C9B9 12D5
+
+The new key is available on my website,
+
+    wget -q -O - http://kenyonralph.com/0xC9B912D5-pubkey.asc | gpg2 --import -
+
+or on public keyservers:
+
+    gpg2 --keyserver pool.sks-keyservers.net --recv-key 0xC9B912D5
+
+If you already have my old key, you can now verify that the new key is signed
+by the old one:
+
+    gpg2 --check-sigs 0xC9B912D5
+
+You should see lines starting with "sig!         92A76E75", denoting that the
+signature has been successfully verified.
+
+Check the fingerprint against the one above:
+
+    gpg2 --fingerprint 0xC9B912D5
+
+If you're satisfied that you have the correct key, I'd appreciate it if you
+would sign my key:
+
+    gpg2 --sign-key 0xC9B912D5
+
+Finally, if you could upload or mail me the signed key, I'd appreciate it:
+
+    gpg2 --armor --export 0xC9B912D5 | mail -s 'PGP signature' kenyon@kenyonralph.com
+
+    gpg2 --keyserver pool.sks-keyservers.net --send-key 0xC9B912D5
+
+Please let me know if there is any trouble, and apologies for the
+inconvenience.
+
+Regards,
+Kenyon Ralph
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.13 (GNU/Linux)
+
+iEYEARECAAYFAksx9+wACgkQmFtUtJKnbnVAZwCgwEOA2Y3++bjq6pwNh23uL5il
+vykAn0V68el4Kq/wLeMNgdHYtC29Lhk2iQIcBAEBCgAGBQJLMffsAAoJEJj/PvnJ
+uRLV+6UP/2lMt0iLc5QxId8nto8A59WlgLe0js8IczFyP/n7L5huCOxLlbZK4j1Q
+1xBc2N66J8+hTAI0JLII9WgGcDR3UT77csTs8FhQfGFlTqsnBTdb7+//MSxCWV8Z
+dBhels7Jv9vJ2cSXRIohMQmBtzN8cDzsR6OgsYffQ3GujU7OfoS/T6Q6qcrT7MuJ
+g2e2fe7IdUeTjzMwvIYhedenX0cJMLOfQd1lbtenNuVINNTvjOS7s1l1f/7k2YDw
+OyYdJY08hv0V8CpS+PmMzImoqcsUg9rvNi95fDQE+6msPwhwkQMdONy50E/cTbkp
+yFf/7zvgIAfh6AqQTAu1eRJLZIfHj1QjdIsLpTXOHdsz0U0431JbJM70nux6188K
+CAtdslAcch0sag1vVQI5r7KglcLhxOpJBjsA/8AeANlPy4XLIiXm63JSVvPCf/wF
+ZHALJbSxHZQBTUvnD5qxxsRVd8C8c9i6TxhlOF2zrv2+T2J4AFQ/DnhEcCb0KKDG
+WMmj92bdOK5cYAw0Rme/SOmzFoUdFFV+BWix4ykiw1nmkXo37/SK/s7EG+BwpdSV
+ZLIwcqXChOaJDy2WY7s05Wd9SrIXegSUTnrFtZaQt6OPTAx0HTnl0GrAebogRikR
+lpfcDDkdxfsQXGkO/FWpibKi6rf1MhGCI6yMqIDqcpNGADSpDBkU
+=5e1T
+-----END PGP SIGNATURE-----

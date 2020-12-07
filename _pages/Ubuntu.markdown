@@ -1,3 +1,6 @@
+---
+title: Ubuntu
+---
 Some of my notes on using Ubuntu Linux.
 
 ## Disabling touchpad tapping
@@ -5,5 +8,3 @@ For some annoying reason, it's very difficult to disable touchpad tap clicking, 
 
 ## Right Alt produces wrong keysym, ISO_Level3_Shift
 I had this problem on my [[Debian]] machine too. It should produce Alt_R. The solution is to run `sudo dpkg-reconfigure console-setup` and select No AltGr key. I suspect this is related to selecting [[Dvorak|Dvorak keyboard]] as my keyboard layout.
-
-[[!tag Ubuntu]]

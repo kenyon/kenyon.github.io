@@ -1,6 +1,7 @@
+---
+title: Time server
+---
 This page documents my project to build a stratum 1 NTP [[!wikipedia time server]] at my house. Its hostname is einstein.kenyonralph.com.
-<!-- There is a link to this page from http://wiki.northgrum.com/wiki/Network_Time_Protocol#Stratum_1_time_servers -->
-[[!toc levels=2]]
 
 ## GPS selection
 

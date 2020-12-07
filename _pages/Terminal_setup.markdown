@@ -1,6 +1,7 @@
+---
+title: Terminal setup
+---
 Here I'll describe my terminal and shell setup. See also [[Mac OS X Terminal.app]] for info specific to my Mac OS X setup.
-
-[[!toc levels=2]]
 
 ## Terminal emulator
 The never-ending quest for the perfect terminal emulator.
@@ -89,5 +90,3 @@ I use tmux instead of screen now.
 
 ## Shell
 Since I started using Linux, I had been using bash. More recently (January 2009) I switched to zsh and I'm liking it.
-
-[[!tag Debian Linux]]

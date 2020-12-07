@@ -1,8 +1,9 @@
+---
+title: Dvorak keyboard
+---
 Notes on how to switch between [[!wikipedia Dvorak_Simplified_Keyboard desc="Dvorak"]] and [[!wikipedia QWERTY]] keyboard layouts in various environments.
 
 Also notes on my progress toward becoming a proficient Dvorak touch typist.
-
-[[!toc levels=2]]
 
 ## Mac OS X
 1. System Preferences -> International -> Input Menu.
@@ -56,5 +57,3 @@ Linux kernel keymap:
 
 ## See also
 * [GNU Typist (gtypist)](http://www.gnu.org/software/gtypist/)
-
-[[!tag Debian Ubuntu "Mac OS X" Solaris]]

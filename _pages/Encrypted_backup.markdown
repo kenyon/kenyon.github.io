@@ -1,6 +1,7 @@
+---
+title: Encrypted backup
+---
 Documentation on my encrypted backup hard drive.
-
-[[!toc levels=3]]
 
 ## Hardware
 * [Seagate Backup Plus 4TB Portable External Hard Drive USB 3.0, Silver (STDR4000900)](https://smile.amazon.com/dp/B0196J43TE)
@@ -76,5 +77,3 @@ Or:
 * cryptsetup, luks: <http://code.google.com/p/cryptsetup/>
 * <http://www.debian-administration.org/article/Encrypting_an_existing_Debian_lenny_installation>
 * <http://madduck.net/docs/cryptdisk/>
-
-[[!tag Debian Linux]]

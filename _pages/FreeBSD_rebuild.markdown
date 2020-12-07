@@ -1,3 +1,6 @@
+---
+title: FreeBSD rebuild
+---
 Here is my condensed version of <http://www.freebsd.org/doc/en/books/handbook/makeworld.html>, or how to rebuild the FreeBSD world and kernel.
 
 Once the devel/subversion port is installed, check out the source tree once:
@@ -44,5 +47,3 @@ shutdown -r now
 (cd /etc && sudo git status; cd /usr/local/etc && sudo git status; cd /boot && sudo git status)
 """]]
 Commit changes to git repositories as necessary.
-
-[[!tag FreeBSD]]

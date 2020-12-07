@@ -1,3 +1,6 @@
+---
+title: One-liners
+---
 [[!wikipedia one-liner program desc="One-liners"]] I have created or found useful.
 
 1. [sed one-liners](http://sed.sourceforge.net/sed1line.txt)
@@ -30,5 +33,3 @@
 * IPv4 only: `curl ifconfig.me`
 1. Convert a hexadecimal IPv4 address, like you would see in NAT64 and DNS64, to dotted-decimal format: `printf "%d.%d.%d.%d\n" $(echo c0a8:ff01 | sed 's/://; s/../0x& /g; s/\.$//')`
 1. Generate IPv6 Unique Local Address prefix `head -c5 /dev/random | hexdump -e '/1 "%02x "' | awk '{printf("fd%s:%s%s:%s%s::/48\n",$1,$2,$3,$4,$5)}'`
-
-[[!tag Linux Debian "Mac OS X" FreeBSD]]

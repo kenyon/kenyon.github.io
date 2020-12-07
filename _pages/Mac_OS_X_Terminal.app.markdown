@@ -1,6 +1,7 @@
+---
+title: Mac OS X Terminal.app
+---
 Terminal.app on Mac OS X is a little weird. It has some default settings that don't work right, at least for me. I'm logging in to all sorts of machines from Terminal.app: Linux, FreeBSD, Solaris, other Macs. I'm also often using screen and tmux. It's taken a while to get settings that work fairly nicely everywhere.
-
-[[!toc levels=3]]
 
 Here are my settings, grouped by preference pane.
 
@@ -56,5 +57,3 @@ So, the result is this:
 
 ## See also
 * [[Terminal setup]] describes my more general terminal and shell setup.
-
-[[!tag "Mac OS X"]]

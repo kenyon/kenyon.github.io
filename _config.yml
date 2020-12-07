@@ -22,13 +22,20 @@ title: Kenyon Ralph
 email: kenyon@kenyonralph.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kenyonralph
 github_username:  kenyon
 
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: 'default'
+
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+theme: jekyll-theme-hacker
 
 # Exclude from processing.
 # The following items will not be processed, by default.

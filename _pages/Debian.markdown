@@ -1,6 +1,7 @@
+---
+title: Debian
+---
 This is my [Debian](http://debian.org/) page.
-
-[[!toc levels=2]]
 
 ## Serial port card
 It took a lot of time to figure out how to get this two-port serial interface card working, so I wanted to document it here for everyone's benefit.
@@ -190,5 +191,3 @@ Now after a `sudo aptitude update` you should be able to install packages from t
 
 ## External links
 * <http://debian.org/>
-
-[[!tag Debian Linux]]

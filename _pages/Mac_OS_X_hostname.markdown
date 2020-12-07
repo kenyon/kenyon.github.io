@@ -1,3 +1,6 @@
+---
+title: Mac OS X hostname
+---
 To prevent my hostname from being set by DHCP, I have this:
 
     kenyon@devildog ~ % grep -i hostname /etc/hostconfig
@@ -11,5 +14,3 @@ In System Preferences, Sharing, Computer Name should be set to the FQDN. The .lo
 * <http://excitedcuriosity.wordpress.com/2007/08/24/mac-os-x-hostname-determination/>
 * <http://forums.macosxhints.com/showthread.php?t=29712>
 * <http://www.macosxhints.com/article.php?story=20001224021638403>
-
-[[!tag "Mac OS X"]]

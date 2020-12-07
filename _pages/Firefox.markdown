@@ -1,3 +1,6 @@
+---
+title: Firefox
+---
 Setting the default application in the "you have chosen to open" dialog box: as of Firefox (Iceweasel) 20.0, in `~/.local/share/applications/mimeapps.list`, add a line like this to the Default Applications section:
 
     application/pdf=kde4-okularApplication_pdf.desktop

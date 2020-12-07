@@ -1,6 +1,7 @@
+---
+title: Contributions to Free Software
+---
 Here I'll try to document my contributions to the [[!wikipedia Free Software]] world. This might not be complete.
-
-[[!toc levels=2]]
 
 ## Bug reporting
 * [PGF/TikZ manual typo corrections](http://sourceforge.net/tracker/?func=detail&aid=2965003&group_id=142562&atid=752792)
@@ -52,5 +53,3 @@ I'm contributing to the [munin](http://munin-monitoring.org/) project.
   [Bitbucket](https://bitbucket.org/kenyon/)
 * [Kenyon Ralph on openhub](https://www.openhub.net/accounts/kenyon)
 * [Debian GitLab (salsa.debian.org)](https://salsa.debian.org/kenyon-guest)
-
-[[!tag Linux Debian Ubuntu FreeBSD]]

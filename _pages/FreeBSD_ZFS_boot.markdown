@@ -1,6 +1,7 @@
+---
+title: FreeBSD ZFS boot
+---
 In 2009, I set up FreeBSD to boot from a ZFS mirrored dataset. This page documents how I did it.
-
-[[!toc]]
 
 ## Hardware
 Pentium 4 (i386) system with three 80-GB hard disks: ad2, ad4, and ad6. 3 GB RAM.
@@ -106,5 +107,3 @@ None of these references contained precise instructions on how to do exactly wha
 * <http://unix.derkeiler.com/Mailing-Lists/FreeBSD/stable/2009-05/msg00546.html>
 * <http://www.freebsd.org/cgi/query-pr.cgi?pr=118855>
 * The FreeBSD manual pages, including [zpool](http://www.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&format=html) and [zfs](http://www.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&format=html)
-
-[[!tag FreeBSD]]

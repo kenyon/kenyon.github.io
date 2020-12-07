@@ -1,11 +1,12 @@
+---
+title: xmobar on Debian
+---
 * 20090105 update: I'm running [[Debian]] on my main desktop machine now. Here's what I did this time. I was running Ubuntu, and the notes I wrote for that still exist below.
 * 20100315 update: Probably none of these instructions are necessary anymore, since a recent version of [[!debpkg xmobar]] is in the Debian repositories. Just `sudo aptitude install xmobar` should be sufficient.
 
 How to install [[!hackage xmobar]] on Debian.
 
 I already had [[!debpkg zlib1g-dev]] and [[!debpkg libxft-dev]] installed. zlib1g-dev would be pulled in by [[!debpkg libghc6-zlib-dev]] anyway. Also already used aptitude to install [[!debpkg xmonad]], so that might have pulled in some dependencies necessary for the following steps.
-
-[[!toc levels=2]]
 
 ## Debian instructions
 
@@ -107,5 +108,3 @@ Here is my `~/.xmonad/xmobar.config`:
 * This blog post was helpful: <http://gimbo.org.uk/blog/2007/04/27/haskell-packages-gotcha-global-vs-per-user-package-databases/>
 * Help make Ubuntu packages for Haskell stuff: <https://wiki.ubuntu.com/MOTU/Teams/UncommonProgrammingLanguages/Haskell>
 * This thread helped figure out why zlib wasn't building: <http://www.nabble.com/zlib,-missing-zlib.h-td17547823.html>
-
-[[!tag Ubuntu Debian]]

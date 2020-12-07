@@ -256,8 +256,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-feed
-  minima
 
 BUNDLED WITH
    2.1.4
