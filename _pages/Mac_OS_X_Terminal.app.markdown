@@ -5,32 +5,41 @@ Terminal.app on Mac OS X is a little weird. It has some default settings that do
 
 Here are my settings, grouped by preference pane.
 
+1. ToC
+{:toc}
+
 ## Startup
-* Shells open with default login shell (/usr/bin/login).
+
+* Shells open with default login shell (`/usr/bin/login`).
 
 ## Settings
+
 ### Text
+
 * Font: DejaVu Sans Mono 10 pt.
 
 ### Window
+
 * Empty title.
 * Active process name, dimensions, command key: checked. The rest are unchecked.
 * Limit number of scrollback rows to 10000.
 
 ### Shell
+
 * Run command: unchecked.
 * When the shell exits, close if the shell exited cleanly.
 * Prompt before closing: never.
 
 ### Keyboard
+
 I used info from [this Mac OS X Hint](http://www.macosxhints.com/article.php?story=20040401033846410) to rebind home, end, pageup, and pagedown. By default, shift home and shift end had some incorrect strings. I wanted to correct them so that I could use them in mutt or vim. I also wanted to scroll Terminal's buffer using shift-pageup and shift-pagedown, like every other terminal program.
 
 So, the result is this:
 
-* home: \033[1~
-* end: \033[4~
-* page down: \033[6~
-* page up: \033[5~
+* home: `\033[1~`
+* end: `\033[4~`
+* page down: `\033[6~`
+* page up: `\033[5~`
 * shift page up: scroll to previous page in buffer
 * shift page down: scroll to next page in buffer
 * shift home: scroll to start of buffer
@@ -39,8 +48,10 @@ So, the result is this:
 * Use option as meta key: checked.
 
 ### Advanced
+
 #### Emulation
-* Declare terminal as: xterm-color.
+
+* Declare terminal as: `xterm-color`
 * Delete sends Ctrl-H: unchecked.
 * Escape non-ASCII input: unchecked.
 * Paste newlines as carriage returns: checked.
@@ -48,12 +59,15 @@ So, the result is this:
 * Scroll to bottom on input: checked.
 
 #### Bell
+
 * Audible bell: unchecked.
 * Visible bell: checked.
 
 #### International
+
 * Character encoding: Unicode (UTF-8).
 * Set LANG environment variable on startup: checked.
 
 ## See also
-* [[Terminal setup]] describes my more general terminal and shell setup.
+
+* [Terminal setup]({% link _pages/Terminal_setup.markdown %}) describes my more general terminal and shell setup.

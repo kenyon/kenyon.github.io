@@ -3,36 +3,45 @@ title: FreeBSD ZFS boot
 ---
 In 2009, I set up FreeBSD to boot from a ZFS mirrored dataset. This page documents how I did it.
 
+1. ToC
+{:toc}
+
 ## Hardware
+
 Pentium 4 (i386) system with three 80-GB hard disks: ad2, ad4, and ad6. 3 GB RAM.
 
 ## Goals
+
 * Have only ZFS.
 * Have a mirror setup in the zpool.
 * Have the system bootable from any of the disks in the mirror.
 
 ## Procedure
-First I did a standard UFS2 minimal install of FreeBSD 8.0-BETA2 to ad2, csup to RELENG_8 (also known as 8-STABLE), and [[rebuilt world and kernel|FreeBSD rebuild]] with ZFS loader support. I also built a custom kernel with "options KVA_PAGES=512" (necessary for i386, see the ZFS tuning guide) and a more specific configuration for my hardware.
 
-These settings are on the ad2 system (they also need to be on the resulting ZFS system):
+First I did a standard UFS2 minimal install of FreeBSD 8.0-BETA2 to `ad2`, csup to `RELENG_8`
+(also known as `8-STABLE`), and [rebuilt world and kernel]({% link
+_pages/FreeBSD_rebuild.markdown %}) with ZFS loader support. I also built a custom kernel with
+`options KVA_PAGES=512` (necessary for i386, see the ZFS tuning guide) and a more specific
+configuration for my hardware. These settings are on the `ad2` system (they also need to be on
+the resulting ZFS system):
 
-[[!format sh """
+```console
 echo 'KERNCONF=KRZFSOHM GENERIC' >> /etc/make.conf
 echo 'LOADER_ZFS_SUPPORT=YES' >> /etc/make.conf
 echo 'daily_status_zfs_enable="YES"' >> /etc/periodic.conf
-"""]]
+```
 
 These need to be only on the resulting ZFS system, not on the UFS system:
 
-[[!format sh """
+```console
 echo 'zfs_load="YES"' >> /ohm/boot/loader.conf
 echo 'vfs.root.mountfrom="zfs:ohm"' >> /ohm/boot/loader.conf
 echo 'zfs_enable="YES"' >> /ohm/etc/rc.conf
-"""]]
+```
 
 ohm is the name of my zpool. Here we go:
 
-[[!format sh """
+```console
 # Force the zpool creation due to the disks being slightly different sizes,
 # since they are from different manufacturers. ZFS should make use of the
 # smaller disk's size for the mirror (according to the ZFS cheat sheet, see
@@ -78,26 +87,27 @@ gpart destroy ad2
 dd if=/boot/zfsboot of=/dev/ad2 bs=512 count=1
 dd if=/boot/zfsboot of=/dev/ad2 bs=512 skip=1 seek=1024
 zpool attach ohm ad4 ad2
-"""]]
+```
 
 ## zfs internal error: failed to initialize ZFS library
+
 This error happens when first trying to use ZFS commands in the FreeBSD livefs environment.
 
 Solution:
 
-[[!format sh """
+```console
 kldload /dist/boot/kernel/opensolaris.ko
 kldload /dist/boot/kernel/zfs.ko
-"""]]
+```
 
 Reference: <http://www.freebsd.org/cgi/query-pr.cgi?pr=118855>
 
 ## References
+
 None of these references contained precise instructions on how to do exactly what I wanted to do, but they all helped me figure this out.
 
-* [[!freebsdwiki ZFS]]
-* [[!freebsdwiki ZFSTuningGuide]]
-* [[!freebsdwiki ZFSOnRootWithZFSboot]]
+* <https://wiki.freebsd.org/ZFS>
+* <https://wiki.freebsd.org/ZFSTuningGuide>
 * <http://www.waishi.jp/~yosimoto/diary/?date=20080909> (Japanese)
 * <http://www.freebsd.org/doc/en/books/handbook/filesystems-zfs.html>
 * <http://www.lildude.co.uk/zfs-cheatsheet/>

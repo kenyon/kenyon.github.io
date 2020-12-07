@@ -2,6 +2,9 @@
 title: Home
 ---
 
+1. ToC
+{:toc}
+
 ## Contact
 
 ### Email
