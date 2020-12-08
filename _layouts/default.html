@@ -5,8 +5,29 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script type="text/javascript">
+      /*
+       * Based on the following:
+       * Baumann, Ryan. "Last Modified Dates for GitHub Pages Jekyll Posts." /etc (blog), 27 Apr 2020,
+       * https://ryanfb.github.io/etc/2020/04/27/last_modified_dates_for_github_pages_jekyll_posts.html
+       * (accessed 07 Dec 2020).
+       * License: https://creativecommons.org/licenses/by/4.0/
+       */
+      function setModifiedDate() {
+        if (document.getElementById('last-modified')) {
+          fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
+            .then((response) => {
+              return response.json();
+            })
+            .then((commits) => {
+              var modified = commits[0]['commit']['committer']['date'];
+              document.getElementById('last-modified').textContent = "Last Modified: " + modified;
+            });
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body onload="setModifiedDate();">
 
     <header>
       <div class="container">
@@ -24,6 +45,7 @@
     </div>
 
     <a href="{{ site.github.repository_url }}/commits/{{ site.github.source.branch }}/{{ page.path }}">Revision History</a>
+    <span id="last-modified"></span>
 
     <!-- https://www.bryanbraun.com/anchorjs/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.3.0/anchor.min.js"></script>
