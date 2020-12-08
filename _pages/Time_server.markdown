@@ -8,14 +8,14 @@ This page documents my project to build a stratum 1 NTP time server at my house.
 
 ## GPS selection
 
-I selected the [Garmin GPS 18x LVC](http://www.amazon.com/gp/product/B0016O3T7A) for the following reasons:
+I selected the [Garmin GPS 18x LVC](https://www.amazon.com/gp/product/B0016O3T7A) for the following reasons:
 
 * Plenty of documentation exists by people who have used this unit as an NTP timing source.
 * The receiver and antenna are integrated into one enclosure.
 * Minimal assembly and soldering necessary, compared to bare-board receivers.
-* Available on [Amazon](http://amazon.com/) for a decent price.
+* Available on [Amazon](https://amazon.com/) for a decent price.
 
-I ordered the 18x (and a [serial cable](http://www.amazon.com/gp/product/B000ZKNANO)) on Amazon on 2011-09-05. UPS delivered it on 2011-09-09.
+I ordered the 18x (and a [serial cable](https://www.amazon.com/gp/product/B000ZKNANO)) on Amazon on 2011-09-05. UPS delivered it on 2011-09-09.
 
 ## Cable Construction
 
@@ -143,7 +143,7 @@ I also tried setting up a time server with FreeBSD to see if it's any easier or 
 
 This section was written in October 2011. I no longer run this FreeBSD system. I'm running the NTP server on the Linux machine described above.
 
-I am using [ntp-devel](http://www.freshports.org/net/ntp-devel/) from ports.
+I am using [ntp-devel](https://www.freshports.org/net/ntp-devel/) from ports.
 
 ### /etc/rc.conf
 
@@ -272,11 +272,8 @@ calibration errors:   10
 
 FreeBSD is much nicer than Linux (as of late 2011) at being a stratum 1 NTP server using a NMEA GPS with PPS reference clock.
 
-As of early 2015, I would say it's about an equal amount of effort between FreeBSD and Debian Linux. Debian Linux is a little more effort if you want to create a proper Debian package of NTP, but since I've already done that, you don't have to. You may use the NTP package from my Debian repository by adding the following line to your sources.list:
-
-```conf
-    deb http://kenyonralph.com/repo/ jessie/
-```
+As of early 2015, I would say it's about an equal amount of effort between FreeBSD and Debian
+Linux. Debian Linux is a little more effort if you want to create a proper Debian package of NTP.
 
 ## Notes
 
@@ -292,15 +289,15 @@ As of early 2015, I would say it's about an equal amount of effort between FreeB
 
 ## References
 
-* NTP documentation: [Reference Clock Support](http://www.eecis.udel.edu/~mills/ntp/html/refclock.html)
-* NTP support wiki: [Configuring Garmin Refclocks](https://support.ntp.org/bin/view/Support/ConfiguringGarminRefclocks)
-* NTP support wiki: [Configuring NMEA Refclocks](https://support.ntp.org/bin/view/Support/ConfiguringNMEARefclocks)
-* NTP support wiki: [Garmin Refclock Users](https://support.ntp.org/bin/view/Support/GarminRefclockUsers)
-* [Adding a FreeBSD NTP server based on an GPS 18 LVC device](http://www.satsignal.eu/ntp/FreeBSD-GPS-PPS.htm) by David Taylor
-* [Enabling ntpd PPS support for Debian Lenny Linux](http://www.worldtimesolutions.com/support/ntp/Debian_Lenny_Linux_PPS_support_for_ntpd.html) by World Time Solutions
-* [Garmin GPS 18x OEM](https://buy.garmin.com/shop/shop.do?cID=158&pID=27594)
-* [NTP server using PC gnu/linux and freebsd](http://www.wraith.sf.ca.us/ntp/) by Steven Bjork
-* [Stratum 1 NTP, Garmin GPS 18 LVC on FreeBSD 8.0](http://blog.doylenet.net/?p=145) by Ryan Doyle
+* NTP documentation: [Reference Clock Support](https://www.eecis.udel.edu/~mills/ntp/html/refclock.html)
+* NTP support wiki: [Configuring Garmin Refclocks](https://web.archive.org/web/20200919195309/http://support.ntp.org/bin/view/Support/ConfiguringGarminRefclocks)
+* NTP support wiki: [Configuring NMEA Refclocks](https://web.archive.org/web/20200815214455/https://support.ntp.org/bin/view/Support/ConfiguringNMEARefclocks)
+* NTP support wiki: [Garmin Refclock Users](https://web.archive.org/web/20201026102407/http://support.ntp.org/bin/view/Support/GarminRefclockUsers)
+* [Adding a FreeBSD NTP server based on an GPS 18 LVC device](https://www.satsignal.eu/ntp/FreeBSD-GPS-PPS.htm) by David Taylor
+* [Enabling ntpd PPS support for Debian Lenny Linux](https://www.worldtimesolutions.com/support/ntp/Debian_Lenny_Linux_PPS_support_for_ntpd.html) by World Time Solutions
+* [Garmin GPS 18x OEM](https://buy.garmin.com/en-US/US/p/27594/pn/010-00321-31)
+* [NTP server using PC gnu/linux and freebsd](https://www.wraith.sf.ca.us/ntp/) by Steven Bjork
+* [Stratum 1 NTP, Garmin GPS 18 LVC on FreeBSD 8.0](http://ryandoyle.net/posts/stratum-1-ntp-garmin-gps-18-lvc-on-freebsd-80/) by Ryan Doyle
 * [Synchronising to a Garmin GPS 18 LVC](http://www.sput.nl/time/garmin.html) by R.J. van der Putten
-* [Synchronizing an NTP server to GPS/PPS](http://linlog.blogspot.com/2009/07/synchronizing-ntp-server-to-gpspps.html) by Pela-Suros
+* [Synchronizing an NTP server to GPS/PPS](https://linlog.blogspot.com/2009/07/synchronizing-ntp-server-to-gpspps.html) by Pela-Suros
 * [Synchronizing ntpd to a Garmin GPS 18 LVC via gpsd](http://www.rjsystems.nl/en/2100-ntpd-garmin-gps-18-lvc-gpsd.php) by Jaap Winius

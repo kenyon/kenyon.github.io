@@ -26,11 +26,11 @@ Temporarily switch in Xorg:
 
 ### Debian, Ubuntu
 
-Permanent switch in Xorg: `sudo dpkg-reconfigure xserver-xorg`
+Permanent switch in Xorg: `sudo dpkg-reconfigure xserver-xorg` and say dvorak for keyboard layout.
 
-and say dvorak for keyboard layout.
-
-Some HAL thing involving `cp /usr/share/hal/fdi/policy/10osvendor/10-keymap.fdi /etc/hal/fdi/policy/`(?) <http://jeromeandrieux.blogspot.com/2009/02/setup-dvorak-on-debian-with-xorg.html>
+Some HAL thing involving `cp /usr/share/hal/fdi/policy/10osvendor/10-keymap.fdi
+/etc/hal/fdi/policy/`(?)
+<http://jeromeandrieux.blogspot.com/2009/02/setup-dvorak-on-debian-with-xorg.html>
 
 Console: `sudo dpkg-reconfigure console-setup`
 
@@ -42,7 +42,7 @@ Linux kernel keymap: `sudo dpkg-reconfigure console-data`
 * 'sysinstall'
 * `kbdmap`
 * `kbdcontrol -l "us.dvorak"`
-* <http://www.bobulous.org.uk/misc/usingDvorak.html>
+* <https://www.bobulous.org.uk/misc/usingDvorak.html>
 * For the console, in `/etc/rc.conf`: `keymap="us.dvorak"`
 * On FreeBSD 8: `sudo cp -vi /usr/local/share/hal/fdi/policy/10osvendor/10-x11-input.fdi /usr/local/etc/hal/fdi/policy ;` edit `/usr/local/etc/hal/fdi/policy/10-x11-input.fdi` and add `<merge key="input.xkb.layout" type="string">dvorak</merge>`.
 
@@ -61,4 +61,4 @@ Linux kernel keymap: `sudo dpkg-reconfigure console-data`
 
 ## See also
 
-* [GNU Typist (gtypist)](http://www.gnu.org/software/gtypist/)
+* [GNU Typist (gtypist)](https://www.gnu.org/software/gtypist/)

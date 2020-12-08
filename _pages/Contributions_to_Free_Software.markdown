@@ -12,10 +12,10 @@ Here I'll try to document my contributions to the Free Software world. This migh
 
 ### FreeBSD
 
-* [docs/129448: loader(8) manpage typo: two init_script listings, the second one should be init_shell](http://www.freebsd.org/cgi/query-pr.cgi?pr=129448)
-* [docs/139370: de(4) manual page typo](http://www.freebsd.org/cgi/query-pr.cgi?pr=docs/139370)
-* [Grammar fix in head/lib/libexpat/libbsdxml.3](http://svn.freebsd.org/viewvc/base?view=revision&revision=201137)
-* [ports/142275: sysutils/anacron should have better configuration hints](http://www.freebsd.org/cgi/query-pr.cgi?pr=142275)
+* [docs/129448: loader(8) manpage typo: two init_script listings, the second one should be init_shell](https://bugs.freebsd.org/129448)
+* [docs/139370: de(4) manual page typo](https://bugs.freebsd.org/139370)
+* [Grammar fix in head/lib/libexpat/libbsdxml.3](https://svnweb.freebsd.org/base?view=revision&revision=201137)
+* [ports/142275: sysutils/anacron should have better configuration hints](https://bugs.freebsd.org/142275)
 
 ### Gentoo Linux
 
@@ -42,7 +42,7 @@ I use and edit the [Ubuntu Community Documentation wiki](https://help.ubuntu.com
 
 ### Debian Linux
 
-I use and edit the [Debian Wiki](http://wiki.debian.org/) as [KenyonRalph](https://wiki.debian.org/KenyonRalph).
+I use and edit the [Debian Wiki](https://wiki.debian.org/) as [KenyonRalph](https://wiki.debian.org/KenyonRalph).
 
 ### Linux iproute2
 
@@ -54,7 +54,8 @@ I use and edit the [Debian Wiki](http://wiki.debian.org/) as [KenyonRalph](https
 
 ### Wikipedia
 
-Not Free Software, a [Free Cultural Work](http://freedomdefined.org/), but I have made a lot of Wikipedia contributions: <https://en.wikipedia.org/wiki/Special:Contributions/Kenyon>
+Not Free Software, a [Free Cultural Work](https://freedomdefined.org/Definition), but I have made
+a lot of Wikipedia contributions: <https://en.wikipedia.org/wiki/Special:Contributions/Kenyon>
 
 ## Packaging
 

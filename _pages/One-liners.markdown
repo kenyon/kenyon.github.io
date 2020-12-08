@@ -28,7 +28,7 @@ One-liners I have created or found useful.
 1. Show top 20 processes by memory usage: `ps -eo rss,vsz,pid,cputime,cmd --width 100 --sort rss,vsz | tail --lines 20`
 1. Get [ARIN](http://arin.net/) whois info: `whois -h whois.arin.net "n + 127.0.0.1"`
     * ARIN whois query syntax: `whois -h whois.arin.net "?"`
-1. [Get external IP address](http://www.commandlinefu.com/commands/view/5427/get-your-external-ip-address):
+1. [Get external IP address](https://www.commandlinefu.com/commands/view/5427/get-your-external-ip-address):
     * IPv6 and IPv4: `curl icanhazip.com`
 1. Convert a hexadecimal IPv4 address, like you would see in NAT64 and DNS64, to dotted-decimal format: `printf "%d.%d.%d.%d\n" $(echo c0a8:ff01 | sed 's/://; s/../0x& /g; s/\.$//')`
 1. Generate IPv6 Unique Local Address prefix `head -c5 /dev/random | hexdump -e '/1 "%02x "' | awk '{printf("fd%s:%s%s:%s%s::/48\n",$1,$2,$3,$4,$5)}'`

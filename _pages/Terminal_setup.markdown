@@ -1,7 +1,8 @@
 ---
 title: Terminal setup
 ---
-Here I'll describe my terminal and shell setup. See also [Mac OS X Terminal.app]({% link _pages/Mac_OS_X_Terminal.app.markdown %}) for info specific to my Mac OS X setup.
+Here I'll describe my terminal and shell setup. See also [Mac OS X Terminal.app]({% link
+_pages/Mac_OS_X_Terminal.app.markdown %}) for info specific to my Mac OS X setup.
 
 1. ToC
 {:toc}
@@ -37,10 +38,11 @@ seem to have a way to configure it to do this.
 Bug causing backspace to fail in screen under xfce4-terminal:
 
 * <https://bugs.launchpad.net/bugs/29787>
-* <http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=477455>
+* <https://bugs.debian.org/477455>
 
 Command for setting the default browser for gnome-terminal and similar (as I reported in
-<http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=487862#35>):
+<https://bugs.debian.org/487862#35>; updated link provided in that comment:
+<https://web.archive.org/web/20081005064342/http://www.linuxworld.com/community/?q=node/18172>):
 
 * `gconftool --type=string --set /desktop/gnome/url-handlers/http/command "x-www-browser %s"`
 
@@ -56,7 +58,8 @@ Change the "open link" handlers with the KDE `systemsettings` program. Use the D
 
 ### mrxvtrc
 
-Here is my ~/.mrxvtrc. I got this stuff by reading the mrxvt manual page and from [dotfiles.org](http://dotfiles.org/.mrxvtrc).
+Here is my ~/.mrxvtrc. I got this stuff by reading the mrxvt manual page and from
+[dotfiles.org](https://web.archive.org/web/20100718094557/http://dotfiles.org/.mrxvtrc).
 
 ```conf
 #Mrxvt.bottomTabbar: True
@@ -79,7 +82,8 @@ Mrxvt.xftSize: 10
 
 ## screenrc
 
-To enable 256 color support in screen, I used these settings, based on <http://www.frexx.de/xterm-256-notes/>.
+To enable 256 color support in screen, I used these settings, based on
+<https://web.archive.org/web/20130313011037/http://www.frexx.de/xterm-256-notes/>.
 
 ```conf
 startup_message off

@@ -32,7 +32,10 @@ Here are my settings, grouped by preference pane.
 
 ### Keyboard
 
-I used info from [this Mac OS X Hint](http://www.macosxhints.com/article.php?story=20040401033846410) to rebind home, end, pageup, and pagedown. By default, shift home and shift end had some incorrect strings. I wanted to correct them so that I could use them in mutt or vim. I also wanted to scroll Terminal's buffer using shift-pageup and shift-pagedown, like every other terminal program.
+I used info from [this Mac OS X Hint](https://hints.macworld.com/article.php?story=20040401033846410)
+to rebind home, end, pageup, and pagedown. By default, shift home and shift end had some incorrect
+strings. I wanted to correct them so that I could use them in mutt or vim. I also wanted to scroll
+Terminal's buffer using shift-pageup and shift-pagedown, like every other terminal program.
 
 So, the result is this:
 

@@ -1,7 +1,8 @@
 ---
 title: FreeBSD rebuild
 ---
-Here is my condensed version of <http://www.freebsd.org/doc/en/books/handbook/makeworld.html>, or how to rebuild the FreeBSD world and kernel.
+Here is my condensed version of <https://www.freebsd.org/doc/en/books/handbook/makeworld.html>,
+or how to rebuild the FreeBSD world and kernel.
 
 Once the `devel/subversion` port is installed, check out the source tree once:
 

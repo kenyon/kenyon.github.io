@@ -100,7 +100,7 @@ kldload /dist/boot/kernel/opensolaris.ko
 kldload /dist/boot/kernel/zfs.ko
 ```
 
-Reference: <http://www.freebsd.org/cgi/query-pr.cgi?pr=118855>
+Reference: <https://bugs.freebsd.org/118855>
 
 ## References
 
@@ -109,11 +109,11 @@ None of these references contained precise instructions on how to do exactly wha
 * <https://wiki.freebsd.org/ZFS>
 * <https://wiki.freebsd.org/ZFSTuningGuide>
 * <http://www.waishi.jp/~yosimoto/diary/?date=20080909> (Japanese)
-* <http://www.freebsd.org/doc/en/books/handbook/filesystems-zfs.html>
-* <http://www.lildude.co.uk/zfs-cheatsheet/>
-* <http://outpost.h3q.com/patches/manageBE/create-FreeBSD-ZFS-bootfs.txt>
-* <http://lulf.geeknest.org/blog/freebsd/Setting_up_a_zfs-only_system/>
+* <https://www.freebsd.org/doc/en/books/handbook/zfs.html>
+* <https://lildude.co.uk/zfs-cheatsheet>
+* <https://outpost.h3q.com/patches/manageBE/create-FreeBSD-ZFS-bootfs.txt>
+* <https://web.archive.org/web/20100824022058/http://lulf.geeknest.org:80/blog/freebsd/Setting_up_a_zfs-only_system/>
 * <http://unix.derkeiler.com/Mailing-Lists/FreeBSD/stable/2009-05/msg00539.html>
 * <http://unix.derkeiler.com/Mailing-Lists/FreeBSD/stable/2009-05/msg00546.html>
-* <http://www.freebsd.org/cgi/query-pr.cgi?pr=118855>
-* The FreeBSD manual pages, including [zpool](http://www.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&format=html) and [zfs](http://www.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&format=html)
+* <https://bugs.freebsd.org/118855>
+* The FreeBSD manual pages, including [zpool](https://www.freebsd.org/cgi/man.cgi?query=zpool&apropos=0&sektion=0&format=html) and [zfs](https://www.freebsd.org/cgi/man.cgi?query=zfs&apropos=0&sektion=0&format=html)

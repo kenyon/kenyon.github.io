@@ -21,7 +21,10 @@ I already had zlib1g-dev and libxft-dev installed. zlib1g-dev would be pulled in
 
 Since Debian sid doesn't have the Haskell X11-xft package, I want to install it with cabal-install, which Debian also does not have.
 
-1. `darcs get --partial http://darcs.haskell.org/cabal-branches/cabal-1.6/` # (Per <http://www.haskell.org/cabal/code.html>.) Due to [cabal-install's](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall) dependence on Cabal >=1.6 && <1.7, but Debian sid has Cabal-1.2.3.0 at the moment, which is part of ghc6.
+1. `darcs get --partial http://darcs.haskell.org/cabal-branches/cabal-1.6/` # (Per
+   <https://www.haskell.org/cabal/code.html>.) Due to
+   [cabal-install's](https://hackage.haskell.org/package/cabal-install) dependence on Cabal >=1.6 &&
+   <1.7, but Debian sid has Cabal-1.2.3.0 at the moment, which is part of ghc6.
 1. `cd cabal-1.6`
 1. `ghc --make Setup && ./Setup configure --user && ./Setup build && ./Setup install`
 1. `cd ..`
@@ -32,7 +35,8 @@ HTTP and zlib are dependencies of cabal-install.
 
 1. `sudo aptitude install libghc6-http-dev libghc6-zlib-dev` # pulls in libghc6-network-dev and libghc6-parsec-dev
 
-Debian squeeze currently doesn't have the required version of libghc6-http-dev, so following <http://projects.haskell.org/http/> (or what used to be there):
+Debian squeeze currently doesn't have the required version of libghc6-http-dev, so following
+<https://web.archive.org/web/20100914185529/http://projects.haskell.org/http/>:
 
 1. `git clone git://code.galois.com/HTTPbis.git`
 1. `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install`
@@ -65,14 +69,14 @@ At first, `Setup configure` could not find X11-xft, even though ghc-pkg list sho
 
 * PROTIP: After doing any `runhaskell Setup configure --user && runhaskell Setup build && runhaskell Setup install`, that package is registered under ~/.ghc and visible to ghc-pkg. If you `rm -rf ~/.cabal` without ghc-pkg unregistering the package, then subsequent builds will fail.
 * runhaskell is equivalent to runghc. I suppose runhaskell is more generic, so that compilers other than ghc can be run.
-* [Haskell Package Version Tracker](http://people.debian.org/~nomeata/hackagevsdebian.html) - Debian versus Hackage
+* [Haskell Package Version Tracker](https://people.debian.org/~nomeata/hackagevsdebian.html) - Debian versus Hackage
 * I had to add `lowerOnStart = True` to my xmobarrc to get it to work this time. Otherwise it's the same as shown at the bottom of this page.
 
 ----------
 
 ## Old Ubuntu instructions
 
-(December 2008) I use [xmonad](http://xmonad.org/) on [Ubuntu]({% link _pages/Ubuntu.markdown %}). I use the xmobar status bar with it. Ubuntu doesn't have a package for xmobar, nor for many of its dependencies. So to build xmobar I had to build and install a bunch of dependencies. Also, in order to make installing Haskell packages easier, I installed cabal-install, which had its own dependencies.
+(December 2008) I use [xmonad](https://xmonad.org/) on [Ubuntu]({% link _pages/Ubuntu.markdown %}). I use the xmobar status bar with it. Ubuntu doesn't have a package for xmobar, nor for many of its dependencies. So to build xmobar I had to build and install a bunch of dependencies. Also, in order to make installing Haskell packages easier, I installed cabal-install, which had its own dependencies.
 
 ### Dependencies with Ubuntu packages
 
@@ -128,4 +132,4 @@ Config { font = "-*-fixed-medium-r-normal-*-13-*-*-*-*-*-*-*"
 
 * This blog post was helpful: <http://gimbo.org.uk/blog/2007/04/27/haskell-packages-gotcha-global-vs-per-user-package-databases/>
 * Help make Ubuntu packages for Haskell stuff: <https://wiki.ubuntu.com/MOTU/Teams/UncommonProgrammingLanguages/Haskell>
-* This thread helped figure out why zlib wasn't building: <http://www.nabble.com/zlib,-missing-zlib.h-td17547823.html>
+* This thread helped figure out why zlib wasn't building: <https://www.nabble.com/zlib,-missing-zlib.h-td17547823.html>

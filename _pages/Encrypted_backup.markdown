@@ -88,6 +88,6 @@ Or: `sudo systemctl stop /bak && sudo systemctl stop systemd-cryptsetup@bak`
 
 ## References
 
-* cryptsetup, luks: <http://code.google.com/p/cryptsetup/>
-* <http://www.debian-administration.org/article/Encrypting_an_existing_Debian_lenny_installation>
-* <http://madduck.net/docs/cryptdisk/>
+* cryptsetup, luks: <https://gitlab.com/cryptsetup/cryptsetup>
+* <http://web.archive.org/web/20190523000016/https://debian-administration.org/article/639/Encrypting_an_existing_Debian_lenny_installation>
+* <https://web.archive.org/web/20170608142813/http://madduck.net/docs/cryptdisk>

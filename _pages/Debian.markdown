@@ -10,7 +10,7 @@ This is my [Debian](http://debian.org/) page.
 
 It took a lot of time to figure out how to get this two-port serial interface card working, so I wanted to document it here for everyone's benefit.
 
-Here is the card I got from Amazon: [Syba SD-PCI-2S PCI 32-Bit 2x Port Serial DB9 PCIe x1 Card](http://a.co/29bam5S)
+Here is the card I got from Amazon: [Syba SD-PCI-2S PCI 32-Bit 2x Port Serial DB9 PCIe x1 Card](https://a.co/29bam5S)
 
 I'm using it with Debian GNU/Linux 9.4 (stretch) and kernel 4.9.88-1+deb9u1 (2018-05-07). Do not use the driver from ASIX Corporation. There is no need for that because the driver is part of the standard Linux kernel these days.
 
@@ -130,11 +130,12 @@ Set 'bell-style' to 'none' in `/etc/inputrc`.
 
 ### See also
 
-* [Removing annoying console beeps](http://www.debian-administration.org/articles/110)
+* [Removing annoying console beeps](http://web.archive.org/web/20190503083644/https://debian-administration.org/article/110/Removing_annoying_console_beeps)
 
 ## Rebuilding Debian packages
 
-This is just my local, condensed version of [Raphaël Hertzog's](http://raphaelhertzog.com/) article [Howto to rebuild Debian packages](http://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/).
+This is just my local, condensed version of [Raphaël Hertzog's](https://raphaelhertzog.com/)
+article [Howto to rebuild Debian packages](https://raphaelhertzog.com/2010/12/15/howto-to-rebuild-debian-packages/).
 
 1. `apt-get source ntp`
 1. `sudo apt-get build-dep ntp`
@@ -209,10 +210,10 @@ Now after a `sudo aptitude update` you should be able to install packages from t
 ### References
 
 * manual pages and `/usr/share/doc` (read with `debmany` from debian-goodies): sources.list, mini-dinstall, dput
-* <http://wiki.freegeek.org/index.php/Debian_Package_Repositories>
-* <http://upsilon.cc/~zack/blog/posts/2009/04/howto:_uploading_to_people.d.o_using_dput/>
-* <http://wiki.debian.org/HowToSetupADebianRepository>
+* <https://web.archive.org/web/20170624163354/http://wiki.freegeek.org/index.php/Debian_Package_Repositories>
+* <https://upsilon.cc/~zack/blog/posts/2009/04/howto:_uploading_to_people.d.o_using_dput/>
+* <https://wiki.debian.org/DebianRepository/Setup>
 
 ## External links
 
-* <http://debian.org/>
+* <https://debian.org/>

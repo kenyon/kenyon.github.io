@@ -14,6 +14,6 @@ In System Preferences, Sharing, Computer Name should be set to the FQDN. The .lo
 
 ## References
 
-* <http://excitedcuriosity.wordpress.com/2007/08/24/mac-os-x-hostname-determination/>
-* <http://forums.macosxhints.com/showthread.php?t=29712>
-* <http://www.macosxhints.com/article.php?story=20001224021638403>
+* <https://excitedcuriosity.wordpress.com/2007/08/24/mac-os-x-hostname-determination/>
+* <https://web.archive.org/web/20141112155051/http://hintsforums.macworld.com/showthread.php?t=29712>
+* <https://web.archive.org/web/20061022140935/http://www.macosxhints.com/article.php?story=20001224021638403>
