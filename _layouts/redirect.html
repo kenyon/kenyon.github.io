@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<html>
+    <head>
+        <title>Redirect to {{ page.target }}</title>
+        <meta charset="utf-8" />
+        <link rel="canonical" href="{{ page.target }}" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="refresh" content="0;url={{ page.target }}" />
+    </head>
+
+    <body>
+        <script>
+            location = "{{ page.target }}";
+        </script>
+
+        This page has moved. Redirecting to
+        <a href="{{ page.target }}">{{ page.target }}</a>
+    </body>
+</html>
