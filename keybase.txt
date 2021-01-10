@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/kenyon
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://kenyonralph.com
+  * I am kenyon (https://keybase.io/kenyon) on keybase.
+  * I have a public key with fingerprint 6166 B557 BF04 3923 AC22  6183 98FF 3EF9 C9B9 12D5
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "6166b557bf043923ac22618398ff3ef9c9b912d5",
+            "host": "keybase.io",
+            "key_id": "98FF3EF9C9B912D5",
+            "uid": "bbf77540696a041a28bc84f937d07600",
+            "username": "kenyon"
+        },
+        "service": {
+            "hostname": "kenyonralph.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1398212925,
+    "expire_in": 157680000,
+    "prev": "e411857dcfed51c18694f3d784d61ecf6c02940951edb6a06aca4b18642213bf",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+owGbwMvMwMU447/dz5M7ha4ynj7wKYkhOJzTtlopKT+lUsmqWik7FUylZealpxYV
+FGXmlShZKZkZmpklmZqaJ6UZmBhbGhknJhsZmRlaGFtapKUZp6ZZJlsmWRoapZgq
+6Shl5BeDdACNSUosTtXLzAeKATnxmSlAUUsLNzdjVzdLZ0snoHoXkPpSsERSUpq5
+uamJgZmlWaKBiWGikUVSsoVJmqWxeYqBuZmBAUhhcWpRXmJuKtjwvMr8PKVaHSWg
+WFlmcirIxSCLUeSLEnMKMvSS83OBmguK8kvyk/NzgJIZJSUFViC9JZUFIMXlqUnx
+UGPikzLzUoAeB2ooSy0qzgTaYWUIVJlckgky1xDoXyNDI0sjUx2l1IqCzKLU+EyQ
+ClNzMwsDIABZk1oGNDLVxNDQwtQ8JTktNcXUMNnQwszSJM04xdzCJMXMMDU5zSzZ
+wMjSxMDS1DA1JQnoYbPE5ESTJKAyEyMjQ+OkNCWQxwrz8pWsTIDOTEwHGlmcmZ6X
+WFJalKpU28kkw8LAyMXAxsoEijoGLk4BWIRe0eL/X1SYlFWhViLj8l8pq2Jy0xK1
+vNWtXlJ1P3/yZ95r+vuk9arm1dU3M63/HLqiIMquvv81e85Rw9c+uz0PzPrpJDlx
+VXrtgQrfFuf7d/bUH3I67LT3bNWivYJ+r9hnxvVwHr1pwd7CF330VNsN/6opb+o4
+eKvTuncfPHbs4AoPY0mDrS9ip+b4ZP1fody1crruiuhVDpW//2lou66U5fYzbrBN
+9bqjc/+hcnaHhsaqCRzJJi97Xn/QMOYM282T+FDU02dq2bMlIfNTjVSiS5/ttDz2
+47n6tJU72fisQ2tTjjf/LLpwzngz95OnMgILLgefX773uXuSz+IGxsla75VUQ5Vi
+Lty+1anmk+cqvvVN1V/TknOtXjdOGZeeFzUreSm/oopTZorY0klnA5ulxPN/Gqtt
+dD6ZKrdQ74fk+tcbtWZtW6wZFxT6/WWdVs7MkxNfve4vnfzw7uvTu3Viuhdwz7KS
+e/5M5+Yl53ex0gt+fJ/mdfjgrva5nx7num+617O+djbzkw13IuYrG9uHcIilbz2q
+MO9lkBzzhxWHQ34YLF/XufDROtvSg53udflHtuyftbzSx8tm75crO+um92v++sms
+2NWvv1Vg0lbpNxrbTO+9f8MarSM5h6OoVODVTfXfIc/yhHUOP1wx1874q878T642
+13745/f0tCpNFLmd9Sau4GZ1p4ziv6ObLvun2H7bMLHm09rUdJetx0zW6QMA
+=PTyP
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kenyon
+
+==================================================================
