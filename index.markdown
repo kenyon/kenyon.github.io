@@ -53,4 +53,3 @@ title: Home
 * [munin](https://darwin.kenyonralph.com/munin/)
 * [NTP pool servers](https://www.ntppool.org/a/kenyon)
 * [smokeping](https://darwin.kenyonralph.com/smokeping/)
-* UPS status: [einstein](http://einstein.kenyonralph.com/cgi-bin/apcupsd/multimon.cgi)
