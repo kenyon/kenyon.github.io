@@ -1,5 +1,5 @@
 ---
 layout: redirect
 permalink: /smokeping/
-target: https://darwin.kenyonralph.com/smokeping/
+target: https://beta.kenyonralph.com/smokeping/
 ---

@@ -1,5 +1,5 @@
 ---
 layout: redirect
 permalink: /munin/
-target: https://darwin.kenyonralph.com/munin/
+target: https://beta.kenyonralph.com/munin/
 ---

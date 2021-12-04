@@ -52,6 +52,6 @@ title: Home
 
 ## System information
 
-- [munin](https://beta.kenyonralph.com/munin/)
+- [munin](https://kenyonralph.com/munin/)
 - [NTP pool servers](https://www.ntppool.org/a/kenyon)
-- [smokeping](https://beta.kenyonralph.com/smokeping/)
+- [smokeping](https://kenyonralph.com/smokeping/)
