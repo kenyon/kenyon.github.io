@@ -20,7 +20,7 @@ title: Home
 
 ### IRC
 
-- [Freenode](https://freenode.net/): kenyon
+- [Libera.Chat](https://libera.chat/): kenyon
 - [OFTC](https://www.oftc.net/): kenyon
 
 ## Internet presence
