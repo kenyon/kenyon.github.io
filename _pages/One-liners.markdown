@@ -20,10 +20,10 @@ One-liners I have created or found useful.
 1. `sha512sum` on Mac OS X (or any system with OpenSSL): `openssl dgst -sha512 filename` (with OpenSSL from MacPorts)
 1. Get rid of "Warning: No xauth data; using fake authentication data for X11 forwarding.": `xauth generate :0 .`
 1. To stop the blinking cursor in GTK+-based [Eclipse](https://eclipse.org/) (on Linux at least), put the following line in `~/.gtkrc-2.0`: `gtk-cursor-blink = 0`
-1. Remove comment lines from configuration files: `grep --invert-match '^\[[:space:]]*#' /etc/file | cat --squeeze-blank`
+1. Remove comment lines from configuration files: `grep --invert-match '^[[:space:]]*#' /etc/file | cat --squeeze-blank`
     * There is a more sophisticated version of `cat --squeeze-blank` in the [GNU sed Info documentation](https://www.gnu.org/software/sed/manual/html_node/cat-_002ds.html#cat-_002ds).
-1. Remove all blank lines: `sed '/^\[[:space:]]*$/d'`
-1. Remove comments and blank lines: `grep --invert-match --regexp '^\[[:space:]]*#' --regexp '^\[[:space:]]*$' /etc/file`
+1. Remove all blank lines: `sed '/^[[:space:]]*$/d'`
+1. Remove comments and blank lines: `grep --invert-match --regexp '^[[:space:]]*#' --regexp '^[[:space:]]*$' /etc/file`
 1. Bash glob for all directory entries, including hidden: `{.[!.]*,*}`
     * <https://stackoverflow.com/a/1586569/124703>
 1. Show top 20 processes by memory usage: `ps -eo rss,vsz,pid,cputime,cmd --width 100 --sort rss,vsz | tail --lines 20`
