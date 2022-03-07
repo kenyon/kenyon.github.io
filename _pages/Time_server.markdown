@@ -27,6 +27,20 @@ I used a Windows Vista computer with Garmin's SNSRXCFG_270.exe to upgrade the fi
 
 ## Debian GNU/Linux setup
 
+March 2022 update: I'm now running my stratum 1 time server on a [Shuttle
+DS10U](https://global.shuttle.com/news/productsDetail?productId=2403) running
+[Debian 11 bullseye](https://www.debian.org/releases/bullseye/). The Garmin GPS
+18x LVC is connected to the serial port. [gpsd](https://gpsd.gitlab.io/gpsd/)
+reads the NMEA sentences and pulse per second (PPS), and
+[chrony](https://chrony.tuxfamily.org/) provides NTP service. I basically
+followed [this
+documentation](https://gpsd.gitlab.io/gpsd/gpsd-time-service-howto.html#_feeding_chrony_from_gpsd)
+and configured everything with puppet.  [This
+commit](https://gitlab.com/kenyon/puppet/-/commit/fd981778d37c88c84a08d672bd446917b1572c45)
+and the two parent commits are the implementation.
+
+Old setups:
+
 Here are the steps in summary (written for Debian wheezy in February 2015):
 
 * Install pps-tools
