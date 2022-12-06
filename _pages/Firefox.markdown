@@ -11,6 +11,7 @@ This overrides the settings in `/usr/share/applications/mimeinfo.cache`, which i
 
 Here are some Firefox config items I like to set:
 
+* accessibility.typeaheadfind.prefillwithselection true
 * browser.backspace_action 0
 * browser.blink_allowed false
 * browser.download.manager.showAlertOnComplete false
