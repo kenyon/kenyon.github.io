@@ -1,7 +1,7 @@
 ---
 title: Time server
 ---
-This page documents my project to build a stratum 1 NTP time server at my house. Its hostname is einstein.kenyonralph.com.
+This page documents my project to build a stratum 1 NTP time server at my house. Its hostname is ntp.kenyonralph.com.
 
 1. ToC
 {:toc}
