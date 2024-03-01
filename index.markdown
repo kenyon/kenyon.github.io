@@ -39,8 +39,8 @@ title: Home
 - [StackExchange](https://stackexchange.com/users/42766/kenyon)
 - [Strava](https://www.strava.com/athletes/2197422)
 - [Threads](https://www.threads.net/@kenyonralph)
-- [Twitter](https://twitter.com/kenyonralph)
 - [Wikipedia](https://en.wikipedia.org/wiki/User:Kenyon)
+- [X](https://X.com/kenyonralph)
 
 ## Pages
 
