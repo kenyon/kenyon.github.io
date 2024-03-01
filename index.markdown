@@ -33,8 +33,7 @@ title: Home
 - [GitLab](https://gitlab.com/kenyon)
 - [Launchpad](https://launchpad.net/~kralph)
 - [LinkedIn](https://www.linkedin.com/in/kenyonralph)
-- <a rel="me" href="https://fosstodon.org/@kenyon">Mastodon</a> fosstodon.org
-- <a rel="me" href="https://ruby.social/@kenyon">Mastodon</a> ruby.social
+- <a rel="me" href="https://fosstodon.org/@kenyon">Mastodon</a>
 - [openhub](https://www.openhub.net/accounts/kenyon)
 - [Quay.io](https://quay.io/user/kenyonralph)
 - [StackExchange](https://stackexchange.com/users/42766/kenyon)
