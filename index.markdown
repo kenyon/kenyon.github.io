@@ -26,7 +26,7 @@ title: Home
 ## Internet presence
 
 - [Bitbucket](https://bitbucket.org/kenyon/)
-- [Bluesky](https://bsky.app/profile/kenyonralph.bsky.social)
+- [Bluesky](https://bsky.app/profile/kenyonralph.com)
 - [Docker Hub](https://hub.docker.com/u/kenyonralph)
 - [eBay](https://www.ebay.com/usr/kenyon321)
 - [Facebook](https://facebook.com/kenyonralph)
