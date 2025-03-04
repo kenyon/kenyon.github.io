@@ -32,14 +32,17 @@ title: Home
 - [Facebook](https://facebook.com/kenyonralph)
 - [GitHub](https://github.com/kenyon)
 - [GitLab](https://gitlab.com/kenyon)
+- [Gravatar](https://gravatar.com/ucsdk)
 - [Launchpad](https://launchpad.net/~kralph)
 - [LinkedIn](https://www.linkedin.com/in/kenyonralph)
 - <a rel="me" href="https://fosstodon.org/@kenyon">Mastodon</a>
 - [openhub](https://www.openhub.net/accounts/kenyon)
+- [PayPal](https://paypal.me/kenyonralph)
 - [Quay.io](https://quay.io/user/kenyonralph)
 - [StackExchange](https://stackexchange.com/users/42766/kenyon)
 - [Strava](https://www.strava.com/athletes/2197422)
 - [Threads](https://www.threads.net/@kenyonralph)
+- [Venmo](https://venmo.com/kenyonralph)
 - [Wikipedia](https://en.wikipedia.org/wiki/User:Kenyon)
 - [X](https://X.com/kenyonralph)
 
