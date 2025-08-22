@@ -24,6 +24,8 @@ Temporarily switch in Xorg:
 
 ## Linux
 
+Console: `sudo loadkeys dvorak`
+
 ### Debian, Ubuntu
 
 Permanent switch in Xorg: `sudo dpkg-reconfigure xserver-xorg` and say dvorak for keyboard layout.
