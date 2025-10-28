@@ -16,6 +16,7 @@ Here are some Firefox config items I like to set:
 * browser.blink_allowed false
 * browser.download.manager.showAlertOnComplete false
 * browser.tabs.closeWindowWithLastTab false
+* browser.urlbar.trimURLs false
 * browser.xul.error_pages.expert_bad_cert true
 * font.size.fixed.x-western 14 (can set this using the GUI)
 * layout.spellcheckDefault 2
