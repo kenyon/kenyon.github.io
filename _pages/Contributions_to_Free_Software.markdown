@@ -73,7 +73,6 @@ I'm contributing to the [munin](http://munin-monitoring.org/) project.
 ## See also
 
 * Lots of contributions on [GitHub](https://github.com/kenyon), and
-  some on [GitLab](https://gitlab.com/kenyon) and
-  [Bitbucket](https://bitbucket.org/kenyon/)
+  some on [GitLab](https://gitlab.com/kenyon)
 * [Kenyon Ralph on openhub](https://www.openhub.net/accounts/kenyon)
 * [Debian GitLab (salsa.debian.org)](https://salsa.debian.org/kenyon-guest)
