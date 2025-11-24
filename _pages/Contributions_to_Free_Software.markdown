@@ -59,6 +59,7 @@ a lot of Wikipedia contributions: <https://en.wikipedia.org/wiki/Special:Contrib
 
 ## Packaging
 
+* <https://copr.fedorainfracloud.org/coprs/kenyon/>
 * [Launchpad Personal Package Archive](https://edge.launchpad.net/~kralph/+archive/ppa)
 
 ## munin
